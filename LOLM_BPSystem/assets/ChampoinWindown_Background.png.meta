@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "c3d7c6ca-c1a2-47e3-9212-e13d3896faa4",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 1920,
+  "height": 1080,
+  "platformSettings": {},
+  "subMetas": {
+    "ChampoinWindown_Background": {
+      "ver": "1.0.4",
+      "uuid": "a9174615-d9c6-4a11-ab0d-e15b82afe7eb",
+      "rawTextureUuid": "c3d7c6ca-c1a2-47e3-9212-e13d3896faa4",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1920,
+      "height": 1080,
+      "rawWidth": 1920,
+      "rawHeight": 1080,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
