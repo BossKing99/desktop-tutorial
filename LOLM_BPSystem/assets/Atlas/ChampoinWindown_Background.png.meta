@@ -9,7 +9,16 @@
   "packable": true,
   "width": 1920,
   "height": 1080,
-  "platformSettings": {},
+  "platformSettings": {
+    "web": {
+      "formats": [
+        {
+          "name": "jpg",
+          "quality": 80
+        }
+      ]
+    }
+  },
   "subMetas": {
     "ChampoinWindown_Background": {
       "ver": "1.0.4",
