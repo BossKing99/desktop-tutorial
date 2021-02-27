@@ -2,8 +2,6 @@ package com.HttpServer.Thread;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.AbstractMap.SimpleEntry;
-import java.util.Map.Entry;
 
 import com.HttpServer.Net.WebSocketServerHandler;
 import com.HttpServer.Portocol.NetJson;
@@ -14,17 +12,6 @@ import com.HttpServer.publicClass.PackData;
 import com.HttpServer.publicClass.ProtocolName;
 import com.HttpServer.publicClass.StackTraceUtil;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelFutureListener;
-import io.netty.handler.codec.http.DefaultFullHttpResponse;
-import io.netty.handler.codec.http.FullHttpResponse;
-import io.netty.handler.codec.http.HttpHeaderNames;
-import io.netty.handler.codec.http.HttpResponseStatus;
-import io.netty.handler.codec.http.HttpVersion;
-import io.netty.util.CharsetUtil;
 
 public class PackThread extends Thread {
     private static Queue<PackData> QuePacket = new LinkedList<PackData>();

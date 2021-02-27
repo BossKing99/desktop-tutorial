@@ -20,10 +20,6 @@ export default class Network extends cc.Component {
         //["onopen","onmessage","onerror","onclose"]
         this._mSocket.onopen = () => {
             console.log("onopen");
-            let data: TestData = new TestData();
-            data.acc = "132";
-            data.pass = "321";
-            this._mSocket.send(JSON.stringify(data));
         }
 
         this._mSocket.onmessage = (evt) => {

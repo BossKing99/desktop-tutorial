@@ -2,6 +2,7 @@ package com.HttpServer.Net;
 
 import java.net.InetSocketAddress;
 
+import com.HttpServer.Manager.PlayerManager;
 import com.HttpServer.Thread.*;
 import com.HttpServer.publicClass.Console;
 import com.HttpServer.publicClass.PackData;
@@ -85,21 +86,9 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 	@Override
 	public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
 		Channel incoming = ctx.channel();
-		if (RemoveBaccarat(ctx)) {
-			if (incoming != null && channels.contains(ctx.channel()))
-				channels.remove(ctx.channel());
-			Console.Err("[SERVER] - " + incoming.remoteAddress() + " exit");
-		} else {
-			Console.Err("!!!![DONT KNOW PLAYER] - " + incoming.remoteAddress() + " log_out");
-		}
-	}
-
-	private static boolean RemoveBaccarat(ChannelHandlerContext ctx) throws Exception {
-		String ctxid = ctx.channel().id().toString();
-		// ---------------------------------------------------------------------
-		// if (PlayerMag.Logout(ctxid))
-		// return true;
-		return false;
+		PlayerManager.Logout(ctx.channel().id().toString());
+		if (incoming != null && channels.contains(ctx.channel()))
+			channels.remove(ctx.channel());
 	}
 
 	public static Channel GetChannel(String m_ChannelID) {

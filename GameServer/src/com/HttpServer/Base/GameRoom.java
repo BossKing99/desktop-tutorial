@@ -1,35 +1,21 @@
 package com.HttpServer.Base;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import com.HttpServer.Manager.GameRoomManager;
-import com.HttpServer.publicClass.Console;
-
 import org.json.JSONObject;
 
-public class GameRoom {
-    private String _key;
-    private long _createTime;
-    private JSONObject RoomData = new JSONObject();
+public abstract class GameRoom {
+    protected String _key;
+    protected long _createTime;
+    protected JSONObject RoomData;
 
-    public GameRoom(String blueTeamName, String redTeamName, String gameName, String key) {
+    public GameRoom(JSONObject jdata, String key) {
         _key = key;
         _createTime = System.currentTimeMillis();
-        try {
-            RoomData.put("BlueTeamName", blueTeamName);
-            RoomData.put("RedTeamName", redTeamName);
-            RoomData.put("GameName", gameName);
-        } catch (Exception e) {
-
-        }
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
-            public void run() {
-                GameRoomManager.Inst.CloseRoom(_key);
-            }
-        };
-        timer.schedule(task, 10000);
+        RoomData = jdata;
     }
-
+    public abstract void Ready();
+    public abstract JSONObject GetStatus();
+    public abstract void Choose(JSONObject jdata);
+    public boolean isExpired() {
+        return System.currentTimeMillis() - _createTime > 14400000;
+    }
 }

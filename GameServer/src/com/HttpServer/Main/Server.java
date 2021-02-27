@@ -1,10 +1,7 @@
 package com.HttpServer.Main;
 
-import com.HttpServer.Base.GameRoom;
-import com.HttpServer.Manager.GameRoomManager;
 import com.HttpServer.Manager.ThreadManager;
 import com.HttpServer.Net.Client2GameInitializer;
-import com.HttpServer.Net.HttpServer;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -37,8 +34,6 @@ public class Server {
 
 	public static void main(String[] args) throws Exception {
 		ThreadManager.Init();
-		// HttpServer server = new HttpServer(8081);// 8081為監聽Port
-		// server.start();
 		Server.mGame = new Server();
 		Server.mGame.bind(8083);
 	}
