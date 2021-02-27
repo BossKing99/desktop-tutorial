@@ -1,5 +1,7 @@
 package com.HttpServer.Portocol;
 
+import com.HttpServer.publicClass.Console;
+
 import org.json.JSONObject;
 
 public class TestProtocol implements PortocolBasc {
@@ -10,7 +12,7 @@ public class TestProtocol implements PortocolBasc {
             jres.put("ttt", 123);
         } catch (Exception e) {
         }
-
+        Console.Log("TestProtocol");
         return jres;
     }
 }

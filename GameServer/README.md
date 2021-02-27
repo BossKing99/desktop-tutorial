@@ -15,7 +15,7 @@
 * vscode build jar 方法 : <br>
     * 把bin裡的class檔都丟進BuildData裡面<br>
     * 先進到BuildData資料夾<br>
-    * 然後輸入 jar -cvfm ../BaccaratServer.jar MANIFEST.MF ./<br>
+    * 然後輸入 jar -cvfm ../Server.jar MANIFEST.MF ./<br>
     * 如果有新的jar檔要加入的話 直接把jar檔解壓縮將資料丟到自己的資料夾裡(都在BuildData裡<br>
 
 * jar command not found : https://ithelp.ithome.com.tw/articles/10213551

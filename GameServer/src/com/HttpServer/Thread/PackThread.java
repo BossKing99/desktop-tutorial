@@ -5,7 +5,10 @@ import java.util.Queue;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.Map.Entry;
 
+import com.HttpServer.Net.WebSocketServerHandler;
+import com.HttpServer.Portocol.NetJson;
 import com.HttpServer.Portocol.PortocolBasc;
+import com.HttpServer.Portocol.TestProtocol;
 import com.HttpServer.publicClass.Console;
 import com.HttpServer.publicClass.PackData;
 import com.HttpServer.publicClass.ProtocolName;
@@ -48,8 +51,7 @@ public class PackThread extends Thread {
                         } else
                             DoPacket(newPack);
                         newPack = null;
-                    }
-                    else
+                    } else
                         Thread.sleep(1000);
                 } catch (Exception e) {
                     Console.Err("PackManager error : " + StackTraceUtil.getStackTrace(e));
@@ -63,17 +65,22 @@ public class PackThread extends Thread {
 
     private void DoPacket(PackData Netdata) {
         try {
-            if (Netdata == null || Netdata.ctx == null )
+            if (Netdata == null || Netdata.ctx == null)
                 return;
-            PortocolBasc oCtrl = GetControl(Netdata.sendData.getInt("pt"));
+            int pt = Netdata.sendData.getInt("pt");
+            PortocolBasc oCtrl = GetControl(pt);
             if (oCtrl == null)
                 return;
             // -------------------------------------------------------------
             String msg = oCtrl.Run(Netdata.sendData).toString();
-            FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK,Unpooled.copiedBuffer(msg, CharsetUtil.UTF_8));
-            response.headers().set(HttpHeaderNames.CONTENT_TYPE, "application/x-www-form-urlencoded");
-            response.headers().set(HttpHeaderNames.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
-            Netdata.ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
+            // FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
+            // HttpResponseStatus.OK,
+            // Unpooled.copiedBuffer(msg, CharsetUtil.UTF_8));
+            // response.headers().set(HttpHeaderNames.CONTENT_TYPE,
+            // "application/x-www-form-urlencoded");
+            // response.headers().set(HttpHeaderNames.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
+            // Netdata.ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
+            WebSocketServerHandler.Write(NetJson.CreatePack(msg, pt),Netdata.ctx.channel());
         } catch (Exception e) {
             Console.Err("DoPacket Error e = " + StackTraceUtil.getStackTrace(e) + " protocol = " + Netdata.sendData);
         }
@@ -81,12 +88,10 @@ public class PackThread extends Thread {
 
     private PortocolBasc GetControl(int pt) {
         switch (pt) {
-            // case ProtocolName.LOGIN:
-            //     return new Login();
-            // case ProtocolName.FORGET_PASSWORD:
-            //     return new ForgetPassword();
-            // case ProtocolName.FORGET_PASSWORD_ANSWER:
-            //     return new ForgetPasswordAnswer();
+            case ProtocolName.TEST:
+                return new TestProtocol();
+            case ProtocolName.CREATE_ROOM:
+                return new TestProtocol();
             default:
                 break;
         }

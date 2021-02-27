@@ -8,11 +8,6 @@
 		</accessrules>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/java-json.jar"/>
-	<classpathentry kind="lib" path="lib/mysql-connector-java-5.0.8-bin.jar"/>
 	<classpathentry kind="lib" path="lib/netty-all-4.1.4.Final.jar"/>
-	<classpathentry kind="lib" path="lib/jedis-2.9.0.jar"/>
-	<classpathentry kind="lib" path="lib/commons-pool2-2.4.2.jar"/>
-	<classpathentry kind="lib" path="lib/mongo-java-driver-3.2.2.jar"/>
-	<classpathentry kind="lib" path="lib/javax.mail.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
