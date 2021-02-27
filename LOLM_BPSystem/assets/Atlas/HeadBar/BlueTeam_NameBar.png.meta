@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "13d026a5-e032-4117-aceb-50fe67617881",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 556,
+  "height": 217,
+  "platformSettings": {},
+  "subMetas": {
+    "BlueTeam_NameBar": {
+      "ver": "1.0.4",
+      "uuid": "0fafe4c1-3526-4e1c-861a-1a79d05b8116",
+      "rawTextureUuid": "13d026a5-e032-4117-aceb-50fe67617881",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 0,
+      "trimX": 13,
+      "trimY": 13,
+      "width": 531,
+      "height": 191,
+      "rawWidth": 556,
+      "rawHeight": 217,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
