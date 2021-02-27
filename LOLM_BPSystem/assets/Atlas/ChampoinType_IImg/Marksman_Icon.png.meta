@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "504208f1-dd64-4f46-b010-ba3cc9f9ceef",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 200,
+  "height": 200,
+  "platformSettings": {},
+  "subMetas": {
+    "Marksman_Icon": {
+      "ver": "1.0.4",
+      "uuid": "d5bfc83c-efe3-4fdc-935a-576c946d1152",
+      "rawTextureUuid": "504208f1-dd64-4f46-b010-ba3cc9f9ceef",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 1,
+      "trimY": 1,
+      "width": 198,
+      "height": 198,
+      "rawWidth": 200,
+      "rawHeight": 200,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

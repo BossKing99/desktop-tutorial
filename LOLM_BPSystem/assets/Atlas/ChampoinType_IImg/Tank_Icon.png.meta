@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "cf5f2334-7a38-46c6-9f09-7467a87fa8a0",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 200,
+  "height": 200,
+  "platformSettings": {},
+  "subMetas": {
+    "Tank_Icon": {
+      "ver": "1.0.4",
+      "uuid": "54c7f0b9-c243-479c-81ed-64539f68cb4c",
+      "rawTextureUuid": "cf5f2334-7a38-46c6-9f09-7467a87fa8a0",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 1,
+      "trimY": 1,
+      "width": 198,
+      "height": 198,
+      "rawWidth": 200,
+      "rawHeight": 200,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

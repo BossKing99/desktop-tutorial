@@ -1,29 +1,20 @@
 {
   "ver": "2.3.4",
-  "uuid": "c3d7c6ca-c1a2-47e3-9212-e13d3896faa4",
+  "uuid": "e7b3306f-adc2-46b8-a89b-5e0641ff69f8",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
   "genMipmaps": false,
   "packable": true,
-  "width": 500,
-  "height": 250,
-  "platformSettings": {
-    "web": {
-      "formats": [
-        {
-          "name": "jpg",
-          "quality": 80
-        }
-      ]
-    }
-  },
+  "width": 120,
+  "height": 120,
+  "platformSettings": {},
   "subMetas": {
-    "ChampoinWindown_Background": {
+    "3": {
       "ver": "1.0.4",
-      "uuid": "a9174615-d9c6-4a11-ab0d-e15b82afe7eb",
-      "rawTextureUuid": "c3d7c6ca-c1a2-47e3-9212-e13d3896faa4",
+      "uuid": "a4e0d270-8d48-4495-a7c3-ac3c46c517f2",
+      "rawTextureUuid": "e7b3306f-adc2-46b8-a89b-5e0641ff69f8",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -31,10 +22,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 500,
-      "height": 250,
-      "rawWidth": 500,
-      "rawHeight": 250,
+      "width": 120,
+      "height": 120,
+      "rawWidth": 120,
+      "rawHeight": 120,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,
