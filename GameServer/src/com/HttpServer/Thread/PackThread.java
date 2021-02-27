@@ -1,0 +1,96 @@
+package com.HttpServer.Thread;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.AbstractMap.SimpleEntry;
+import java.util.Map.Entry;
+
+import com.HttpServer.Portocol.PortocolBasc;
+import com.HttpServer.publicClass.Console;
+import com.HttpServer.publicClass.PackData;
+import com.HttpServer.publicClass.ProtocolName;
+import com.HttpServer.publicClass.StackTraceUtil;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelFutureListener;
+import io.netty.handler.codec.http.DefaultFullHttpResponse;
+import io.netty.handler.codec.http.FullHttpResponse;
+import io.netty.handler.codec.http.HttpHeaderNames;
+import io.netty.handler.codec.http.HttpResponseStatus;
+import io.netty.handler.codec.http.HttpVersion;
+import io.netty.util.CharsetUtil;
+
+public class PackThread extends Thread {
+    private static Queue<PackData> QuePacket = new LinkedList<PackData>();
+
+    public static void SetPacket(PackData Netdata) {
+        synchronized (QuePacket) {
+            QuePacket.offer(Netdata);
+        }
+
+    }
+
+    public void run() {
+        try {
+            while (true) {
+                try {
+                    PackData newPack = null;
+                    if (QuePacket.size() != 0) {
+                        synchronized (QuePacket) {
+                            if (QuePacket.size() != 0)
+                                newPack = QuePacket.poll();
+                        }
+                        if (newPack == null) {
+                            Thread.sleep(10);
+                        } else
+                            DoPacket(newPack);
+                        newPack = null;
+                    }
+                    else
+                        Thread.sleep(1000);
+                } catch (Exception e) {
+                    Console.Err("PackManager error : " + StackTraceUtil.getStackTrace(e));
+                }
+
+            }
+        } catch (Exception e) {
+            Console.Err("強制關閉");
+        }
+    }
+
+    private void DoPacket(PackData Netdata) {
+        try {
+            if (Netdata == null || Netdata.ctx == null )
+                return;
+            PortocolBasc oCtrl = GetControl(Netdata.sendData.getInt("pt"));
+            if (oCtrl == null)
+                return;
+            // -------------------------------------------------------------
+            String msg = oCtrl.Run(Netdata.sendData).toString();
+            FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK,Unpooled.copiedBuffer(msg, CharsetUtil.UTF_8));
+            response.headers().set(HttpHeaderNames.CONTENT_TYPE, "application/x-www-form-urlencoded");
+            response.headers().set(HttpHeaderNames.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
+            Netdata.ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
+        } catch (Exception e) {
+            Console.Err("DoPacket Error e = " + StackTraceUtil.getStackTrace(e) + " protocol = " + Netdata.sendData);
+        }
+    }
+
+    private PortocolBasc GetControl(int pt) {
+        switch (pt) {
+            // case ProtocolName.LOGIN:
+            //     return new Login();
+            // case ProtocolName.FORGET_PASSWORD:
+            //     return new ForgetPassword();
+            // case ProtocolName.FORGET_PASSWORD_ANSWER:
+            //     return new ForgetPasswordAnswer();
+            default:
+                break;
+        }
+        return null;
+    }
+
+}

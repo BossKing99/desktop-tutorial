@@ -1,0 +1,113 @@
+{
+    // 使用 IntelliSense 以得知可用的屬性。
+    // 暫留以檢視現有屬性的描述。
+    // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Server",
+            "request": "launch",
+            "mainClass": "com.HttpServer.Main.Server",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RobotMain",
+            "request": "launch",
+            "mainClass": "com.Robot.Main.RobotMain",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WebSocketClient",
+            "request": "launch",
+            "mainClass": "com.Robot.Net.WebSocketClient",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EchoServer",
+            "request": "launch",
+            "mainClass": "com.Baccarat.Net.EchoServer",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Rsa",
+            "request": "launch",
+            "mainClass": "com.Baccarat.RSA.Rsa",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GameServer",
+            "request": "launch",
+            "mainClass": "com.Baccarat.Main.GameServer",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Tjavac",
+            "request": "launch",
+            "mainClass": "Tjavac",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GameServer<GameServer>",
+            "request": "launch",
+            "mainClass": "com.box.Main.GameServer",
+            "projectName": "GameServer",
+            "console": "none"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DocsConnectionPropsHelper<GameServer>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.DocsConnectionPropsHelper",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ErrorMappingsDocGenerator<GameServer>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.ErrorMappingsDocGenerator",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PropertiesDocGenerator<GameServer>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.PropertiesDocGenerator",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TimezoneDump<GameServer>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.TimezoneDump",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-VersionFSHierarchyMaker<GameServer>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.VersionFSHierarchyMaker",
+            "projectName": "GameServer"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Version<GameServer>",
+            "request": "launch",
+            "mainClass": "io.netty.util.Version",
+            "projectName": "GameServer"
+        }
+    ]
+}
