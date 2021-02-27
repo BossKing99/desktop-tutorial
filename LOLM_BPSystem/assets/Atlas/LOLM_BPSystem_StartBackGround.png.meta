@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "79e82332-609f-4971-9052-ce1b6dc67abe",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2000,
+  "height": 1125,
+  "platformSettings": {},
+  "subMetas": {
+    "LOLM_BPSystem_StartBackGround": {
+      "ver": "1.0.4",
+      "uuid": "bebaa8f2-73a6-4130-b600-7fff7e8db224",
+      "rawTextureUuid": "79e82332-609f-4971-9052-ce1b6dc67abe",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2000,
+      "height": 1125,
+      "rawWidth": 2000,
+      "rawHeight": 1125,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
