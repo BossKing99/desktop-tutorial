@@ -28,18 +28,19 @@ public class GameRoomManager {
 
     private Map<String, GameRoom> AllGame = new HashMap<>();
 
-    public String CreateNewGameRoom(JSONObject jdata) {
-        String Key = "";
+    public String[] CreateNewGameRoom(JSONObject jdata) {
+        String[] Key = new String[2];
         try {
-            Key = GetKey(jdata.getString("blueTeamName") + jdata.getString("redTeamName") + jdata.getString("GameName")
-                    + System.currentTimeMillis());
+            Key[0] = GetKey(jdata.getString("blueTeamName") + jdata.getString("redTeamName")
+                    + jdata.getString("GameName") + System.currentTimeMillis());
+            Key[1] = GetKey(System.currentTimeMillis() + "").substring(5, 12);
         } catch (Exception e) {
         }
-        if (Key != "") {
+        if (Key[0] != "") {
             // 這邊可以換成可擴充結構
             GameRoom newGameRoom = new LOLM3BanRoom(jdata, Key);
             synchronized (AllGame) {
-                AllGame.put(Key, newGameRoom);
+                AllGame.put(Key[0], newGameRoom);
             }
         }
         return Key;
