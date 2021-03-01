@@ -32,5 +32,8 @@ public abstract class GameRoom {
     }
 
     protected abstract void SetStatus(RoomStatus s);
-    protected abstract void PlayerAdd(Player p);
+
+    public abstract void PlayerAdd(Player p);
+
+    public abstract void Preview(JSONObject jdata, String ctxId);
 }

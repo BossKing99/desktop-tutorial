@@ -12,4 +12,8 @@ public abstract class PlayerDecorator implements IPlayer {
     public void Write(String data) {
         _player.Write(data);
     }
+    @Override
+    public String GetCtxId() {
+        return _player.GetCtxId();
+    }
 }

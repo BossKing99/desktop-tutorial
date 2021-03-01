@@ -11,10 +11,21 @@ public class PlayerManager {
     private static Map<String, Player> _allPlayer = new HashMap<>();
 
     public static void AddPlayer(Channel ctx) {
-        _allPlayer.put(ctx.id().toString(), new Player(ctx));
+        synchronized (_allPlayer) {
+            _allPlayer.put(ctx.id().toString(), new Player(ctx));
+        }
+    }
+
+    public static Player GetPlayer(String id) {
+        if (_allPlayer.containsKey(id))
+            return _allPlayer.get(id);
+        else
+            return null;
     }
 
     public static void Logout(String id) {
-        _allPlayer.remove(id);
+        synchronized (_allPlayer) {
+            _allPlayer.remove(id);
+        }
     }
 }

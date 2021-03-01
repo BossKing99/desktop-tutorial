@@ -2,6 +2,10 @@ package com.HttpServer.Main;
 
 import com.HttpServer.Manager.ThreadManager;
 import com.HttpServer.Net.Client2GameInitializer;
+import com.HttpServer.publicClass.Console;
+import com.HttpServer.publicClass.LOLMData;
+
+import org.json.JSONObject;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -14,6 +18,7 @@ import io.netty.handler.logging.LoggingHandler;
 
 public class Server {
 	public static Server mGame = null;
+
 	public void bind(int port) throws Exception { // 使用netty啟動server
 		// WebSocketServerHandler.Init();
 		EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -33,6 +38,7 @@ public class Server {
 	}
 
 	public static void main(String[] args) throws Exception {
+		LOLMData.LoadData();
 		ThreadManager.Init();
 		Server.mGame = new Server();
 		Server.mGame.bind(8083);

@@ -54,6 +54,14 @@ public class GameRoomManager {
         Console.Log("" + AllGame.size());
     }
 
+    public GameRoom GetRoom(String key) {
+        if (AllGame.containsKey(key))
+            return AllGame.get(key);
+        else
+            return null;
+    }
+
+    // 檢查房間是否超時
     private void checkRoom() {
         Iterator<Map.Entry<String, GameRoom>> entries = AllGame.entrySet().iterator();
         synchronized (AllGame) {

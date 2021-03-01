@@ -12,6 +12,7 @@ import com.HttpServer.publicClass.PackData;
 import com.HttpServer.publicClass.ProtocolName;
 import com.HttpServer.publicClass.StackTraceUtil;
 
+import org.json.JSONObject;
 
 public class PackThread extends Thread {
     private static Queue<PackData> QuePacket = new LinkedList<PackData>();
@@ -59,15 +60,12 @@ public class PackThread extends Thread {
             if (oCtrl == null)
                 return;
             // -------------------------------------------------------------
-            String msg = oCtrl.Run(Netdata.sendData).toString();
-            // FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
-            // HttpResponseStatus.OK,
-            // Unpooled.copiedBuffer(msg, CharsetUtil.UTF_8));
-            // response.headers().set(HttpHeaderNames.CONTENT_TYPE,
-            // "application/x-www-form-urlencoded");
-            // response.headers().set(HttpHeaderNames.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
-            // Netdata.ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
-            WebSocketServerHandler.Write(NetJson.CreatePack(msg, pt),Netdata.ctx.channel());
+            JSONObject jmsg = oCtrl.Run(Netdata.sendData, Netdata.ctx.channel());
+
+            if (jmsg.length() > 0) {
+                String msg = jmsg.toString();
+                WebSocketServerHandler.Write(NetJson.CreatePack(msg, pt), Netdata.ctx.channel());
+            }
         } catch (Exception e) {
             Console.Err("DoPacket Error e = " + StackTraceUtil.getStackTrace(e) + " protocol = " + Netdata.sendData);
         }

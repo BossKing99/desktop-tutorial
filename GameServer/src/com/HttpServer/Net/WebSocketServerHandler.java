@@ -125,11 +125,9 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 			return false;
 		for (Channel channel : WebSocketServerHandler.channels) {
 			if (channel.id().toString().equals(m_ChannelID) == true) {
-
 				if (channel.isActive()) {
 					return true;
 				}
-
 			}
 		}
 		return false;
