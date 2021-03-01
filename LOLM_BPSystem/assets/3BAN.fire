@@ -1263,7 +1263,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Blue_Time",
+    "_name": "Blue",
     "_objFlags": 0,
     "_parent": {
       "__id__": 22
@@ -1357,7 +1357,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Red_Time",
+    "_name": "Red",
     "_objFlags": 0,
     "_parent": {
       "__id__": 22
