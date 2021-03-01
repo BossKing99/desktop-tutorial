@@ -1,4 +1,4 @@
-package com.HttpServer.Base;
+package com.HttpServer.Base.PlayerBase;
 
 import com.HttpServer.Net.WebSocketServerHandler;
 

@@ -3,7 +3,7 @@ package com.HttpServer.Manager;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.HttpServer.Base.Player;
+import com.HttpServer.Base.PlayerBase.Player;
 
 import io.netty.channel.Channel;
 
