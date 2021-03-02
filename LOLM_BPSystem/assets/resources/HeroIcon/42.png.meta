@@ -1,6 +1,6 @@
 {
   "ver": "2.3.4",
-  "uuid": "2760780f-68df-4898-b7be-f9df5ee46016",
+  "uuid": "a21b3dc3-ca9d-42bc-b948-7bfc604191fa",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,10 +11,10 @@
   "height": 120,
   "platformSettings": {},
   "subMetas": {
-    "Assassin_Icon": {
+    "42": {
       "ver": "1.0.4",
-      "uuid": "202ebf1e-00b8-4ead-99fc-828515bdaedd",
-      "rawTextureUuid": "2760780f-68df-4898-b7be-f9df5ee46016",
+      "uuid": "6c191400-dcd0-4581-ae1d-02d5645b2269",
+      "rawTextureUuid": "a21b3dc3-ca9d-42bc-b948-7bfc604191fa",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
