@@ -32,7 +32,7 @@ public class GameRoomManager {
         String[] Key = new String[2];
         try {
             Key[0] = GetKey(jdata.getString("blueTeamName") + jdata.getString("redTeamName")
-                    + jdata.getString("GameName") + System.currentTimeMillis());
+                    + jdata.getString("gameName") + System.currentTimeMillis());
             Key[1] = GetKey(System.currentTimeMillis() + "").substring(5, 12);
         } catch (Exception e) {
         }

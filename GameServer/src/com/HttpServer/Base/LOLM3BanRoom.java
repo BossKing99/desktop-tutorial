@@ -17,31 +17,54 @@ import org.json.JSONObject;
 
 public class LOLM3BanRoom extends GameRoom {
     // 0是藍隊 1是紅隊
-    private Map<Integer, Integer> _chosen = new HashMap<Integer, Integer>();
+    private Map<Integer, Integer> chosen = new HashMap<>();
     private Boolean[] isReady = { false, false };
-    private int[][] _banData = { { -1, -1, -1 }, { -1, -1, -1 } };
-    private int[][] _pickData = { { -1, -1, -1, -1, -1 }, { -1, -1, -1, -1, -1, } };
+    private int[][] banData;
+    private int[][] pickData = new int[2][5];
     private Timer timer = new Timer();
     private TimerTask task;
-    private List<LOLMPlayer> _allPlayers = new ArrayList<LOLMPlayer>();
-    private long ChooseTime = 30000;
+    private List<LOLMPlayer> allPlayers = new ArrayList<>();
+    private long chooseTime = 30000;
+    // 選角用
+    private int nowCtrl = 0;
+    private int[] banProcess;
+    private int[] pickProcess = { 0, 1, 1, 0, 0, 1, 1, 0, 0, 1 };
+    private int banFlage = 0;
+    private int pickFlage = 0;
 
     public LOLM3BanRoom(JSONObject jdata, String[] key) {
         super(jdata, key);
         try {
+            int banCount = jdata.getInt("banCount");
+            banData = new int[2][banCount];
+            initIntArray(banData);
+            initIntArray(pickData);
+            banProcess = new int[banCount * 2];
+            for (int i = 0; i < banCount; i++) {
+                banProcess[i * 2] = 0;
+                banProcess[i * 2 + 1] = 1;
+            }
             RoomJData.put("Status", _status);
-            RoomJData.put("BuleBan", _banData[0]);
-            RoomJData.put("RedBan", _banData[1]);
-            RoomJData.put("BulePick", _pickData[0]);
-            RoomJData.put("RedPick", _pickData[1]);
+            RoomJData.put("BuleBan", banData[0]);
+            RoomJData.put("RedBan", banData[1]);
+            RoomJData.put("BulePick", pickData[0]);
+            RoomJData.put("RedPick", pickData[1]);
+
         } catch (Exception e) {
             Console.Err("LOLM3BanRoom Create Error");
         }
         task = new TimerTask() {
             public void run() {
-                NextProcess(0);
+                nextProcess(0);
             }
         };
+    }
+
+    private void initIntArray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++)
+                arr[i][j] = -1;
+        }
     }
 
     @Override
@@ -61,7 +84,7 @@ public class LOLM3BanRoom extends GameRoom {
     public void Choose(JSONObject jdata) {
         try {
             if (jdata.optString("pass") == _pass) {
-                NextProcess(jdata.optInt("choose"));
+                nextProcess(jdata.optInt("choose"));
             }
         } catch (Exception e) {
             Console.Err("LOLM3BanRoom Choose Error");
@@ -73,19 +96,19 @@ public class LOLM3BanRoom extends GameRoom {
     public void Preview(JSONObject data, String ctxId) {
         try {
             int num = data.getInt("num");
-            if ((num == 0 || !_chosen.containsKey(num)) && data.optString("pass") == _pass) {
-                LOLMPlayer player = FindPlayer(ctxId);
-                if (player != null && player.team == _nowCtrl) {
+            if ((num == 0 || !chosen.containsKey(num)) && data.optString("pass").equals(_pass)) {
+                LOLMPlayer player = findPlayer(ctxId);
+                if (player != null && player.team == nowCtrl) {
                     JSONObject jdata = new JSONObject();
                     if (_status == RoomStatus.BAN)
-                        jdata.put("banNum", _banFlage);
+                        jdata.put("banNum", banFlage);
                     else if (_status == RoomStatus.PICK)
-                        jdata.put("pickNum", _pickFlage);
+                        jdata.put("pickNum", pickFlage);
                     else
                         return;
-                    jdata.put("team", _nowCtrl);
+                    jdata.put("team", nowCtrl);
                     jdata.put("preview", num);
-                    Broadcast(jdata.toString(), ProtocolName.PREVIEW);
+                    broadcast(jdata.toString(), ProtocolName.PREVIEW);
                 }
             }
         } catch (Exception e) {
@@ -107,9 +130,9 @@ public class LOLM3BanRoom extends GameRoom {
             case WAIT:
                 break;
             case BAN:
-                timer.schedule(task, ChooseTime);
+                timer.schedule(task, chooseTime);
                 try {
-                    RoomJData.put("NextTime", System.currentTimeMillis() + ChooseTime);
+                    RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
                 } catch (Exception e) {
                 }
                 break;
@@ -122,66 +145,54 @@ public class LOLM3BanRoom extends GameRoom {
 
     @Override
     public void PlayerAdd(Player p) {
-        _allPlayers.add(new LOLMPlayer(p));
-        Broadcast(RoomJData.toString(), ProtocolName.SYNC);
+        allPlayers.add(new LOLMPlayer(p));
+        broadcast(RoomJData.toString(), ProtocolName.SYNC);
     }
 
-    private int _nowCtrl = 0;
-    private int[] _banProcess = { 0, 1, 0, 1, 0, 1 };
-    private int[] _pickProcess = { 0, 1, 1, 0, 0, 1, 1, 0, 0, 1 };
-    private int _banFlage = 0;
-    private int _pickFlage = 0;
-
-    private void NextProcess(int choose) {
-        if (choose < LOLMData.MaxHeroCount() && (choose == 0 || !_chosen.containsKey(choose))) {
+    private void nextProcess(int choose) {
+        try {
+            if (!(choose < LOLMData.MaxHeroCount() && (choose == 0 || !chosen.containsKey(choose))))
+                return;
             if (choose != 0)
-                _chosen.put(choose, 0);
+                chosen.put(choose, 0);
             timer.cancel();
             if (_status == RoomStatus.BAN) {
-                _banData[_nowCtrl][_banFlage / 2] = choose;
-                _banFlage++;
-                if (_banFlage == 6) {
+                banData[nowCtrl][banFlage / 2] = choose;
+                banFlage++;
+                if (banFlage == 6) {
                     SetStatus(RoomStatus.PICK);
-                    _nowCtrl = 0;
+                    nowCtrl = 0;
                 } else
-                    _nowCtrl = _banProcess[_banFlage];
+                    nowCtrl = banProcess[banFlage];
 
-                try {
-                    RoomJData.put("BuleBan", _banData[0]);
-                    RoomJData.put("RedBan", _banData[1]);
-                } catch (Exception e) {
-                    Console.Err("LOLM3BanRoom NextProcess BAN Error");
-                }
-                Broadcast(RoomJData.toString(), ProtocolName.SYNC);
+                RoomJData.put("BuleBan", banData[0]);
+                RoomJData.put("RedBan", banData[1]);
+
+                broadcast(RoomJData.toString(), ProtocolName.SYNC);
             } else if (_status == RoomStatus.PICK) {
-                _pickData[_nowCtrl][_pickFlage / 2] = choose;
-                _pickFlage++;
-                if (_pickFlage == 10)
+                pickData[nowCtrl][pickFlage / 2] = choose;
+                pickFlage++;
+                if (pickFlage == 10)
                     SetStatus(RoomStatus.END);
                 else
-                    _nowCtrl = _pickProcess[_pickFlage++];
-
-                try {
-                    RoomJData.put("BulePick", _pickData[0]);
-                    RoomJData.put("RedPick", _pickData[1]);
-                } catch (Exception e) {
-                    Console.Err("LOLM3BanRoom NextProcess PICK Error");
-                }
-                Broadcast(RoomJData.toString(), ProtocolName.SYNC);
+                    nowCtrl = pickProcess[pickFlage++];
+                RoomJData.put("BulePick", pickData[0]);
+                RoomJData.put("RedPick", pickData[1]);
+                broadcast(RoomJData.toString(), ProtocolName.SYNC);
             }
 
             if (_status != RoomStatus.END) {
-                timer.schedule(task, ChooseTime);
-                try {
-                    RoomJData.put("NextTime", System.currentTimeMillis() + ChooseTime);
-                } catch (Exception e) {
-                }
+                timer.schedule(task, chooseTime);
+                RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
             }
+
+        } catch (Exception e) {
+            Console.Err("LOLM3BanRoom NextProcess Error");
         }
     }
 
-    private void Broadcast(String data, int pt) {
-        for (LOLMPlayer lolmPlayer : _allPlayers) {
+    private void broadcast(String data, int pt) {
+        for (LOLMPlayer lolmPlayer : allPlayers) {
             try {
                 lolmPlayer.Write(NetJson.CreatePack(data, pt));
             } catch (Exception e) {
@@ -189,9 +200,9 @@ public class LOLM3BanRoom extends GameRoom {
         }
     }
 
-    private LOLMPlayer FindPlayer(String ctxId) {
-        for (LOLMPlayer lolmPlayer : _allPlayers) {
-            if (lolmPlayer.GetCtxId() == ctxId)
+    private LOLMPlayer findPlayer(String ctxId) {
+        for (LOLMPlayer lolmPlayer : allPlayers) {
+            if (lolmPlayer.GetCtxId().equals(ctxId))
                 return lolmPlayer;
         }
         return null;
