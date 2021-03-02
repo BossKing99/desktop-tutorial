@@ -14,8 +14,8 @@ public class LoginProtocol implements PortocolBasc {
         try {
             PlayerManager.AddPlayer(ctx);
         } catch (Exception e) {
+            Console.Err("LoginProtocol error e = \n" + e);
         }
-        Console.Log("TestProtocol");
         return jres;
     }
 }

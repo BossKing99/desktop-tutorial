@@ -1,5 +1,8 @@
 package com.HttpServer.Main;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.HttpServer.Manager.ThreadManager;
 import com.HttpServer.Net.Client2GameInitializer;
 import com.HttpServer.publicClass.Console;
