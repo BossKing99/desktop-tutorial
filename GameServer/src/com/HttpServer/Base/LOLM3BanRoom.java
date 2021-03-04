@@ -70,7 +70,7 @@ public class LOLM3BanRoom extends GameRoom {
     @Override
     public void Ready(JSONObject jdata) {
         try {
-            if (_status == RoomStatus.WAIT && jdata.optString("pass") == _pass) {
+            if (_status == RoomStatus.WAIT && jdata.optString("pass").equals(_pass)) {
                 isReady[jdata.getInt("team")] = true;
                 if (isReady[0] && isReady[1])
                     SetStatus(RoomStatus.BAN);
@@ -83,7 +83,7 @@ public class LOLM3BanRoom extends GameRoom {
     @Override
     public void Choose(JSONObject jdata) {
         try {
-            if (jdata.optString("pass") == _pass) {
+            if (jdata.optString("pass").equals(_pass)) {
                 nextProcess(jdata.optInt("choose"));
             }
         } catch (Exception e) {

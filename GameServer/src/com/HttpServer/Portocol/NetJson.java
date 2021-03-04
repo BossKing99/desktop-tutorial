@@ -17,7 +17,7 @@ public class NetJson {
     public static String CreatePack(String jdata, int protocol) {
         try {
             JSONObject rdata = new JSONObject();
-            rdata.put("pr", protocol);
+            rdata.put("pt", protocol);
             rdata.put("data", jdata);
             return rdata.toString();
         } catch (Exception e) {

@@ -1,7 +1,7 @@
 package com.HttpServer.publicClass;
 
 public class ProtocolName {
-    public static final int TEST = 0;
+    private ProtocolName(){}
     public static final int LOGIN = 1;
     public static final int CREATE_ROOM = 2; // 創房
     public static final int LINK_ROOM = 3; // 連進房

@@ -4,16 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import com.HttpServer.Net.WebSocketServerHandler;
-import com.HttpServer.Portocol.ChooseProtocol;
-import com.HttpServer.Portocol.CreateRoomProtocol;
-import com.HttpServer.Portocol.GetLOLMDataProtocol;
-import com.HttpServer.Portocol.LinkRoomProtocol;
-import com.HttpServer.Portocol.LoginProtocol;
-import com.HttpServer.Portocol.NetJson;
-import com.HttpServer.Portocol.PortocolBasc;
-import com.HttpServer.Portocol.PrevienProtocol;
-import com.HttpServer.Portocol.ReadyProtocol;
-import com.HttpServer.Portocol.TestProtocol;
+import com.HttpServer.Portocol.*;
 import com.HttpServer.publicClass.Console;
 import com.HttpServer.publicClass.PackData;
 import com.HttpServer.publicClass.ProtocolName;
@@ -31,30 +22,26 @@ public class PackThread extends Thread {
 
     }
 
+    @Override
     public void run() {
-        try {
-            while (true) {
-                try {
-                    PackData newPack = null;
-                    if (QuePacket.size() != 0) {
-                        synchronized (QuePacket) {
-                            if (QuePacket.size() != 0)
-                                newPack = QuePacket.poll();
-                        }
-                        if (newPack == null) {
-                            Thread.sleep(10);
-                        } else
-                            doPacket(newPack);
-                        newPack = null;
-                    } else
-                        Thread.sleep(1000);
-                } catch (Exception e) {
-                    Console.Err("PackManager error : " + StackTraceUtil.getStackTrace(e));
-                }
-
+        while (true) {
+            try {
+                PackData newPack = null;
+                if (QuePacket.size() != 0) {
+                    synchronized (QuePacket) {
+                        if (QuePacket.size() != 0)
+                            newPack = QuePacket.poll();
+                    }
+                    if (newPack == null)
+                        Thread.sleep(10);
+                    else
+                        doPacket(newPack);
+                } else
+                    Thread.sleep(1000);
+            } catch (Exception e) {
+                Console.Err("PackManager error : " + StackTraceUtil.getStackTrace(e));
             }
-        } catch (Exception e) {
-            Console.Err("強制關閉");
+
         }
     }
 

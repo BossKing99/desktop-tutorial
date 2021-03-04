@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.HttpServer.Manager.ThreadManager;
 import com.HttpServer.Net.Client2GameInitializer;
+import com.HttpServer.publicClass.CheckPassword;
 import com.HttpServer.publicClass.Console;
 import com.HttpServer.publicClass.LOLMData;
 
@@ -41,6 +42,7 @@ public class Server {
 	}
 
 	public static void main(String[] args) throws Exception {
+		CheckPassword.Check("ss");
 		LOLMData.LoadData();
 		ThreadManager.Init();
 		Server.mGame = new Server();

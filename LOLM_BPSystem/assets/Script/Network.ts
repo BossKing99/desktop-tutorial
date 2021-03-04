@@ -5,14 +5,16 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import Manager from "./public/Manager";
+import { ECreateRoomData } from "./UI/View/UI_CreateRoom";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class Network extends cc.Component {
+export default class Network {
     private _mSocket: WebSocket;
-    onEnable() {
-        this.creatWebSocket();
-    }
+    private _isConnent: boolean = false;
+    private _callBack: Function[] = [];
     creatWebSocket() {
         //新建Socket，並請求連線
         this._mSocket = new WebSocket('ws://127.0.0.1:8083/ws');
@@ -20,10 +22,13 @@ export default class Network extends cc.Component {
         //["onopen","onmessage","onerror","onclose"]
         this._mSocket.onopen = () => {
             console.log("onopen");
+            this._isConnent = true;
         }
 
         this._mSocket.onmessage = (evt) => {
-            console.log(evt);
+            let jdata = JSON.parse(evt.data);
+            console.log(evt.data);
+            this._callBack[jdata.pt](jdata);
         }
 
         this._mSocket.onerror = () => {
@@ -31,19 +36,21 @@ export default class Network extends cc.Component {
         }
 
         this._mSocket.onclose = () => {
-
+            this._isConnent = false;
         }
     }
-    public Test()
-    {
-        let data: TestData = new TestData();
-        data.acc = "132";
-        data.pass = "321";
-        this._mSocket.send(JSON.stringify(data));
+    public Send(data) {
+        if (this.isConnent())
+            this._mSocket.send(JSON.stringify(data));
+        else
+            window.alert("與主機無連線");
     }
-}
-export class TestData {
-    public pt: number = 0;
-    public acc: String = "";
-    public pass: String = "";
+    public isConnent(): boolean {
+        return this._isConnent;
+    }
+    public AddCallBack(key: number, fun: Function) {
+        console.log("AddCallBack");
+        this._callBack[key] = fun;
+        console.log(this._callBack);
+    }
 }
