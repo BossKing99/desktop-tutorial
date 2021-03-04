@@ -28,7 +28,7 @@ export default class Network {
         this._mSocket.onmessage = (evt) => {
             let jdata = JSON.parse(evt.data);
             console.log(evt.data);
-            this._callBack[jdata.pt](jdata);
+            this._callBack[jdata.pt](jdata.data);
         }
 
         this._mSocket.onerror = () => {
@@ -49,8 +49,6 @@ export default class Network {
         return this._isConnent;
     }
     public AddCallBack(key: number, fun: Function) {
-        console.log("AddCallBack");
         this._callBack[key] = fun;
-        console.log(this._callBack);
     }
 }

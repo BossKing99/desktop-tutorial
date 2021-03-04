@@ -17,6 +17,9 @@ public class CreateRoomProtocol implements PortocolBasc {
                 String[] key = GameRoomManager.Inst.CreateNewGameRoom(jdata);
                 jres.put("resCode", 0);
                 jres.put("key", key);
+                jres.put("blueTeam", jdata.getString("blueTeamName"));
+                jres.put("redTeam", jdata.getString("redTeamName"));
+                jres.put("gameName", jdata.getString("gameName"));
             } else {
                 jres.put("resCode", 1);
             }

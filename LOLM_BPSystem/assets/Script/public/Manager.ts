@@ -36,7 +36,10 @@ export default class Manager extends cc.Component {
         return this._network;
     }
 
-    public wait(ms) {
+    public Wait(ms) {
         return new Promise(r => setTimeout(r, ms));
+    }
+    public GetOriginURL():string {
+        return this.originURL;
     }
 }
