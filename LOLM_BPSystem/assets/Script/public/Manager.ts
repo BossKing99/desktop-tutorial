@@ -36,10 +36,17 @@ export default class Manager extends cc.Component {
         return this._network;
     }
 
-    public Wait(ms) {
+    public Wait(ms) { 
         return new Promise(r => setTimeout(r, ms));
     }
-    public GetOriginURL():string {
+    public GetOriginURL(): string {
         return this.originURL;
+    }
+    public GetMyCtrlTeam() {
+        let url = new URL(window.location.href);
+        if (url.searchParams.has("team"))
+            return url.searchParams.get("team");
+        else
+            return -1;
     }
 }

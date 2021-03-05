@@ -91,8 +91,10 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 			channels.remove(ctx.channel());
 	}
 
+	public static String noConnect = "no_connect";
+
 	public static Channel GetChannel(String m_ChannelID) {
-		if (m_ChannelID == "no_connect")
+		if (m_ChannelID.equals(noConnect))
 			return null;
 		for (Channel channel : WebSocketServerHandler.channels) {
 			if (channel.id().toString().equals(m_ChannelID) == true) {
@@ -106,7 +108,7 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 	}
 
 	public static String GetHost(String m_ChannelID) {
-		if (m_ChannelID == "no_connect")
+		if (m_ChannelID.equals(noConnect))
 			return null;
 		for (Channel channel : WebSocketServerHandler.channels) {
 			if (channel.id().toString().equals(m_ChannelID) == true) {
@@ -114,14 +116,13 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 					InetSocketAddress insocket = (InetSocketAddress) channel.remoteAddress();
 					return insocket.getAddress().getHostAddress();
 				}
-
 			}
 		}
 		return "NO_FIND";
 	}
 
 	public static boolean HasPlayerConnect(String m_ChannelID) {
-		if (m_ChannelID == "no_connect")
+		if (m_ChannelID.equals(noConnect))
 			return false;
 		for (Channel channel : WebSocketServerHandler.channels) {
 			if (channel.id().toString().equals(m_ChannelID) == true) {

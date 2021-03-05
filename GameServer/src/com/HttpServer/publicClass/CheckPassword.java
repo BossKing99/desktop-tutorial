@@ -19,6 +19,7 @@ public class CheckPassword {
         float md = Float.parseFloat(new SimpleDateFormat("MMdd").format(date));
         todayPass = (md / y) + "";
         todayPass = todayPass.substring(6, 10);
+        Console.Log(todayPass);
         return pass.equals(todayPass);
     }
 }

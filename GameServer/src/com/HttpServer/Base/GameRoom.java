@@ -34,6 +34,7 @@ public abstract class GameRoom {
     protected abstract void SetStatus(RoomStatus s);
 
     public abstract void PlayerAdd(Player p);
+    public abstract void RmPlayer(Player p);
 
     public abstract void Preview(JSONObject jdata, String ctxId);
 }

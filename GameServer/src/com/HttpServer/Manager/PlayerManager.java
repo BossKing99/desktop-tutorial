@@ -25,6 +25,8 @@ public class PlayerManager {
 
     public static void Logout(String id) {
         synchronized (_allPlayer) {
+            if (_allPlayer.get(id).GetRoom() != null)
+                _allPlayer.get(id).RmRoom();
             _allPlayer.remove(id);
         }
     }

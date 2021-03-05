@@ -145,8 +145,21 @@ public class LOLM3BanRoom extends GameRoom {
 
     @Override
     public void PlayerAdd(Player p) {
-        allPlayers.add(new LOLMPlayer(p));
+        synchronized (allPlayers) {
+            allPlayers.add(new LOLMPlayer(p));
+        }
         broadcast(RoomJData.toString(), ProtocolName.SYNC);
+    }
+
+    @Override
+    public void RmPlayer(Player p) {
+        Console.Log("RmPlayer start count = "+allPlayers.size());
+        LOLMPlayer lolp = findPlayer(p.GetCtxId());
+        synchronized (allPlayers) {
+            if (lolp != null)
+                allPlayers.remove(lolp);
+        }
+        Console.Log("RmPlayer end count = "+allPlayers.size());
     }
 
     private void nextProcess(int choose) {
@@ -194,7 +207,8 @@ public class LOLM3BanRoom extends GameRoom {
     private void broadcast(String data, int pt) {
         for (LOLMPlayer lolmPlayer : allPlayers) {
             try {
-                lolmPlayer.Write(NetJson.CreatePack(data, pt));
+                if (lolmPlayer != null)
+                    lolmPlayer.Write(NetJson.CreatePack(data, pt));
             } catch (Exception e) {
             }
         }
@@ -202,7 +216,7 @@ public class LOLM3BanRoom extends GameRoom {
 
     private LOLMPlayer findPlayer(String ctxId) {
         for (LOLMPlayer lolmPlayer : allPlayers) {
-            if (lolmPlayer.GetCtxId().equals(ctxId))
+            if (lolmPlayer != null && lolmPlayer.GetCtxId().equals(ctxId))
                 return lolmPlayer;
         }
         return null;

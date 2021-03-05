@@ -20,8 +20,10 @@ public class LinkRoomProtocol implements PortocolBasc {
             if (room != null) {
                 Player p = PlayerManager.GetPlayer(ctx.id().toString());
                 room.PlayerAdd(p);
-            }
+            } else 
+                jres.put("resCode", 1);
         } catch (Exception e) {
+            Console.Err("Error LinkRoomProtocol");
         }
         Console.Log("TestProtocol");
         return jres;

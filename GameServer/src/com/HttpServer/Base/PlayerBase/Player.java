@@ -16,7 +16,10 @@ public class Player implements IPlayer {
     public GameRoom GetRoom() {
         return _room;
     }
-
+    public void RmRoom() {
+         _room.RmPlayer(this);
+         _room = null;
+    }
     @Override
     public void Write(String data) {
         WebSocketServerHandler.Write(data, _ctx);
