@@ -10,6 +10,7 @@ export default class HeroButton extends cc.Component {
     private Icon: cc.Sprite;
     private Id: number;
     private Tag = [];
+    private isChoose = false;
     public Init(data: HeroData) {
         this.Id = data.Num;
         this.Tag = data.Tag.split(",");
@@ -26,7 +27,15 @@ export default class HeroButton extends cc.Component {
     public OnClick() {
         UI_BP.Inst.SetChoosebox(this.node, this.Id);
     }
+    public Choose() {
+        if (this.isChoose)
+            return;
+        this.isChoose = true;
+        this.node.active = false;
+    }
     public Filter(tag) {
+        if (this.isChoose)
+            return;
         if (tag == -1)
             this.node.active = true;
         else {

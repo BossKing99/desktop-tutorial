@@ -125,18 +125,24 @@ export default class UI_BP extends IUIView {
                     break;
                 case "BAN":
                     for (let i = 0; i < UI_BP.Inst.SyncData.BanList.length; i++) {
-                        if (UI_BP.Inst.SyncData.BanList[i] != -1)
+                        if (UI_BP.Inst.SyncData.BanList[i] != -1) {
+                            UI_BP.Inst.IconManager.isChoose(UI_BP.Inst.SyncData.BanList[i]);
                             UI_BP.Inst.AllBanIcon[i].SetChoose(UI_BP.Inst.SyncData.BanList[i]);
+                        }
                     }
                     if (UI_BP.Inst.SyncData.banFlage < UI_BP.Inst.AllBanIcon.length)
                         UI_BP.Inst.AllBanIcon[UI_BP.Inst.SyncData.banFlage].SetReady();
                     break;
                 case "PICK":
-                    for (let i = 0; i < UI_BP.Inst.SyncData.BanList.length; i++)
+                    for (let i = 0; i < UI_BP.Inst.SyncData.BanList.length; i++) {
+                        UI_BP.Inst.IconManager.isChoose(UI_BP.Inst.SyncData.BanList[i]);
                         UI_BP.Inst.AllBanIcon[i].SetChoose(UI_BP.Inst.SyncData.BanList[i]);
+                    }
                     for (let i = 0; i < UI_BP.Inst.SyncData.PickList.length; i++) {
-                        if (UI_BP.Inst.SyncData.PickList[i] != -1)
+                        if (UI_BP.Inst.SyncData.PickList[i] != -1) {
+                            UI_BP.Inst.IconManager.isChoose(UI_BP.Inst.SyncData.PickList[i]);
                             UI_BP.Inst.AllPickIcon[i].SetChoose(UI_BP.Inst.SyncData.PickList[i]);
+                        }
                     }
                     if (UI_BP.Inst.SyncData.pickFlage < UI_BP.Inst.AllPickIcon.length)
                         UI_BP.Inst.AllPickIcon[UI_BP.Inst.SyncData.pickFlage].SetReady();

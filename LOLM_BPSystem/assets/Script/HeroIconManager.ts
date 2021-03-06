@@ -21,6 +21,11 @@ export default class HeroIconManager extends cc.Component {
         }
         this.HeroButtonPraent.setContentSize(800, this.AllIcon.length / 10 * 80);
     }
+    public isChoose(n) {
+
+        console.log(n);
+        this.AllIcon[n].Choose();
+    }
     public OnClick_filter(event, n) {
         for (let i = 0; i < this.AllIcon.length; i++)
             this.AllIcon[i].Filter(n);
