@@ -1,4 +1,6 @@
 import { HeroData } from "../HeroIconManager";
+import Manager from "../public/Manager";
+import UI_BP from "./View/UI_BP";
 
 const { ccclass, property } = cc._decorator;
 
@@ -22,7 +24,7 @@ export default class HeroButton extends cc.Component {
         })
     }
     public OnClick() {
-
+        UI_BP.Inst.SetChoosebox(this.node, this.Id);
     }
     public Filter(tag) {
         if (tag == -1)

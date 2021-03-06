@@ -18,7 +18,7 @@ export default class BanPickIcon extends cc.Component {
     public SetReady() {
         this.ReadyNode.active = true;
     }
-    public SetBan(num: number) {
+    public SetChoose(num: number) {
         if (this.num == num)
             return;
         this.num = num;
@@ -32,5 +32,16 @@ export default class BanPickIcon extends cc.Component {
             this.Icon.spriteFrame = spriteFrame;
         })
         this.ReadyNode.active = false;
+    }
+    public SetPreView(num: number) {
+        cc.loader.loadRes("HeroIcon/" + num, cc.SpriteFrame, (e: Error, spriteFrame: cc.SpriteFrame) => {
+            // 加載 失敗
+            if (e) {
+                console.log("HeroButton loader Error e = " + e);
+                return
+            }
+            // 加載 成功
+            this.Icon.spriteFrame = spriteFrame;
+        })
     }
 }

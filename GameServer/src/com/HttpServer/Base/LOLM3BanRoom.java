@@ -56,11 +56,6 @@ public class LOLM3BanRoom extends GameRoom {
         } catch (Exception e) {
             Console.Err("LOLM3BanRoom Create Error");
         }
-        task = new TimerTask() {
-            public void run() {
-                nextProcess(0);
-            }
-        };
     }
 
     private void initIntArray(int[] arr) {
@@ -136,10 +131,18 @@ public class LOLM3BanRoom extends GameRoom {
         case WAIT:
             break;
         case BAN:
+            task = new TimerTask() {
+                public void run() {
+                    nextProcess(0);
+                }
+            };
+            timer = new Timer();
             timer.schedule(task, chooseTime);
             try {
                 RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
                 RoomJData.put("banFlage", banFlage);
+                nowCtrl = 0;
+                RoomJData.put("nowCtrl", nowCtrl);
             } catch (Exception e) {
             }
             break;
@@ -184,7 +187,7 @@ public class LOLM3BanRoom extends GameRoom {
             if (_status == RoomStatus.BAN) {
                 banData[banFlage] = choose;
                 banFlage++;
-                if (banFlage == 6) {
+                if (banFlage == banData.length) {
                     SetStatus(RoomStatus.PICK);
                     nowCtrl = 0;
                 } else
@@ -192,25 +195,29 @@ public class LOLM3BanRoom extends GameRoom {
                 RoomJData.put("nowCtrl", nowCtrl);
                 RoomJData.put("BanList", banData);
                 RoomJData.put("banFlage", banFlage);
-                broadcast(RoomJData.toString(), ProtocolName.SYNC);
             } else if (_status == RoomStatus.PICK) {
                 pickData[pickFlage] = choose;
                 pickFlage++;
                 if (pickFlage == 10)
                     SetStatus(RoomStatus.END);
                 else
-                    nowCtrl = pickProcess[pickFlage++];
+                    nowCtrl = pickProcess[pickFlage];
                 RoomJData.put("nowCtrl", nowCtrl);
                 RoomJData.put("PickList", pickData);
                 RoomJData.put("pickFlage", pickFlage);
-                broadcast(RoomJData.toString(), ProtocolName.SYNC);
             }
 
             if (_status != RoomStatus.END) {
+                task = new TimerTask() {
+                    public void run() {
+                        nextProcess(0);
+                    }
+                };
+                timer = new Timer();
                 timer.schedule(task, chooseTime);
                 RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
             }
-
+            broadcast(RoomJData.toString(), ProtocolName.SYNC);
         } catch (Exception e) {
             Console.Err("LOLM3BanRoom NextProcess Error e = " + e);
         }

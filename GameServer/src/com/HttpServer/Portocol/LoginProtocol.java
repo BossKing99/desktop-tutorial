@@ -14,6 +14,7 @@ public class LoginProtocol implements PortocolBasc {
         try {
             PlayerManager.AddPlayer(ctx);
             jres.put("resCode", 0);
+            jres.put("time", System.currentTimeMillis());
         } catch (Exception e) {
             Console.Err("LoginProtocol error e = \n" + e);
         }

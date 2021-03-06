@@ -15,9 +15,9 @@ export default class Network {
     private _mSocket: WebSocket;
     private _isConnent: boolean = false;
     private _callBack: Function[] = [];
-    creatWebSocket() {
+    creatWebSocket(ip: string) {
         //新建Socket，並請求連線
-        this._mSocket = new WebSocket('ws://127.0.0.1:8083/ws');
+        this._mSocket = new WebSocket('ws://' + ip + ':8083/ws');
         //設定request觸發處理程序(callback)
         //["onopen","onmessage","onerror","onclose"]
         this._mSocket.onopen = async () => {

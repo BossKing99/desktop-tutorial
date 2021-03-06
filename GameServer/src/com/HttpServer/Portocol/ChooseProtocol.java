@@ -19,7 +19,6 @@ public class ChooseProtocol implements PortocolBasc {
             }
         } catch (Exception e) {
         }
-        Console.Log("TestProtocol");
         return jres;
     }
 }

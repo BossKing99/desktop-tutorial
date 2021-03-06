@@ -17,7 +17,7 @@ public class CheckPassword {
         Date date = new Date(System.currentTimeMillis());
         float y = Float.parseFloat(new SimpleDateFormat("yyyy").format(date));
         float md = Float.parseFloat(new SimpleDateFormat("MMdd").format(date));
-        todayPass = (md / y) + "";
+        todayPass = (md / y) + "0000000000";
         todayPass = todayPass.substring(6, 10);
         Console.Log(todayPass);
         return pass.equals(todayPass);

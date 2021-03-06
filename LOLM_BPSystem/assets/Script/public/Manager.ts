@@ -1,10 +1,13 @@
 import Network from "../Network";
 import IUIView from "../UI/View/IUIView";
+import GetTime from "./GetTime";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class Manager extends cc.Component {
+    @property(String)
+    private IP: string = "";
     public static Inst: Manager = null;
     private _network: Network = null;
     private originURL: string = "";
@@ -27,7 +30,7 @@ export default class Manager extends cc.Component {
             window.location.href = newURL.toString();
         }
         else {
-            this._network.creatWebSocket();
+            this._network.creatWebSocket(this.IP);
             while (true) {
                 if (this.GetNetwork().isConnent()) {
                     Manager.Inst.GetNetwork().Send(new LoginData());
@@ -58,6 +61,7 @@ export default class Manager extends cc.Component {
     private GetLoginCallBack(data: string) {
         let jdata = JSON.parse(data);
         if (jdata.resCode === 0) {
+            GetTime.Init(jdata.time)
             let url = new URL(window.location.href);
             let page: number = Number.parseInt(url.searchParams.get("page"));
             Manager.Inst.UIView[page].Open();
