@@ -7,11 +7,12 @@ public abstract class PlayerDecorator implements IPlayer {
     public PlayerDecorator(Player p) {
         _player = p;
     }
-    
+
     @Override
     public void Write(String data) {
         _player.Write(data);
     }
+
     @Override
     public String GetCtxId() {
         return _player.GetCtxId();

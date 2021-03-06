@@ -1,13 +1,17 @@
+import { HeroData } from "../HeroIconManager";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class HeroButton extends cc.Component {
-    private Id: number;
     @property(cc.Sprite)
     private Icon: cc.Sprite;
-    public Init(id: number) {
-        this.Id = id;
-        cc.loader.loadRes("HeroIcon/"+this.Id, cc.SpriteFrame, (e: Error, spriteFrame: cc.SpriteFrame) => {
+    private Id: number;
+    private Tag = [];
+    public Init(data: HeroData) {
+        this.Id = data.Num;
+        this.Tag = data.Tag.split(",");
+        cc.loader.loadRes("HeroIcon/" + this.Id, cc.SpriteFrame, (e: Error, spriteFrame: cc.SpriteFrame) => {
             // 加載 失敗
             if (e) {
                 console.log("HeroButton loader Error e = " + e);
@@ -20,9 +24,17 @@ export default class HeroButton extends cc.Component {
     public OnClick() {
 
     }
-    start() {
-
+    public Filter(tag) {
+        if (tag == -1)
+            this.node.active = true;
+        else {
+            for (let i = 0; i < this.Tag.length; i++) {
+                if (this.Tag[i] == tag) {
+                    this.node.active = true;
+                    return;
+                }
+            }
+            this.node.active = false;
+        }
     }
-
-    // update (dt) {}
 }

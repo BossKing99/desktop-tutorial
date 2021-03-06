@@ -37,7 +37,7 @@ public class GameRoomManager {
             Key[1] = getKey(System.currentTimeMillis() + "").substring(5, 12);
         } catch (Exception e) {
         }
-        if (Key[0].equals("")) {
+        if (!Key[0].equals("")) {
             // 這邊可以換成可擴充結構
             GameRoom newGameRoom = new LOLM3BanRoom(jdata, Key);
             synchronized (AllGame) {

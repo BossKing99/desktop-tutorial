@@ -16,7 +16,6 @@ public abstract class GameRoom {
         _key = key[0];
         _pass = key[1];
         _createTime = System.currentTimeMillis();
-        RoomInfo = jdata;
     }
 
     public abstract void Ready(JSONObject jdata);
@@ -24,7 +23,9 @@ public abstract class GameRoom {
     public JSONObject GetStatus() {
         return RoomJData;
     }
-
+    public JSONObject GetRoomInfo() {
+        return RoomInfo;
+    }
     public abstract void Choose(JSONObject jdata);
 
     public boolean isExpired() {
@@ -33,7 +34,7 @@ public abstract class GameRoom {
 
     protected abstract void SetStatus(RoomStatus s);
 
-    public abstract void PlayerAdd(Player p);
+    public abstract void PlayerAdd(Player p, int team);
     public abstract void RmPlayer(Player p);
 
     public abstract void Preview(JSONObject jdata, String ctxId);

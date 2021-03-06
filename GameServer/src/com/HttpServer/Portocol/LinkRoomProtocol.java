@@ -19,13 +19,19 @@ public class LinkRoomProtocol implements PortocolBasc {
             GameRoom room = GameRoomManager.Inst.GetRoom(key);
             if (room != null) {
                 Player p = PlayerManager.GetPlayer(ctx.id().toString());
-                room.PlayerAdd(p);
-            } else 
+                if (p == null) {
+                    Console.Err("LinkRoomProtocol Player is null ");
+                    return jres;
+                }
+                room.PlayerAdd(p, jdata.getInt("team"));
+                jres.put("resCode", 0);
+                Console.Log(room.GetRoomInfo().toString());
+                jres.put("info", room.GetRoomInfo());
+            } else
                 jres.put("resCode", 1);
         } catch (Exception e) {
-            Console.Err("Error LinkRoomProtocol");
+            Console.Err("Error LinkRoomProtocol e =" + e);
         }
-        Console.Log("TestProtocol");
         return jres;
     }
 }
