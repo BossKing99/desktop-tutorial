@@ -13,13 +13,19 @@ public class Player implements IPlayer {
         _ctx = ctx;
     }
 
+    public void SetRoom(GameRoom r) {
+        _room = r;
+    }
+
     public GameRoom GetRoom() {
         return _room;
     }
+
     public void RmRoom() {
-         _room.RmPlayer(this);
-         _room = null;
+        _room.RmPlayer(this);
+        _room = null;
     }
+
     @Override
     public void Write(String data) {
         WebSocketServerHandler.Write(data, _ctx);

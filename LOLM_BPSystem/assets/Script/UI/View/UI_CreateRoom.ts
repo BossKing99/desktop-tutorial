@@ -1,4 +1,4 @@
-import Manager from "../../public/Manager";
+import Manager, { ProtocolName } from "../../public/Manager";
 import IUIView from "./IUIView";
 
 const { ccclass, property } = cc._decorator;
@@ -17,48 +17,52 @@ export default class UI_CreateRoom extends IUIView {
     banCount_box: cc.EditBox = null;
     @property(cc.Toggle)
     isRandomTeam: cc.Toggle = null;
-    private blueTeam: string = "";
-    private redTeam: string = "";
+    private isClick: boolean = false;
+    public static Inst: UI_CreateRoom = null;
     public Open() {
         super.Open();
+        UI_CreateRoom.Inst = this;
         let url = new URL(window.location.href);
         if (url.searchParams.get("team1") != null)
             this.Team1Name_box.string = url.searchParams.get("team1");
         if (url.searchParams.get("team2") != null)
             this.Team2Name_box.string = url.searchParams.get("team2");
-        Manager.Init.GetNetwork().AddCallBack(2, this.GetCallBack);
+        Manager.Inst.GetNetwork().AddCallBack(ProtocolName.CREATE_ROOM, this.GetCallBack);
     }
     public Close() {
         super.Close();
     }
     public OnClick() {
-        let data: CreateRoomData = new CreateRoomData();
-        if (this.isRandomTeam.isChecked && Math.random() * 2 < 1) {
-            data.blueTeamName = this.Team2Name_box.string;
-            data.redTeamName = this.Team1Name_box.string;
+        if (!this.isClick) {
+            let data: CreateRoomData = new CreateRoomData();
+            if (this.isRandomTeam.isChecked && Math.random() * 2 < 1) {
+                data.blueTeamName = this.Team2Name_box.string;
+                data.redTeamName = this.Team1Name_box.string;
+            }
+            else {
+                data.blueTeamName = this.Team1Name_box.string;
+                data.redTeamName = this.Team2Name_box.string;
+            }
+            data.gameName = this.gameName_box.string;
+            data.banCount = Number.parseInt(this.banCount_box.string);
+            data.pass = this.pass_box.string;
+            if (data.blueTeamName === "" || data.redTeamName === "" || data.gameName === "" || data.pass === "")
+                window.alert("輸入框不可為空");
+            else if (data.banCount < 0 || data.banCount > 5)
+                window.alert("Ban數需介於0~5之間");
+            else if (data.redTeamName === data.blueTeamName)
+                window.alert("隊名不可相同");
+            else {
+                this.isClick = true;
+                Manager.Inst.GetNetwork().Send(data);
+            }
         }
-        else {
-            data.blueTeamName = this.Team1Name_box.string;
-            data.redTeamName = this.Team2Name_box.string;
-        }
-        this.blueTeam = data.blueTeamName;
-        this.redTeam = data.redTeamName;
-        data.gameName = this.gameName_box.string;
-        data.banCount = Number.parseInt(this.banCount_box.string);
-        data.pass = this.pass_box.string;
-        if (data.blueTeamName === "" || data.redTeamName === "" || data.gameName === "" || data.pass === "")
-            window.alert("輸入框不可為空");
-        else if (data.banCount < 0 || data.banCount > 5)
-            window.alert("Ban數需介於0~5之間");
-        else if (data.redTeamName === data.blueTeamName)
-            window.alert("隊名不可相同");
-        else
-            Manager.Init.GetNetwork().Send(data);
     }
     private GetCallBack(data: string) {
-        let jdata = JSON.parse(data);
+        UI_CreateRoom.Inst.isClick = false;
+        let jdata: ECreateRoomData = JSON.parse(data);
         if (jdata.resCode === 0) {
-            let url = new URL(Manager.Init.GetOriginURL());
+            let url = new URL(Manager.Inst.GetOriginURL());
             url.searchParams.set("page", "1");
             url.searchParams.set("key", jdata.key[0]);
             url.searchParams.set("pass", jdata.key[1]);
@@ -71,7 +75,7 @@ export default class UI_CreateRoom extends IUIView {
     }
 }
 export class CreateRoomData {
-    public pt: number = 2;
+    public pt: number = ProtocolName.CREATE_ROOM;
     public blueTeamName: string = "";
     public redTeamName: string = "";
     public gameName: string = "";

@@ -14,14 +14,14 @@ export default class UI_RoomLink extends IUIView {
         this.TeamLable[0].string = "点击前往" + url.searchParams.get("blue") + "的BP页面";
         this.TeamLable[1].string = "点击前往" + url.searchParams.get("red") + "的BP页面";
         for (let i = 0; i < 2; i++) {
-            let TeamUrl = new URL(Manager.Init.GetOriginURL());
+            let TeamUrl = new URL(Manager.Inst.GetOriginURL());
             TeamUrl.searchParams.set("page", "2");
             TeamUrl.searchParams.set("team", i.toString());
             TeamUrl.searchParams.set("key", url.searchParams.get("key"));
             TeamUrl.searchParams.set("pass", url.searchParams.get("pass"));
             this.Urls[i] = TeamUrl.toString();
         }
-        let AudienceUrl = new URL(Manager.Init.GetOriginURL());
+        let AudienceUrl = new URL(Manager.Inst.GetOriginURL());
         AudienceUrl.searchParams.set("page", "2");
         AudienceUrl.searchParams.set("key", url.searchParams.get("key"));
         this.Urls[2] = AudienceUrl.toString();

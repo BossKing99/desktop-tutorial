@@ -20,7 +20,7 @@ export default class Network {
         this._mSocket = new WebSocket('ws://127.0.0.1:8083/ws');
         //設定request觸發處理程序(callback)
         //["onopen","onmessage","onerror","onclose"]
-        this._mSocket.onopen = () => {
+        this._mSocket.onopen = async () => {
             console.log("onopen");
             this._isConnent = true;
         }
@@ -40,6 +40,7 @@ export default class Network {
         }
     }
     public Send(data) {
+        console.log(data);
         if (this.isConnent())
             this._mSocket.send(JSON.stringify(data));
         else

@@ -13,6 +13,7 @@ public class LoginProtocol implements PortocolBasc {
         JSONObject jres = new JSONObject();
         try {
             PlayerManager.AddPlayer(ctx);
+            jres.put("resCode", 0);
         } catch (Exception e) {
             Console.Err("LoginProtocol error e = \n" + e);
         }
