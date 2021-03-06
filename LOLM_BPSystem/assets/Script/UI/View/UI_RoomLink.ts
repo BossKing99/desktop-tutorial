@@ -29,14 +29,15 @@ export default class UI_RoomLink extends IUIView {
     public Close() {
         super.Close();
     }
-    public OnClick_Goto(event,n) {
-        window.location.href = this.Urls[n];
+    public OnClick_Goto(event, n) {
+        window.open(this.Urls[n]);
     }
-    public OnClick_Copy(event,n) {
+    public OnClick_Copy(event, n) {
         const input = document.createElement('input');
         document.body.appendChild(input);
         input.setAttribute('value', this.Urls[n]);
         input.select();
         document.execCommand('copy')
+        window.alert("网址已复制");
     }
 }
