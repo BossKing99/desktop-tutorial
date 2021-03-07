@@ -28,7 +28,7 @@ export default class HeroButton extends cc.Component {
         UI_BP.Inst.SetChoosebox(this.node, this.Id);
     }
     public Choose() {
-        if (this.isChoose)
+        if (this.isChoose || this.Id == 0)
             return;
         this.isChoose = true;
         this.node.active = false;

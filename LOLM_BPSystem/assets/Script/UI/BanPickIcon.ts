@@ -31,7 +31,8 @@ export default class BanPickIcon extends cc.Component {
             // 加載 成功
             this.Icon.spriteFrame = spriteFrame;
         })
-        this.ReadyNode.active = false;
+        if (this.ReadyNode !== null)
+            this.ReadyNode.active = false;
     }
     public SetPreView(num: number) {
         cc.loader.loadRes("HeroIcon/" + num, cc.SpriteFrame, (e: Error, spriteFrame: cc.SpriteFrame) => {

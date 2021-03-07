@@ -22,7 +22,7 @@ export default class Manager extends cc.Component {
             this.UIView[i].Close();
         }
         let url = new URL(window.location.href);
-        this.originURL = url.origin;
+        this.originURL = url.origin + url.pathname;
         Manager.Inst.GetNetwork().AddCallBack(ProtocolName.LOGIN, this.GetLoginCallBack);
         if (url.searchParams.get("page") === null) {
             let newURL = new URL(this.originURL);
