@@ -48,8 +48,8 @@ export default class UI_CreateRoom extends IUIView {
             data.pass = this.pass_box.string;
             if (data.blueTeamName === "" || data.redTeamName === "" || data.gameName === "" || data.pass === "")
                 window.alert("輸入框不可為空");
-            else if (data.banCount < 0 || data.banCount > 5)
-                window.alert("Ban數需介於0~5之間");
+            else if (data.banCount < 1 || data.banCount > 5)
+                window.alert("Ban數需介於1~5之間");
             else if (data.redTeamName === data.blueTeamName)
                 window.alert("隊名不可相同");
             else {

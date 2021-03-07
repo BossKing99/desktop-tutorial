@@ -37,7 +37,7 @@ public class PackThread extends Thread {
                     else
                         doPacket(newPack);
                 } else
-                    Thread.sleep(1000);
+                    Thread.sleep(50);
             } catch (Exception e) {
                 Console.Err("PackManager error : " + StackTraceUtil.getStackTrace(e));
             }
