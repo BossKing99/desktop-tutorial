@@ -118,8 +118,10 @@ export default class UI_BP extends IUIView {
             switch (UI_BP.Inst.SyncData.Status) {
                 case "WAIT":
                     UI_BP.Inst.RoomInfoLable.string = "准备阶段";
-                    if (UI_BP.Inst.myTeam != -1)
+                    if (UI_BP.Inst.myTeam != -1){
                         UI_BP.Inst.ReadyLabel.string = jdata.Ready[UI_BP.Inst.myTeam] ? "准备完成" : "准备";
+                        UI_BP.Inst.ReadyButtonNode.interactable = !jdata.Ready[UI_BP.Inst.myTeam];
+                    }
                     for (let i = 0; i < 2; i++)
                         UI_BP.Inst.TeamBox[i].spriteFrame = UI_BP.Inst.TeamBoxSf[i];
                     break;
