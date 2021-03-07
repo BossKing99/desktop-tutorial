@@ -12,10 +12,12 @@ export default class UI_Output extends IUIView {
     private BanIcon: cc.Prefab[] = [];
     @property([cc.Layout])
     private BanParent: cc.Layout[] = [];
+    @property([cc.Label])
+    private Name: cc.Label[] = [];
     @property([BanPickIcon])
     private AllPickIcon: BanPickIcon[] = [];
+    //---------------------------------
     private AllBanIcon: BanPickIcon[] = [];
-
     private isInit: boolean = false;
     private sizeL: number[] = [0, 170, 85, 12, 5, 5];
     private sizeX: number[] = [0, 0, 100, 80, 35, 10];
@@ -36,6 +38,9 @@ export default class UI_Output extends IUIView {
     private GetLinkCallBack(data: string) {
         let jdata: ELinkRoomData = JSON.parse(data);
         if (jdata.resCode === 0) {
+            UI_Output.Inst.Name[0].string = jdata.info.blue;
+            UI_Output.Inst.Name[1].string = jdata.info.red;
+            UI_Output.Inst.Name[2].string = jdata.info.game;
             UI_Output.Inst.BanParent[0].spacingX = UI_Output.Inst.sizeX[jdata.info.banCount];
             UI_Output.Inst.BanParent[0].paddingLeft = UI_Output.Inst.sizeL[jdata.info.banCount];
             UI_Output.Inst.BanParent[1].spacingX = UI_Output.Inst.sizeX[jdata.info.banCount];
