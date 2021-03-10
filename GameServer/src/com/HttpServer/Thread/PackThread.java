@@ -76,7 +76,7 @@ public class PackThread extends Thread {
         case ProtocolName.CHOOSE:
             return new ChooseProtocol();
         case ProtocolName.PREVIEW:
-            return new PrevienProtocol();
+            return new PreviewProtocol();
         case ProtocolName.GET_LOLMDATA:
             return new GetLOLMDataProtocol();
         case ProtocolName.READY:

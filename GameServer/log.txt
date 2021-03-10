@@ -1,0 +1,746 @@
+[2021-03-10 08:05:15] : 8941
+[2021-03-10 08:05:48] : [Server] - /194.5.52.40:45448 join
+[2021-03-10 08:05:52] : [Server] - /194.5.52.40:45452 join
+[2021-03-10 08:06:11] : [Server] - /194.5.52.40:45458 join
+[2021-03-10 08:06:13] : [Server] - /194.5.52.40:45460 join
+[2021-03-10 08:06:37] : [Server] - /194.5.52.40:45486 join
+[2021-03-10 08:09:00] : 8941
+[2021-03-10 08:09:01] : [Server] - /194.5.52.40:45512 join
+[2021-03-10 08:09:40] : [Server] - /194.5.52.40:45516 join
+[2021-03-10 08:09:40] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 08:09:40] : {"red":"F","game":"T","blue":"T","banCount":2}
+[2021-03-10 08:09:46] : aef6a35
+[2021-03-10 08:09:46] : aef6a35
+[2021-03-10 08:09:46] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 08:09:51] : RmPlayer start count = 1
+[2021-03-10 08:09:51] : RmPlayer end count = 0
+[2021-03-10 08:10:21] : [Server] - /194.5.52.40:45526 join
+[2021-03-10 08:10:23] : [Server] - /194.5.52.40:45528 join
+[2021-03-10 08:28:40] : [Server] - /162.142.125.39:53922 join
+[2021-03-10 08:28:41] : [Server] - /162.142.125.39:34204 join
+[2021-03-10 08:28:42] : [Server] - /162.142.125.39:46466 join
+[2021-03-10 08:28:43] : [Server] - /162.142.125.39:60776 join
+[2021-03-10 11:57:07] : [Server] - /111.162.203.241:2102 join
+[2021-03-10 11:57:34] : [Server] - /111.162.203.241:2287 join
+[2021-03-10 11:57:40] : [Server] - /111.162.203.241:2321 join
+[2021-03-10 11:59:03] : [Server] - /111.162.203.241:2611 join
+[2021-03-10 12:02:41] : 8941
+[2021-03-10 12:03:02] : 8941
+[2021-03-10 12:03:03] : [Server] - /111.162.203.241:1691 join
+[2021-03-10 12:03:49] : [Server] - /116.234.176.228:38136 join
+[2021-03-10 12:03:51] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:03:51] : {"red":"xr","game":"ESR 测试1","blue":"elg","banCount":2}
+[2021-03-10 12:03:52] : 41d8a8d
+[2021-03-10 12:03:52] : 41d8a8d
+[2021-03-10 12:03:52] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,true],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:03:58] : RmPlayer start count = 1
+[2021-03-10 12:03:58] : RmPlayer end count = 0
+[2021-03-10 12:04:08] : 8941
+[2021-03-10 12:04:08] : [Server] - /111.162.203.241:1816 join
+[2021-03-10 12:04:31] : [Server] - /223.104.5.71:15235 join
+[2021-03-10 12:04:32] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,true],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:04:32] : {"red":"xr","game":"ESR 测试1","blue":"elg","banCount":2}
+[2021-03-10 12:04:38] : RmPlayer start count = 1
+[2021-03-10 12:04:38] : RmPlayer end count = 0
+[2021-03-10 12:04:39] : [Server] - /116.237.149.237:64279 join
+[2021-03-10 12:04:47] : [Server] - /140.240.50.155:11634 join
+[2021-03-10 12:04:51] : [Server] - /140.240.50.155:11694 join
+[2021-03-10 12:05:04] : 8941
+[2021-03-10 12:05:05] : [Server] - /116.237.149.237:64310 join
+[2021-03-10 12:05:27] : [Server] - /140.240.50.155:12191 join
+[2021-03-10 12:05:36] : [Server] - /140.240.50.155:12202 join
+[2021-03-10 12:05:40] : [Server] - /140.240.50.155:12214 join
+[2021-03-10 12:05:53] : [Server] - /140.240.50.155:11021 join
+[2021-03-10 12:06:20] : 8941
+[2021-03-10 12:06:20] : [Server] - /116.237.149.237:64417 join
+[2021-03-10 12:06:21] : [Server] - /111.162.203.241:2238 join
+[2021-03-10 12:06:31] : [Server] - /61.183.129.62:2062 join
+[2021-03-10 12:06:31] : [Server] - /58.33.165.234:59489 join
+[2021-03-10 12:06:32] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:06:32] : {"red":"agm","game":"ESR 测试1","blue":"omg","banCount":2}
+[2021-03-10 12:06:32] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:06:32] : {"red":" 打不过就跑  ","game":"ESR 测试1","blue":" KT","banCount":2}
+[2021-03-10 12:06:33] : 25fde44
+[2021-03-10 12:06:33] : 25fde44
+[2021-03-10 12:06:33] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:06:35] : 8941
+[2021-03-10 12:06:36] : 6cf7f3b
+[2021-03-10 12:06:36] : 6cf7f3b
+[2021-03-10 12:06:36] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,true],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:06:37] : [Server] - /140.240.50.155:12341 join
+[2021-03-10 12:06:49] : [Server] - /118.113.15.40:20698 join
+[2021-03-10 12:06:50] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:06:50] : {"red":"agm","game":"ESR 测试1","blue":"omg","banCount":2}
+[2021-03-10 12:07:04] : 25fde44
+[2021-03-10 12:07:04] : 25fde44
+[2021-03-10 12:07:04] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378054383,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:07:15] : [Server] - /140.240.50.155:12400 join
+[2021-03-10 12:07:28] : [Server] - /140.240.50.155:12422 join
+[2021-03-10 12:07:28] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:07:28] : {"red":"SMG","game":"ob测试一","blue":"Tianba","banCount":2}
+[2021-03-10 12:07:34] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378084311,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[0,-1,-1,-1]}"}
+[2021-03-10 12:07:35] : 8941
+[2021-03-10 12:07:38] : [Server] - /101.89.239.238:59821 join
+[2021-03-10 12:07:41] : RmPlayer start count = 1
+[2021-03-10 12:07:41] : RmPlayer end count = 0
+[2021-03-10 12:07:42] : 8941
+[2021-03-10 12:07:42] : 8941
+[2021-03-10 12:07:42] : [Server] - /140.240.50.155:12462 join
+[2021-03-10 12:07:43] : [Server] - /116.237.149.237:64503 join
+[2021-03-10 12:08:01] : [Server] - /116.237.149.237:64528 join
+[2021-03-10 12:08:04] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378114312,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[0,0,-1,-1]}"}
+[2021-03-10 12:08:21] : 8941
+[2021-03-10 12:08:22] : {"pt":6,"data":"{\"preview\":53,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:08:22] : [Server] - /116.237.149.237:64548 join
+[2021-03-10 12:08:28] : [Server] - /113.81.14.214:2370 join
+[2021-03-10 12:08:28] : [Server] - /140.240.50.155:12879 join
+[2021-03-10 12:08:29] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:08:29] : {"red":"太子殿","game":"lol","blue":"CFU","banCount":2}
+[2021-03-10 12:08:29] : [Server] - /180.161.70.54:65107 join
+[2021-03-10 12:08:29] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,true],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:08:29] : {"red":" 打不过就跑  ","game":"ESR 测试1","blue":" KT","banCount":2}
+[2021-03-10 12:08:29] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:08:29] : {"red":"太子殿","game":"lol","blue":"CFU","banCount":2}
+[2021-03-10 12:08:33] : 6cf7f3b
+[2021-03-10 12:08:33] : 6cf7f3b
+[2021-03-10 12:08:33] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378143373,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:08:34] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378144312,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[0,0,0,-1]}"}
+[2021-03-10 12:08:41] : {"pt":6,"data":"{\"preview\":0,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:08:43] : {"pt":6,"data":"{\"preview\":1,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:08:48] : 3fee196
+[2021-03-10 12:08:48] : 3fee196
+[2021-03-10 12:08:48] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:08:56] : {"pt":6,"data":"{\"preview\":55,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:08:56] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378166802,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[55,-1,-1,-1]}"}
+[2021-03-10 12:08:57] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:08:57] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:08:57] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:08:57] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:08:57] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:08:57] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:08:59] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:08:59] : {"pt":6,"data":"{\"preview\":11,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:09:00] : [Server] - /116.237.149.237:64597 join
+[2021-03-10 12:09:01] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:09:01] : {"red":"DC","game":"esr","blue":"9ez","banCount":2}
+[2021-03-10 12:09:03] : RmPlayer start count = 1
+[2021-03-10 12:09:03] : RmPlayer end count = 0
+[2021-03-10 12:09:04] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615378174312,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:09:05] : [Server] - /101.87.159.158:16966 join
+[2021-03-10 12:09:06] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:09:06] : {"red":"MQ","game":"ESR","blue":"IG","banCount":2}
+[2021-03-10 12:09:10] : [Server] - /116.237.149.237:64611 join
+[2021-03-10 12:09:11] : 0ed3c3d
+[2021-03-10 12:09:11] : 0ed3c3d
+[2021-03-10 12:09:11] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:09:12] : {"pt":6,"data":"{\"preview\":22,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:09:13] : {"pt":6,"data":"{\"preview\":23,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:09:13] : {"pt":6,"data":"{\"preview\":32,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:09:14] : {"pt":6,"data":"{\"preview\":33,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:09:15] : {"pt":6,"data":"{\"preview\":21,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:09:17] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:09:17] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:09:18] : {"pt":6,"data":"{\"preview\":53,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:09:18] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378188780,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[55,10,-1,-1]}"}
+[2021-03-10 12:09:18] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615378188981,\"nowCtrl\":1,\"PickList\":[53,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:09:19] : [Server] - /125.89.48.58:4193 join
+[2021-03-10 12:09:20] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:09:20] : {"red":"太子殿","game":"lol","blue":"CFU","banCount":2}
+[2021-03-10 12:09:23] : 3fee196
+[2021-03-10 12:09:23] : 3fee196
+[2021-03-10 12:09:23] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378193448,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:09:26] : 8941
+[2021-03-10 12:09:30] : [Server] - /180.161.70.54:50093 join
+[2021-03-10 12:09:30] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378193448,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:09:30] : {"red":"太子殿","game":"lol","blue":"CFU","banCount":2}
+[2021-03-10 12:09:31] : {"pt":6,"data":"{\"preview\":17,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:09:33] : 8941
+[2021-03-10 12:09:34] : [Server] - /116.237.149.237:64635 join
+[2021-03-10 12:09:35] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378205440,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[17,-1,-1,-1]}"}
+[2021-03-10 12:09:36] : {"pt":6,"data":"{\"preview\":17,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:09:39] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378209751,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[55,10,17,-1]}"}
+[2021-03-10 12:09:44] : RmPlayer start count = 2
+[2021-03-10 12:09:44] : RmPlayer end count = 1
+[2021-03-10 12:09:44] : {"pt":6,"data":"{\"preview\":32,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:09:46] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378216830,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[17,32,-1,-1]}"}
+[2021-03-10 12:09:47] : {"pt":6,"data":"{\"preview\":43,\"banNum\":3,\"team\":1}"}
+[2021-03-10 12:09:48] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615378218729,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:09:48] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615378218981,\"nowCtrl\":1,\"PickList\":[53,0,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:09:49] : RmPlayer start count = 1
+[2021-03-10 12:09:49] : RmPlayer end count = 0
+[2021-03-10 12:09:50] : [Server] - /118.113.15.40:19024 join
+[2021-03-10 12:09:50] : {"pt":6,"data":"{\"preview\":55,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:09:50] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615378218981,\"nowCtrl\":1,\"PickList\":[53,0,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:09:50] : {"red":"agm","game":"ESR 测试1","blue":"omg","banCount":2}
+[2021-03-10 12:09:51] : RmPlayer start count = 1
+[2021-03-10 12:09:51] : RmPlayer end count = 0
+[2021-03-10 12:09:51] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378221944,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[17,32,55,-1]}"}
+[2021-03-10 12:09:55] : {"pt":6,"data":"{\"preview\":23,\"banNum\":3,\"team\":1}"}
+[2021-03-10 12:09:57] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615378227109,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:09:58] : [Server] - /111.175.7.158:54803 join
+[2021-03-10 12:09:59] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:09:59] : {"red":"DC","game":"esr","blue":"9ez","banCount":2}
+[2021-03-10 12:09:59] : {"pt":6,"data":"{\"preview\":9,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:10:01] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615378231273,\"nowCtrl\":1,\"PickList\":[9,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:10:02] : {"pt":6,"data":"{\"preview\":53,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:10:03] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615378233582,\"nowCtrl\":1,\"PickList\":[53,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:10:13] : [Server] - /140.240.50.155:9502 join
+[2021-03-10 12:10:17] : {"pt":6,"data":"{\"preview\":54,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:10:18] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615378248277,\"nowCtrl\":1,\"PickList\":[9,54,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:10:18] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615378248982,\"nowCtrl\":0,\"PickList\":[53,0,0,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:10:22] : 44bd9cf
+[2021-03-10 12:10:22] : 44bd9cf
+[2021-03-10 12:10:22] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:10:24] : [Server] - /116.237.149.237:64698 join
+[2021-03-10 12:10:25] : {"pt":6,"data":"{\"preview\":58,\"team\":1,\"pickNum\":2}"}
+[2021-03-10 12:10:25] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615378255946,\"nowCtrl\":0,\"PickList\":[9,54,58,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:10:25] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:10:25] : {"red":"TF","game":"esr","blue":"DB6","banCount":2}
+[2021-03-10 12:10:28] : RmPlayer start count = 1
+[2021-03-10 12:10:28] : RmPlayer end count = 0
+[2021-03-10 12:10:30] : {"pt":6,"data":"{\"preview\":58,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:10:30] : {"pt":6,"data":"{\"preview\":50,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:10:31] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615378261864,\"nowCtrl\":1,\"PickList\":[53,50,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:10:33] : [Server] - /111.175.7.158:49540 join
+[2021-03-10 12:10:33] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:10:33] : {"red":"DC","game":"esr","blue":"9ez","banCount":2}
+[2021-03-10 12:10:38] : [Server] - /1.80.243.12:5746 join
+[2021-03-10 12:10:38] : 8941
+[2021-03-10 12:10:39] : [Server] - /140.240.50.155:9537 join
+[2021-03-10 12:10:39] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:10:39] : {"red":"V5","game":"ESR","blue":"TLM","banCount":2}
+[2021-03-10 12:10:39] : {"pt":6,"data":"{\"preview\":9,\"team\":1,\"pickNum\":2}"}
+[2021-03-10 12:10:48] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615378278116,\"nowCtrl\":0,\"PickList\":[53,50,9,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:10:48] : [Server] - /116.234.140.82:53089 join
+[2021-03-10 12:10:48] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615378278983,\"nowCtrl\":0,\"PickList\":[53,0,0,0,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:10:49] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:10:49] : {"red":"DC","game":"esr","blue":"9ez","banCount":2}
+[2021-03-10 12:10:49] : [Server] - /182.96.203.100:65459 join
+[2021-03-10 12:10:50] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:10:50] : {"red":"TF","game":"esr","blue":"DB6","banCount":2}
+[2021-03-10 12:10:52] : {"pt":6,"data":"{\"preview\":31,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:10:53] : 44bd9cf
+[2021-03-10 12:10:53] : 44bd9cf
+[2021-03-10 12:10:53] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378283291,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:10:55] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615378285947,\"nowCtrl\":0,\"PickList\":[9,54,58,0,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:10:59] : RmPlayer start count = 2
+[2021-03-10 12:10:59] : RmPlayer end count = 1
+[2021-03-10 12:11:03] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615378293522,\"nowCtrl\":0,\"PickList\":[53,50,9,31,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:11:13] : {"pt":6,"data":"{\"preview\":42,\"team\":0,\"pickNum\":4}"}
+[2021-03-10 12:11:14] : {"pt":6,"data":"{\"preview\":6,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:11:15] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378305109,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[6,-1,-1,-1]}"}
+[2021-03-10 12:11:17] : [Server] - /101.93.38.80:61716 join
+[2021-03-10 12:11:18] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615378308984,\"nowCtrl\":1,\"PickList\":[53,0,0,0,0,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:11:19] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:11:19] : {"red":"MQ","game":"ESR","blue":"IG","banCount":2}
+[2021-03-10 12:11:20] : [Server] - /219.145.40.189:15459 join
+[2021-03-10 12:11:20] : {"pt":6,"data":"{\"preview\":28,\"team\":0,\"pickNum\":4}"}
+[2021-03-10 12:11:20] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:11:20] : {"red":"Ab","game":"ob","blue":"LZB","banCount":2}
+[2021-03-10 12:11:25] : {"pt":6,"data":"{\"preview\":10,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:11:25] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615378315746,\"nowCtrl\":1,\"PickList\":[53,50,9,31,28,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:11:25] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615378315948,\"nowCtrl\":1,\"PickList\":[9,54,58,0,0,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:11:26] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378316549,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[6,10,-1,-1]}"}
+[2021-03-10 12:11:31] : {"pt":6,"data":"{\"preview\":15,\"team\":1,\"pickNum\":5}"}
+[2021-03-10 12:11:34] : {"pt":6,"data":"{\"preview\":37,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:11:35] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378325375,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[6,10,37,-1]}"}
+[2021-03-10 12:11:36] : [Server] - /114.83.50.110:60233 join
+[2021-03-10 12:11:37] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:11:37] : {"red":"TF","game":"esr","blue":"DB6","banCount":2}
+[2021-03-10 12:11:45] : b41c6e0
+[2021-03-10 12:11:45] : b41c6e0
+[2021-03-10 12:11:45] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:11:45] : RmPlayer start count = 4
+[2021-03-10 12:11:45] : RmPlayer end count = 3
+[2021-03-10 12:11:48] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615378338985,\"nowCtrl\":1,\"PickList\":[53,0,0,0,0,0,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:11:53] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615378343535,\"nowCtrl\":1,\"PickList\":[53,50,9,31,28,15,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:11:55] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615378345948,\"nowCtrl\":1,\"PickList\":[9,54,58,0,0,0,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:11:56] : [Server] - /116.237.149.237:64806 join
+[2021-03-10 12:12:00] : {"pt":6,"data":"{\"preview\":17,\"banNum\":3,\"team\":1}"}
+[2021-03-10 12:12:03] : {"pt":6,"data":"{\"preview\":25,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:12:05] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615378355119,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:12:05] : 604aad4
+[2021-03-10 12:12:05] : 604aad4
+[2021-03-10 12:12:05] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:12:09] : [Server] - /122.232.70.156:51103 join
+[2021-03-10 12:12:10] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:12:10] : {"red":"Ab","game":"ob","blue":"LZB","banCount":2}
+[2021-03-10 12:12:11] : {"pt":6,"data":"{\"preview\":42,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:12:14] : {"pt":6,"data":"{\"preview\":42,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:12:16] : {"pt":6,"data":"{\"preview\":42,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:12:16] : 8941
+[2021-03-10 12:12:16] : {"pt":6,"data":"{\"preview\":9,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:12:17] : [Server] - /116.237.149.237:64822 join
+[2021-03-10 12:12:18] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615378368986,\"nowCtrl\":0,\"PickList\":[53,0,0,0,0,0,0,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:12:19] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615378369222,\"nowCtrl\":0,\"PickList\":[53,50,9,31,28,15,42,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:12:20] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615378370727,\"nowCtrl\":1,\"PickList\":[9,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:12:21] : [Server] - /115.204.235.30:64502 join
+[2021-03-10 12:12:23] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:12:23] : {"red":"Ab","game":"ob","blue":"LZB","banCount":2}
+[2021-03-10 12:12:24] : {"pt":6,"data":"{\"preview\":10,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:12:25] : {"pt":6,"data":"{\"preview\":55,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:12:25] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615378375949,\"nowCtrl\":0,\"PickList\":[9,54,58,0,0,0,0,-1,-1,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:12:26] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615378376455,\"nowCtrl\":1,\"PickList\":[9,55,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:12:27] : {"pt":6,"data":"{\"preview\":53,\"team\":1,\"pickNum\":2}"}
+[2021-03-10 12:12:28] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615378378601,\"nowCtrl\":0,\"PickList\":[9,55,53,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:12:38] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615378388390,\"nowCtrl\":0,\"PickList\":[53,50,9,31,28,15,42,10,-1,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:12:44] : RmPlayer start count = 1
+[2021-03-10 12:12:44] : RmPlayer end count = 0
+[2021-03-10 12:12:46] : {"pt":6,"data":"{\"preview\":58,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:12:48] : {"pt":6,"data":"{\"preview\":12,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:12:48] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615378398987,\"nowCtrl\":0,\"PickList\":[53,0,0,0,0,0,0,0,-1,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:12:52] : 604aad4
+[2021-03-10 12:12:52] : 604aad4
+[2021-03-10 12:12:52] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378402168,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:12:52] : {"pt":6,"data":"{\"preview\":48,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:12:53] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615378403222,\"nowCtrl\":0,\"PickList\":[9,55,53,48,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:12:54] : {"pt":6,"data":"{\"preview\":50,\"team\":0,\"pickNum\":4}"}
+[2021-03-10 12:12:54] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615378404427,\"nowCtrl\":1,\"PickList\":[9,55,53,48,50,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:12:55] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615378405950,\"nowCtrl\":0,\"PickList\":[9,54,58,0,0,0,0,0,-1,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:13:00] : b41c6e0
+[2021-03-10 12:13:00] : b41c6e0
+[2021-03-10 12:13:00] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378410144,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:13:00] : {"pt":6,"data":"{\"preview\":17,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:13:01] : {"pt":6,"data":"{\"preview\":17,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:13:04] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378414911,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[17,-1,-1,-1]}"}
+[2021-03-10 12:13:05] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615378415614,\"nowCtrl\":1,\"PickList\":[53,50,9,31,28,15,42,10,12,-1],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:13:06] : {"pt":6,"data":"{\"preview\":6,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:13:06] : {"pt":6,"data":"{\"preview\":6,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:13:07] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378417121,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[6,-1,-1,-1]}"}
+[2021-03-10 12:13:07] : {"pt":6,"data":"{\"preview\":58,\"team\":1,\"pickNum\":9}"}
+[2021-03-10 12:13:08] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378418978,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[17,6,-1,-1]}"}
+[2021-03-10 12:13:09] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378415614,\"nowCtrl\":1,\"PickList\":[53,50,9,31,28,15,42,10,12,58],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:13:09] : RmPlayer start count = 3
+[2021-03-10 12:13:09] : RmPlayer end count = 2
+[2021-03-10 12:13:09] : RmPlayer start count = 2
+[2021-03-10 12:13:09] : RmPlayer end count = 1
+[2021-03-10 12:13:09] : [Server] - /140.240.50.155:10099 join
+[2021-03-10 12:13:10] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378415614,\"nowCtrl\":1,\"PickList\":[53,50,9,31,28,15,42,10,12,58],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:13:10] : {"red":"太子殿","game":"lol","blue":"CFU","banCount":2}
+[2021-03-10 12:13:10] : RmPlayer start count = 2
+[2021-03-10 12:13:10] : RmPlayer end count = 1
+[2021-03-10 12:13:11] : {"pt":6,"data":"{\"preview\":28,\"team\":1,\"pickNum\":5}"}
+[2021-03-10 12:13:12] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615378422693,\"nowCtrl\":1,\"PickList\":[9,55,53,48,50,28,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:13:13] : [Server] - /125.89.48.58:1984 join
+[2021-03-10 12:13:14] : [Server] - /180.161.70.54:49218 join
+[2021-03-10 12:13:14] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378415614,\"nowCtrl\":1,\"PickList\":[53,50,9,31,28,15,42,10,12,58],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:13:14] : {"red":"太子殿","game":"lol","blue":"CFU","banCount":2}
+[2021-03-10 12:13:14] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378415614,\"nowCtrl\":1,\"PickList\":[53,50,9,31,28,15,42,10,12,58],\"banFlage\":4,\"BanList\":[17,32,55,23]}"}
+[2021-03-10 12:13:14] : {"red":"太子殿","game":"lol","blue":"CFU","banCount":2}
+[2021-03-10 12:13:18] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615378428988,\"nowCtrl\":1,\"PickList\":[53,0,0,0,0,0,0,0,0,-1],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:13:25] : {"pt":6,"data":"{\"preview\":55,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:13:25] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615378435951,\"nowCtrl\":1,\"PickList\":[9,54,58,0,0,0,0,0,0,-1],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:13:26] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378436837,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[6,55,-1,-1]}"}
+[2021-03-10 12:13:29] : {"pt":6,"data":"{\"preview\":53,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:13:29] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378439847,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[17,6,53,-1]}"}
+[2021-03-10 12:13:34] : {"pt":6,"data":"{\"preview\":11,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:13:37] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615378447521,\"nowCtrl\":0,\"PickList\":[9,55,53,48,50,28,11,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:13:41] : RmPlayer start count = 3
+[2021-03-10 12:13:41] : RmPlayer end count = 2
+[2021-03-10 12:13:45] : {"pt":6,"data":"{\"preview\":42,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:13:47] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615378457750,\"nowCtrl\":0,\"PickList\":[9,55,53,48,50,28,11,42,-1,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:13:48] : {"pt":6,"data":"{\"preview\":58,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:13:48] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378428988,\"nowCtrl\":1,\"PickList\":[53,0,0,0,0,0,0,0,0,0],\"banFlage\":4,\"BanList\":[0,0,0,0]}"}
+[2021-03-10 12:13:49] : {"pt":6,"data":"{\"preview\":58,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:13:49] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615378459607,\"nowCtrl\":1,\"PickList\":[9,55,53,48,50,28,11,42,58,-1],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:13:51] : {"pt":6,"data":"{\"preview\":8,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:13:52] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378462876,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[6,55,8,-1]}"}
+[2021-03-10 12:13:55] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378435951,\"nowCtrl\":1,\"PickList\":[9,54,58,0,0,0,0,0,0,0],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:13:59] : 0ed3c3d
+[2021-03-10 12:13:59] : 0ed3c3d
+[2021-03-10 12:13:59] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378469596,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:13:59] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615378469847,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:14:05] : {"pt":6,"data":"{\"preview\":51,\"team\":1,\"pickNum\":9}"}
+[2021-03-10 12:14:06] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378459607,\"nowCtrl\":1,\"PickList\":[9,55,53,48,50,28,11,42,58,51],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:14:06] : RmPlayer start count = 2
+[2021-03-10 12:14:06] : RmPlayer end count = 1
+[2021-03-10 12:14:06] : [Server] - /111.175.7.158:2061 join
+[2021-03-10 12:14:07] : RmPlayer start count = 1
+[2021-03-10 12:14:07] : RmPlayer end count = 0
+[2021-03-10 12:14:09] : [Server] - /116.234.140.82:53135 join
+[2021-03-10 12:14:10] : {"pt":6,"data":"{\"preview\":10,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:14:10] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378459607,\"nowCtrl\":1,\"PickList\":[9,55,53,48,50,28,11,42,58,51],\"banFlage\":4,\"BanList\":[6,10,37,17]}"}
+[2021-03-10 12:14:10] : {"red":"DC","game":"esr","blue":"9ez","banCount":2}
+[2021-03-10 12:14:11] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615378481382,\"nowCtrl\":1,\"PickList\":[10,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:14:14] : {"pt":6,"data":"{\"preview\":9,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:14:15] : {"pt":6,"data":"{\"preview\":17,\"banNum\":3,\"team\":1}"}
+[2021-03-10 12:14:16] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615378486397,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:14:18] : {"pt":6,"data":"{\"preview\":53,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:14:19] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615378489356,\"nowCtrl\":1,\"PickList\":[10,9,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:14:20] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378490010,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[53,-1,-1,-1]}"}
+[2021-03-10 12:14:21] : {"pt":6,"data":"{\"preview\":54,\"team\":1,\"pickNum\":2}"}
+[2021-03-10 12:14:21] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615378491816,\"nowCtrl\":0,\"PickList\":[10,9,54,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:14:23] : {"pt":6,"data":"{\"preview\":53,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:14:23] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615378493924,\"nowCtrl\":1,\"PickList\":[53,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:14:30] : {"pt":6,"data":"{\"preview\":54,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:14:31] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615378501448,\"nowCtrl\":1,\"PickList\":[53,54,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:14:35] : {"pt":6,"data":"{\"preview\":9,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:14:35] : [Server] - /140.240.50.155:10294 join
+[2021-03-10 12:14:35] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615378501448,\"nowCtrl\":1,\"PickList\":[53,54,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:14:35] : {"red":"Ab","game":"ob","blue":"LZB","banCount":2}
+[2021-03-10 12:14:37] : {"pt":6,"data":"{\"preview\":15,\"team\":1,\"pickNum\":2}"}
+[2021-03-10 12:14:38] : {"pt":6,"data":"{\"preview\":11,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:14:39] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615378509578,\"nowCtrl\":0,\"PickList\":[10,9,54,11,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:14:39] : 2ff15db
+[2021-03-10 12:14:39] : 2ff15db
+[2021-03-10 12:14:39] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:14:43] : {"pt":6,"data":"{\"preview\":8,\"team\":0,\"pickNum\":4}"}
+[2021-03-10 12:14:44] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615378514243,\"nowCtrl\":1,\"PickList\":[10,9,54,11,8,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:14:48] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615378518257,\"nowCtrl\":0,\"PickList\":[53,54,15,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:14:48] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378518609,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[53,9,-1,-1]}"}
+[2021-03-10 12:14:51] : {"pt":6,"data":"{\"preview\":17,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:14:55] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615378525379,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[53,9,17,-1]}"}
+[2021-03-10 12:15:01] : {"pt":6,"data":"{\"preview\":20,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:15:05] : {"pt":6,"data":"{\"preview\":13,\"team\":1,\"pickNum\":5}"}
+[2021-03-10 12:15:05] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615378535965,\"nowCtrl\":0,\"PickList\":[53,54,15,20,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:15:10] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615378540652,\"nowCtrl\":1,\"PickList\":[10,9,54,11,8,13,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:15:20] : {"pt":6,"data":"{\"preview\":42,\"team\":0,\"pickNum\":4}"}
+[2021-03-10 12:15:21] : {"pt":6,"data":"{\"preview\":25,\"banNum\":3,\"team\":1}"}
+[2021-03-10 12:15:23] : {"pt":6,"data":"{\"preview\":25,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:15:24] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615378554088,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:15:29] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615378559303,\"nowCtrl\":1,\"PickList\":[53,54,15,20,42,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:15:30] : {"pt":6,"data":"{\"preview\":10,\"team\":1,\"pickNum\":5}"}
+[2021-03-10 12:15:35] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615378565036,\"nowCtrl\":0,\"PickList\":[10,9,54,11,8,13,25,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:15:41] : {"pt":6,"data":"{\"preview\":50,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:15:47] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615378577506,\"nowCtrl\":1,\"PickList\":[53,54,15,20,42,10,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:15:49] : {"pt":6,"data":"{\"preview\":48,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:15:51] : {"pt":6,"data":"{\"preview\":10,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:15:51] : {"pt":6,"data":"{\"preview\":50,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:15:51] : {"pt":6,"data":"{\"preview\":9,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:15:51] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615378581870,\"nowCtrl\":1,\"PickList\":[10,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:15:52] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615378582036,\"nowCtrl\":0,\"PickList\":[10,9,54,11,8,13,25,50,-1,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:15:53] : {"pt":6,"data":"{\"preview\":48,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:15:53] : {"pt":6,"data":"{\"preview\":38,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:15:54] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615378584278,\"nowCtrl\":1,\"PickList\":[10,9,54,11,8,13,25,50,48,-1],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:15:55] : {"pt":6,"data":"{\"preview\":50,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:15:56] : {"pt":6,"data":"{\"preview\":28,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:15:58] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615378588441,\"nowCtrl\":0,\"PickList\":[53,54,15,20,42,10,50,-1,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:16:09] : {"pt":6,"data":"{\"preview\":15,\"team\":1,\"pickNum\":9}"}
+[2021-03-10 12:16:12] : {"pt":6,"data":"{\"preview\":9,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:16:18] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378584278,\"nowCtrl\":1,\"PickList\":[10,9,54,11,8,13,25,50,48,15],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:16:19] : RmPlayer start count = 3
+[2021-03-10 12:16:19] : RmPlayer end count = 2
+[2021-03-10 12:16:19] : RmPlayer start count = 2
+[2021-03-10 12:16:19] : RmPlayer end count = 1
+[2021-03-10 12:16:19] : [Server] - /114.83.50.110:60840 join
+[2021-03-10 12:16:19] : RmPlayer start count = 1
+[2021-03-10 12:16:19] : RmPlayer end count = 0
+[2021-03-10 12:16:19] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378584278,\"nowCtrl\":1,\"PickList\":[10,9,54,11,8,13,25,50,48,15],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:16:19] : {"red":"TF","game":"esr","blue":"DB6","banCount":2}
+[2021-03-10 12:16:20] : [Server] - /116.237.149.237:65051 join
+[2021-03-10 12:16:20] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615378610159,\"nowCtrl\":1,\"PickList\":[10,28,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:16:21] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378584278,\"nowCtrl\":1,\"PickList\":[10,9,54,11,8,13,25,50,48,15],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:16:21] : {"red":"TF","game":"esr","blue":"DB6","banCount":2}
+[2021-03-10 12:16:26] : {"pt":6,"data":"{\"preview\":28,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:16:27] : {"pt":6,"data":"{\"preview\":28,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:16:28] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615378618442,\"nowCtrl\":0,\"PickList\":[53,54,15,20,42,10,50,0,-1,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:16:28] : {"pt":6,"data":"{\"preview\":28,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:16:29] : {"pt":6,"data":"{\"preview\":6,\"team\":1,\"pickNum\":2}"}
+[2021-03-10 12:16:43] : RmPlayer start count = 2
+[2021-03-10 12:16:43] : RmPlayer end count = 1
+[2021-03-10 12:16:43] : {"pt":6,"data":"{\"preview\":28,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:16:46] : [Server] - /182.96.203.100:49619 join
+[2021-03-10 12:16:47] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378584278,\"nowCtrl\":1,\"PickList\":[10,9,54,11,8,13,25,50,48,15],\"banFlage\":4,\"BanList\":[17,6,53,0]}"}
+[2021-03-10 12:16:47] : {"red":"TF","game":"esr","blue":"DB6","banCount":2}
+[2021-03-10 12:16:49] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615378639198,\"nowCtrl\":0,\"PickList\":[10,28,6,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:16:53] : {"pt":6,"data":"{\"preview\":55,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:16:55] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615378645015,\"nowCtrl\":1,\"PickList\":[53,54,15,20,42,10,50,0,28,-1],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:16:57] : {"pt":6,"data":"{\"preview\":9,\"team\":1,\"pickNum\":9}"}
+[2021-03-10 12:17:08] : {"pt":6,"data":"{\"preview\":45,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:17:12] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615378662216,\"nowCtrl\":0,\"PickList\":[10,28,6,45,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:17:12] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378645015,\"nowCtrl\":1,\"PickList\":[53,54,15,20,42,10,50,0,28,9],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:17:12] : RmPlayer start count = 4
+[2021-03-10 12:17:12] : RmPlayer end count = 3
+[2021-03-10 12:17:12] : RmPlayer start count = 3
+[2021-03-10 12:17:12] : RmPlayer end count = 2
+[2021-03-10 12:17:12] : RmPlayer start count = 2
+[2021-03-10 12:17:12] : RmPlayer end count = 1
+[2021-03-10 12:17:12] : [Server] - /122.232.70.156:51462 join
+[2021-03-10 12:17:13] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378645015,\"nowCtrl\":1,\"PickList\":[53,54,15,20,42,10,50,0,28,9],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:17:13] : {"red":"Ab","game":"ob","blue":"LZB","banCount":2}
+[2021-03-10 12:17:13] : RmPlayer start count = 2
+[2021-03-10 12:17:13] : RmPlayer end count = 1
+[2021-03-10 12:17:15] : [Server] - /140.240.50.155:10496 join
+[2021-03-10 12:17:15] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378645015,\"nowCtrl\":1,\"PickList\":[53,54,15,20,42,10,50,0,28,9],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:17:15] : {"red":"Ab","game":"ob","blue":"LZB","banCount":2}
+[2021-03-10 12:17:15] : [Server] - /115.204.235.30:64699 join
+[2021-03-10 12:17:17] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378645015,\"nowCtrl\":1,\"PickList\":[53,54,15,20,42,10,50,0,28,9],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:17:17] : {"red":"Ab","game":"ob","blue":"LZB","banCount":2}
+[2021-03-10 12:17:17] : [Server] - /219.145.40.189:15835 join
+[2021-03-10 12:17:19] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378645015,\"nowCtrl\":1,\"PickList\":[53,54,15,20,42,10,50,0,28,9],\"banFlage\":4,\"BanList\":[6,55,8,17]}"}
+[2021-03-10 12:17:19] : {"red":"Ab","game":"ob","blue":"LZB","banCount":2}
+[2021-03-10 12:17:24] : {"pt":6,"data":"{\"preview\":15,\"team\":0,\"pickNum\":4}"}
+[2021-03-10 12:17:32] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615378682243,\"nowCtrl\":1,\"PickList\":[10,28,6,45,15,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:17:39] : RmPlayer start count = 2
+[2021-03-10 12:17:39] : RmPlayer end count = 1
+[2021-03-10 12:17:57] : {"pt":6,"data":"{\"preview\":50,\"team\":1,\"pickNum\":5}"}
+[2021-03-10 12:18:00] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615378710075,\"nowCtrl\":1,\"PickList\":[10,28,6,45,15,50,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:18:22] : {"pt":6,"data":"{\"preview\":54,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:18:27] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615378737542,\"nowCtrl\":0,\"PickList\":[10,28,6,45,15,50,54,-1,-1,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:18:32] : [Server] - /116.237.149.237:65158 join
+[2021-03-10 12:18:48] : 8941
+[2021-03-10 12:18:50] : [Server] - /116.237.149.237:65167 join
+[2021-03-10 12:18:57] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615378767542,\"nowCtrl\":0,\"PickList\":[10,28,6,45,15,50,54,0,-1,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:19:03] : {"pt":6,"data":"{\"preview\":32,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:19:15] : {"pt":6,"data":"{\"preview\":31,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:19:16] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615378786690,\"nowCtrl\":1,\"PickList\":[10,28,6,45,15,50,54,0,31,-1],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:19:28] : [Server] - /222.65.114.34:56756 join
+[2021-03-10 12:19:29] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:19:29] : {"red":"AQUA","game":"esr","blue":"MMA","banCount":2}
+[2021-03-10 12:19:44] : {"pt":6,"data":"{\"preview\":0,\"team\":1,\"pickNum\":9}"}
+[2021-03-10 12:19:46] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378786690,\"nowCtrl\":1,\"PickList\":[10,28,6,45,15,50,54,0,31,0],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:19:46] : RmPlayer start count = 2
+[2021-03-10 12:19:46] : RmPlayer end count = 1
+[2021-03-10 12:19:46] : RmPlayer start count = 1
+[2021-03-10 12:19:46] : RmPlayer end count = 0
+[2021-03-10 12:19:47] : [Server] - /101.93.38.80:61826 join
+[2021-03-10 12:19:47] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378786690,\"nowCtrl\":1,\"PickList\":[10,28,6,45,15,50,54,0,31,0],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:19:47] : {"red":"MQ","game":"ESR","blue":"IG","banCount":2}
+[2021-03-10 12:19:54] : [Server] - /222.65.114.34:64882 join
+[2021-03-10 12:19:54] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:19:54] : {"red":"AQUA","game":"esr","blue":"MMA","banCount":2}
+[2021-03-10 12:19:55] : RmPlayer start count = 2
+[2021-03-10 12:19:55] : RmPlayer end count = 1
+[2021-03-10 12:20:23] : RmPlayer start count = 4
+[2021-03-10 12:20:23] : RmPlayer end count = 3
+[2021-03-10 12:20:49] : 0d556cb
+[2021-03-10 12:20:49] : 0d556cb
+[2021-03-10 12:20:49] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:21:35] : RmPlayer start count = 3
+[2021-03-10 12:21:35] : RmPlayer end count = 2
+[2021-03-10 12:22:04] : [Server] - /223.166.59.102:64121 join
+[2021-03-10 12:22:07] : [Server] - /223.166.59.102:64126 join
+[2021-03-10 12:22:17] : [Server] - /223.166.59.102:64132 join
+[2021-03-10 12:23:35] : [Server] - /116.237.149.237:65435 join
+[2021-03-10 12:23:36] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378786690,\"nowCtrl\":1,\"PickList\":[10,28,6,45,15,50,54,0,31,0],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:23:36] : {"red":"MQ","game":"ESR","blue":"IG","banCount":2}
+[2021-03-10 12:23:37] : RmPlayer start count = 2
+[2021-03-10 12:23:37] : RmPlayer end count = 1
+[2021-03-10 12:23:37] : [Server] - /116.237.149.237:65437 join
+[2021-03-10 12:23:37] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378786690,\"nowCtrl\":1,\"PickList\":[10,28,6,45,15,50,54,0,31,0],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:23:37] : {"red":"MQ","game":"ESR","blue":"IG","banCount":2}
+[2021-03-10 12:24:27] : [Server] - /111.162.203.241:2710 join
+[2021-03-10 12:24:28] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378435951,\"nowCtrl\":1,\"PickList\":[9,54,58,0,0,0,0,0,0,0],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:24:28] : {"red":" 打不过就跑  ","game":"ESR 测试1","blue":" KT","banCount":2}
+[2021-03-10 12:24:28] : RmPlayer start count = 1
+[2021-03-10 12:24:28] : RmPlayer end count = 0
+[2021-03-10 12:24:29] : [Server] - /111.162.203.241:2737 join
+[2021-03-10 12:24:29] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378435951,\"nowCtrl\":1,\"PickList\":[9,54,58,0,0,0,0,0,0,0],\"banFlage\":4,\"BanList\":[55,10,17,43]}"}
+[2021-03-10 12:24:29] : {"red":" 打不过就跑  ","game":"ESR 测试1","blue":" KT","banCount":2}
+[2021-03-10 12:24:34] : RmPlayer start count = 1
+[2021-03-10 12:24:34] : RmPlayer end count = 0
+[2021-03-10 12:24:50] : [Server] - /58.40.65.50:60126 join
+[2021-03-10 12:24:52] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:24:52] : {"red":"AQUA","game":"esr","blue":"MMA","banCount":2}
+[2021-03-10 12:25:52] : RmPlayer start count = 2
+[2021-03-10 12:25:52] : RmPlayer end count = 1
+[2021-03-10 12:25:56] : [Server] - /58.40.65.50:60137 join
+[2021-03-10 12:25:56] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:25:56] : {"red":"AQUA","game":"esr","blue":"MMA","banCount":2}
+[2021-03-10 12:25:58] : RmPlayer start count = 2
+[2021-03-10 12:25:58] : RmPlayer end count = 1
+[2021-03-10 12:26:01] : RmPlayer start count = 2
+[2021-03-10 12:26:01] : RmPlayer end count = 1
+[2021-03-10 12:26:20] : [Server] - /114.92.199.207:59592 join
+[2021-03-10 12:26:20] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:26:20] : {"red":"DLG.B","game":"ESR","blue":"XBEE","banCount":2}
+[2021-03-10 12:26:23] : 2188dd7
+[2021-03-10 12:26:23] : 2188dd7
+[2021-03-10 12:26:23] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,true],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:26:31] : [Server] - /194.5.52.40:41638 join
+[2021-03-10 12:26:31] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615378786690,\"nowCtrl\":1,\"PickList\":[10,28,6,45,15,50,54,0,31,0],\"banFlage\":4,\"BanList\":[53,9,17,25]}"}
+[2021-03-10 12:26:31] : {"red":"MQ","game":"ESR","blue":"IG","banCount":2}
+[2021-03-10 12:26:34] : RmPlayer start count = 3
+[2021-03-10 12:26:34] : RmPlayer end count = 2
+[2021-03-10 12:26:38] : [Server] - /58.40.65.50:60140 join
+[2021-03-10 12:26:39] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:26:39] : {"red":"AQUA","game":"esr","blue":"MMA","banCount":2}
+[2021-03-10 12:28:01] : [Server] - /183.69.202.119:10525 join
+[2021-03-10 12:28:04] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,true],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:28:04] : {"red":"DLG.B","game":"ESR","blue":"XBEE","banCount":2}
+[2021-03-10 12:28:53] : 2188dd7
+[2021-03-10 12:28:53] : 2188dd7
+[2021-03-10 12:28:53] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379363516,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:28:59] : {"pt":6,"data":"{\"preview\":9,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:29:00] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379370675,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[9,-1,-1,-1]}"}
+[2021-03-10 12:29:07] : {"pt":6,"data":"{\"preview\":53,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:29:08] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379378299,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[9,53,-1,-1]}"}
+[2021-03-10 12:29:17] : {"pt":6,"data":"{\"preview\":55,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:29:19] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379389482,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[9,53,55,-1]}"}
+[2021-03-10 12:29:23] : {"pt":6,"data":"{\"preview\":17,\"banNum\":3,\"team\":1}"}
+[2021-03-10 12:29:28] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615379398659,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:29:29] : {"pt":6,"data":"{\"preview\":10,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:29:32] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615379402019,\"nowCtrl\":1,\"PickList\":[10,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:29:39] : {"pt":6,"data":"{\"preview\":50,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:29:40] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615379410545,\"nowCtrl\":1,\"PickList\":[10,50,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:29:53] : {"pt":6,"data":"{\"preview\":58,\"team\":1,\"pickNum\":2}"}
+[2021-03-10 12:29:54] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615379424385,\"nowCtrl\":0,\"PickList\":[10,50,58,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:29:59] : {"pt":6,"data":"{\"preview\":28,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:30:24] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615379454386,\"nowCtrl\":0,\"PickList\":[10,50,58,0,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:30:24] : {"pt":6,"data":"{\"preview\":20,\"team\":0,\"pickNum\":4}"}
+[2021-03-10 12:30:25] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615379455212,\"nowCtrl\":1,\"PickList\":[10,50,58,0,20,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:30:35] : 0d556cb
+[2021-03-10 12:30:35] : 0d556cb
+[2021-03-10 12:30:35] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379465541,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:30:47] : {"pt":6,"data":"{\"preview\":54,\"team\":1,\"pickNum\":5}"}
+[2021-03-10 12:30:51] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615379481739,\"nowCtrl\":1,\"PickList\":[10,50,58,0,20,54,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:31:02] : {"pt":6,"data":"{\"preview\":22,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:31:03] : {"pt":6,"data":"{\"preview\":0,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:31:04] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615379494474,\"nowCtrl\":0,\"PickList\":[10,50,58,0,20,54,22,-1,-1,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:31:04] : {"pt":6,"data":"{\"preview\":1,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:31:05] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379495542,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[0,-1,-1,-1]}"}
+[2021-03-10 12:31:10] : [Server] - /116.237.149.237:49432 join
+[2021-03-10 12:31:10] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379495542,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[0,-1,-1,-1]}"}
+[2021-03-10 12:31:10] : {"red":"AQUA","game":"esr","blue":"MMA","banCount":2}
+[2021-03-10 12:31:11] : {"pt":6,"data":"{\"preview\":19,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:31:12] : {"pt":6,"data":"{\"preview\":53,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:31:17] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379507516,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[0,53,-1,-1]}"}
+[2021-03-10 12:31:28] : {"pt":6,"data":"{\"preview\":15,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:31:33] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615379523659,\"nowCtrl\":0,\"PickList\":[10,50,58,0,20,54,22,15,-1,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:31:34] : {"pt":6,"data":"{\"preview\":19,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:31:35] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615379525013,\"nowCtrl\":1,\"PickList\":[10,50,58,0,20,54,22,15,19,-1],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:31:38] : {"pt":6,"data":"{\"preview\":17,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:31:44] : {"pt":6,"data":"{\"preview\":32,\"team\":1,\"pickNum\":9}"}
+[2021-03-10 12:31:45] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615379525013,\"nowCtrl\":1,\"PickList\":[10,50,58,0,20,54,22,15,19,32],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:31:45] : RmPlayer start count = 2
+[2021-03-10 12:31:45] : RmPlayer end count = 1
+[2021-03-10 12:31:45] : [Server] - /114.92.199.207:59725 join
+[2021-03-10 12:31:46] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379536398,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[0,53,17,-1]}"}
+[2021-03-10 12:31:46] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615379525013,\"nowCtrl\":1,\"PickList\":[10,50,58,0,20,54,22,15,19,32],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:31:46] : {"red":"DLG.B","game":"ESR","blue":"XBEE","banCount":2}
+[2021-03-10 12:31:51] : RmPlayer start count = 2
+[2021-03-10 12:31:51] : RmPlayer end count = 1
+[2021-03-10 12:31:51] : [Server] - /183.69.202.119:10720 join
+[2021-03-10 12:31:52] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615379525013,\"nowCtrl\":1,\"PickList\":[10,50,58,0,20,54,22,15,19,32],\"banFlage\":4,\"BanList\":[9,53,55,17]}"}
+[2021-03-10 12:31:52] : {"red":"DLG.B","game":"ESR","blue":"XBEE","banCount":2}
+[2021-03-10 12:32:10] : {"pt":6,"data":"{\"preview\":9,\"banNum\":3,\"team\":1}"}
+[2021-03-10 12:32:11] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615379561369,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:32:21] : {"pt":6,"data":"{\"preview\":28,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:32:25] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615379575110,\"nowCtrl\":1,\"PickList\":[28,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:32:39] : {"pt":6,"data":"{\"preview\":58,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:32:50] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615379600178,\"nowCtrl\":1,\"PickList\":[28,58,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:33:09] : {"pt":6,"data":"{\"preview\":10,\"team\":1,\"pickNum\":2}"}
+[2021-03-10 12:33:12] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615379622692,\"nowCtrl\":0,\"PickList\":[28,58,10,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:33:30] : {"pt":6,"data":"{\"preview\":52,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:33:34] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615379644956,\"nowCtrl\":0,\"PickList\":[28,58,10,52,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:34:01] : {"pt":6,"data":"{\"preview\":31,\"team\":0,\"pickNum\":4}"}
+[2021-03-10 12:34:02] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615379672748,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:34:23] : {"pt":6,"data":"{\"preview\":6,\"team\":1,\"pickNum\":5}"}
+[2021-03-10 12:34:31] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615379701120,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,6,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:34:39] : {"pt":6,"data":"{\"preview\":20,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:35:01] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615379731121,\"nowCtrl\":0,\"PickList\":[28,58,10,52,31,6,0,-1,-1,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:35:31] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615379761122,\"nowCtrl\":0,\"PickList\":[28,58,10,52,31,6,0,0,-1,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:36:01] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615379791121,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,6,0,0,0,-1],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:36:31] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615379791121,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,6,0,0,0,0],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:36:31] : RmPlayer start count = 3
+[2021-03-10 12:36:31] : RmPlayer end count = 2
+[2021-03-10 12:36:31] : RmPlayer start count = 2
+[2021-03-10 12:36:31] : RmPlayer end count = 1
+[2021-03-10 12:36:31] : RmPlayer start count = 1
+[2021-03-10 12:36:31] : RmPlayer end count = 0
+[2021-03-10 12:36:31] : [Server] - /116.237.149.237:49722 join
+[2021-03-10 12:36:31] : [Server] - /116.237.149.237:49723 join
+[2021-03-10 12:36:31] : [Server] - /58.40.65.50:60202 join
+[2021-03-10 12:36:32] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615379791121,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,6,0,0,0,0],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:36:32] : {"red":"AQUA","game":"esr","blue":"MMA","banCount":2}
+[2021-03-10 12:36:32] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615379791121,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,6,0,0,0,0],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:36:32] : {"red":"AQUA","game":"esr","blue":"MMA","banCount":2}
+[2021-03-10 12:36:35] : [Server] - /222.65.114.34:50013 join
+[2021-03-10 12:36:35] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615379791121,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,6,0,0,0,0],\"banFlage\":4,\"BanList\":[0,53,17,9]}"}
+[2021-03-10 12:36:35] : {"red":"AQUA","game":"esr","blue":"MMA","banCount":2}
+[2021-03-10 12:36:46] : 8941
+[2021-03-10 12:36:47] : [Server] - /116.237.149.237:49733 join
+[2021-03-10 12:36:52] : RmPlayer start count = 3
+[2021-03-10 12:36:52] : RmPlayer end count = 2
+[2021-03-10 12:36:54] : RmPlayer start count = 2
+[2021-03-10 12:36:54] : RmPlayer end count = 1
+[2021-03-10 12:36:56] : [Server] - /222.65.114.34:50048 join
+[2021-03-10 12:36:56] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:36:56] : {"red":"AQUA","game":"ESR","blue":"MMA","banCount":2}
+[2021-03-10 12:36:58] : [Server] - /58.40.65.50:60209 join
+[2021-03-10 12:36:59] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[false,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:36:59] : {"red":"AQUA","game":"ESR","blue":"MMA","banCount":2}
+[2021-03-10 12:36:59] : 55f62ef
+[2021-03-10 12:36:59] : 55f62ef
+[2021-03-10 12:36:59] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:37:11] : RmPlayer start count = 2
+[2021-03-10 12:37:11] : RmPlayer end count = 1
+[2021-03-10 12:37:15] : [Server] - /58.40.65.50:60215 join
+[2021-03-10 12:37:16] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:37:16] : {"red":"AQUA","game":"ESR","blue":"MMA","banCount":2}
+[2021-03-10 12:37:19] : 55f62ef
+[2021-03-10 12:37:19] : 55f62ef
+[2021-03-10 12:37:19] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379869303,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":0,\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:37:22] : {"pt":6,"data":"{\"preview\":17,\"banNum\":0,\"team\":0}"}
+[2021-03-10 12:37:23] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379873767,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":1,\"BanList\":[17,-1,-1,-1]}"}
+[2021-03-10 12:37:32] : {"pt":6,"data":"{\"preview\":53,\"banNum\":1,\"team\":1}"}
+[2021-03-10 12:37:34] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379884248,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":2,\"BanList\":[17,53,-1,-1]}"}
+[2021-03-10 12:37:50] : {"pt":6,"data":"{\"preview\":20,\"banNum\":2,\"team\":0}"}
+[2021-03-10 12:37:53] : {"pt":5,"data":"{\"Status\":\"BAN\",\"Ready\":[true,true],\"NextTime\":1615379903502,\"nowCtrl\":1,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":3,\"BanList\":[17,53,20,-1]}"}
+[2021-03-10 12:38:02] : {"pt":6,"data":"{\"preview\":9,\"banNum\":3,\"team\":1}"}
+[2021-03-10 12:38:14] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":0,\"Ready\":[true,true],\"NextTime\":1615379924122,\"nowCtrl\":0,\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:38:15] : {"pt":6,"data":"{\"preview\":28,\"team\":0,\"pickNum\":0}"}
+[2021-03-10 12:38:16] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615379926069,\"nowCtrl\":1,\"PickList\":[28,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:38:20] : [Server] - /116.237.149.237:49811 join
+[2021-03-10 12:38:21] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":1,\"Ready\":[true,true],\"NextTime\":1615379926069,\"nowCtrl\":1,\"PickList\":[28,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:38:21] : {"red":"AQUA","game":"ESR","blue":"MMA","banCount":2}
+[2021-03-10 12:38:26] : {"pt":6,"data":"{\"preview\":58,\"team\":1,\"pickNum\":1}"}
+[2021-03-10 12:38:36] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":2,\"Ready\":[true,true],\"NextTime\":1615379946028,\"nowCtrl\":1,\"PickList\":[28,58,-1,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:38:46] : {"pt":6,"data":"{\"preview\":10,\"team\":1,\"pickNum\":2}"}
+[2021-03-10 12:38:57] : RmPlayer start count = 1
+[2021-03-10 12:38:57] : RmPlayer end count = 0
+[2021-03-10 12:39:03] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":3,\"Ready\":[true,true],\"NextTime\":1615379973059,\"nowCtrl\":0,\"PickList\":[28,58,10,-1,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:39:06] : {"pt":6,"data":"{\"preview\":52,\"team\":0,\"pickNum\":3}"}
+[2021-03-10 12:39:27] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":4,\"Ready\":[true,true],\"NextTime\":1615379997734,\"nowCtrl\":0,\"PickList\":[28,58,10,52,-1,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:39:46] : {"pt":6,"data":"{\"preview\":31,\"team\":0,\"pickNum\":4}"}
+[2021-03-10 12:39:52] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":5,\"Ready\":[true,true],\"NextTime\":1615380022756,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,-1,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:40:05] : {"pt":6,"data":"{\"preview\":50,\"team\":1,\"pickNum\":5}"}
+[2021-03-10 12:40:20] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":6,\"Ready\":[true,true],\"NextTime\":1615380050442,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,50,-1,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:40:46] : {"pt":6,"data":"{\"preview\":6,\"team\":1,\"pickNum\":6}"}
+[2021-03-10 12:40:48] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":7,\"Ready\":[true,true],\"NextTime\":1615380078425,\"nowCtrl\":0,\"PickList\":[28,58,10,52,31,50,6,-1,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:40:55] : {"pt":6,"data":"{\"preview\":54,\"team\":0,\"pickNum\":7}"}
+[2021-03-10 12:41:04] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":8,\"Ready\":[true,true],\"NextTime\":1615380094882,\"nowCtrl\":0,\"PickList\":[28,58,10,52,31,50,6,54,-1,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:41:15] : {"pt":6,"data":"{\"preview\":47,\"team\":0,\"pickNum\":8}"}
+[2021-03-10 12:41:15] : {"pt":5,"data":"{\"Status\":\"PICK\",\"pickFlage\":9,\"Ready\":[true,true],\"NextTime\":1615380105754,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,50,6,54,47,-1],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:41:24] : {"pt":6,"data":"{\"preview\":48,\"team\":1,\"pickNum\":9}"}
+[2021-03-10 12:41:42] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615380105754,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,50,6,54,47,48],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:41:42] : RmPlayer start count = 3
+[2021-03-10 12:41:42] : RmPlayer end count = 2
+[2021-03-10 12:41:42] : RmPlayer start count = 2
+[2021-03-10 12:41:42] : RmPlayer end count = 1
+[2021-03-10 12:41:42] : RmPlayer start count = 1
+[2021-03-10 12:41:42] : RmPlayer end count = 0
+[2021-03-10 12:41:43] : [Server] - /116.237.149.237:49941 join
+[2021-03-10 12:41:43] : [Server] - /222.65.114.34:50490 join
+[2021-03-10 12:41:43] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615380105754,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,50,6,54,47,48],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:41:43] : {"red":"AQUA","game":"ESR","blue":"MMA","banCount":2}
+[2021-03-10 12:41:43] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615380105754,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,50,6,54,47,48],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:41:43] : {"red":"AQUA","game":"ESR","blue":"MMA","banCount":2}
+[2021-03-10 12:41:51] : [Server] - /58.40.65.50:60238 join
+[2021-03-10 12:41:52] : {"pt":5,"data":"{\"Status\":\"END\",\"pickFlage\":10,\"Ready\":[true,true],\"NextTime\":1615380105754,\"nowCtrl\":1,\"PickList\":[28,58,10,52,31,50,6,54,47,48],\"banFlage\":4,\"BanList\":[17,53,20,9]}"}
+[2021-03-10 12:41:52] : {"red":"AQUA","game":"ESR","blue":"MMA","banCount":2}
+[2021-03-10 12:42:48] : RmPlayer start count = 1
+[2021-03-10 12:42:48] : RmPlayer end count = 0
+[2021-03-10 12:43:51] : [Server] - /1.80.243.12:6350 join
+[2021-03-10 12:43:52] : {"pt":5,"data":"{\"Status\":\"WAIT\",\"Ready\":[true,false],\"PickList\":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],\"BanList\":[-1,-1,-1,-1]}"}
+[2021-03-10 12:43:52] : {"red":"V5","game":"ESR","blue":"TLM","banCount":2}
+[2021-03-10 12:44:01] : RmPlayer start count = 2
+[2021-03-10 12:44:01] : RmPlayer end count = 1
+[2021-03-10 12:45:35] : RmPlayer start count = 3
+[2021-03-10 12:45:35] : RmPlayer end count = 2
+[2021-03-10 12:45:36] : RmPlayer start count = 1
+[2021-03-10 12:45:36] : RmPlayer end count = 0
+[2021-03-10 12:45:36] : RmPlayer start count = 1
+[2021-03-10 12:45:36] : RmPlayer end count = 0
+[2021-03-10 12:45:37] : RmPlayer start count = 2
+[2021-03-10 12:45:37] : RmPlayer end count = 1
+[2021-03-10 12:50:20] : RmPlayer start count = 2
+[2021-03-10 12:50:20] : RmPlayer end count = 1
+[2021-03-10 13:00:21] : RmPlayer start count = 1
+[2021-03-10 13:00:21] : RmPlayer end count = 0
+[2021-03-10 13:19:37] : RmPlayer start count = 1
+[2021-03-10 13:19:37] : RmPlayer end count = 0
+[2021-03-10 13:49:32] : RmPlayer start count = 2
+[2021-03-10 13:49:32] : RmPlayer end count = 1
+[2021-03-10 14:02:16] : RmPlayer start count = 2
+[2021-03-10 14:02:16] : RmPlayer end count = 1

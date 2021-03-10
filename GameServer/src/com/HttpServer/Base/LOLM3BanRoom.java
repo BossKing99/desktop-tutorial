@@ -24,13 +24,14 @@ public class LOLM3BanRoom extends GameRoom {
     private Timer timer = new Timer();
     private TimerTask task;
     private List<LOLMPlayer> allPlayers = new ArrayList<>();
-    private long chooseTime = 30000;
+    private long chooseTime = 60000;
     // 選角用
     private int nowCtrl = 0;
     private int[] banProcess;
     private int[] pickProcess = { 0, 1, 1, 0, 0, 1, 1, 0, 0, 1 };
     private int banFlage = 0;
     private int pickFlage = 0;
+    private int previewNum = 0;
 
     public LOLM3BanRoom(JSONObject jdata, String[] key) {
         super(jdata, key);
@@ -98,6 +99,7 @@ public class LOLM3BanRoom extends GameRoom {
         try {
             int num = data.getInt("num");
             if ((num == 0 || !chosen.containsKey(num)) && data.optString("pass").equals(_pass)) {
+                previewNum = num;
                 LOLMPlayer player = findPlayer(ctxId);
                 if (player != null && player.team == nowCtrl) {
                     JSONObject jdata = new JSONObject();
@@ -108,7 +110,7 @@ public class LOLM3BanRoom extends GameRoom {
                     else
                         return;
                     jdata.put("team", nowCtrl);
-                    jdata.put("preview", num);
+                    jdata.put("preview", previewNum);
                     broadcast(jdata.toString(), ProtocolName.PREVIEW);
                 }
             }
@@ -133,7 +135,7 @@ public class LOLM3BanRoom extends GameRoom {
         case BAN:
             task = new TimerTask() {
                 public void run() {
-                    nextProcess(0);
+                    nextProcess(previewNum);
                 }
             };
             timer = new Timer();
@@ -178,6 +180,7 @@ public class LOLM3BanRoom extends GameRoom {
     }
 
     private void nextProcess(int choose) {
+        previewNum = 0;
         try {
             if (!(choose < LOLMData.MaxHeroCount() && (choose == 0 || !chosen.containsKey(choose))))
                 return;
@@ -210,7 +213,7 @@ public class LOLM3BanRoom extends GameRoom {
             if (_status != RoomStatus.END) {
                 task = new TimerTask() {
                     public void run() {
-                        nextProcess(0);
+                        nextProcess(previewNum);
                     }
                 };
                 timer = new Timer();

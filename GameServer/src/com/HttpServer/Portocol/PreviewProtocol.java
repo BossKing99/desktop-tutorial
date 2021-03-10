@@ -8,7 +8,7 @@ import org.json.JSONObject;
 
 import io.netty.channel.Channel;
 
-public class PrevienProtocol implements PortocolBasc {
+public class PreviewProtocol implements PortocolBasc {
     @Override
     public JSONObject Run(JSONObject jdata, Channel ctx) {
         JSONObject jres = new JSONObject();
