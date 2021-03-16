@@ -23,10 +23,12 @@ public abstract class GameRoom {
     public JSONObject GetStatus() {
         return RoomJData;
     }
+
     public JSONObject GetRoomInfo() {
         return RoomInfo;
     }
-    public abstract void Choose(JSONObject jdata);
+
+    public abstract void Choose(JSONObject jdata, String ctxId);
 
     public boolean isExpired() {
         return System.currentTimeMillis() - _createTime > 14400000;
@@ -35,6 +37,7 @@ public abstract class GameRoom {
     protected abstract void SetStatus(RoomStatus s);
 
     public abstract void PlayerAdd(Player p, int team);
+
     public abstract void RmPlayer(Player p);
 
     public abstract void Preview(JSONObject jdata, String ctxId);

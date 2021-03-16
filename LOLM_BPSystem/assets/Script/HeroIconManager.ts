@@ -19,7 +19,7 @@ export default class HeroIconManager extends cc.Component {
             HeroButtonS.Init(data[index])
             this.AllIcon.push(HeroButtonS);
         }
-        this.HeroButtonPraent.setContentSize(800, this.AllIcon.length / 10 * 80);
+        this.HeroButtonPraent.setContentSize(800, ((this.AllIcon.length / 10) + 1) * 80);
     }
     public isChoose(n) {
 

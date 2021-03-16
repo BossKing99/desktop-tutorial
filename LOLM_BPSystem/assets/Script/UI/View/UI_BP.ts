@@ -218,7 +218,7 @@ export default class UI_BP extends IUIView {
                 break;
             case "BAN":
             case "PICK":
-                if (this.NowChoose != -1 && this.SyncData.nowCtrl == this.myTeam) {
+                if (this.NowChoose != -1) {
                     let data: ChooseData = new ChooseData();
                     data.choose = this.NowChoose;
                     data.pass = this.pass;

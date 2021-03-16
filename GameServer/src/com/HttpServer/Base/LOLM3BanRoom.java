@@ -83,10 +83,13 @@ public class LOLM3BanRoom extends GameRoom {
     }
 
     @Override
-    public void Choose(JSONObject jdata) {
+    public void Choose(JSONObject jdata, String ctxId) {
         try {
             if (jdata.optString("pass").equals(_pass)) {
-                nextProcess(jdata.optInt("choose"));
+                LOLMPlayer player = findPlayer(ctxId);
+                if (player != null && player.team == nowCtrl) {
+                    nextProcess(jdata.optInt("choose"));
+                }
             }
         } catch (Exception e) {
             Console.Err("LOLM3BanRoom Choose Error");

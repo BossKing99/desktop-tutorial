@@ -15,7 +15,7 @@ public class ChooseProtocol implements PortocolBasc {
         try {
             Player p = PlayerManager.GetPlayer(ctx.id().toString());
             if (p != null && p.GetRoom() != null) {
-                p.GetRoom().Choose(jdata);
+                p.GetRoom().Choose(jdata, ctx.id().toString());
             }
         } catch (Exception e) {
         }
