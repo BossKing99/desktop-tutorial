@@ -4,5 +4,6 @@ public enum RoomStatus {
     WAIT,
     BAN,
     PICK,
-    END
+    END,
+    COMPOSE,
 }

@@ -1,0 +1,6 @@
+FROM openjdk:11.0.12
+WORKDIR /app
+COPY  Server.jar /app/Server.jar
+COPY  Config/LOLMData.json /app/Config/LOLMData.json
+EXPOSE 8083
+ENTRYPOINT ["java","-jar","Server.jar"]

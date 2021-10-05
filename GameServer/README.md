@@ -1,5 +1,5 @@
 # 百家伺服器說明文件
-* JAVA版本 1.8.0_77
+* JAVA版本 openjdk version 11.0.12
 * 開發環境 VSCode
 
 * 流程 : <br>

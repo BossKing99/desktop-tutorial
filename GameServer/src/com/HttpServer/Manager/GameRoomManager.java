@@ -9,6 +9,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import com.HttpServer.Base.GameRoom;
+import com.HttpServer.Base.HPBanRoom;
 import com.HttpServer.Base.LOLM3BanRoom;
 import com.HttpServer.publicClass.Console;
 
@@ -18,20 +19,23 @@ public class GameRoomManager {
     public static GameRoomManager Inst = new GameRoomManager();
 
     private GameRoomManager() {
+        Console.Log("GameRoomManager");
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
             public void run() {
                 checkRoom();
             }
         };
-        timer.schedule(task, 14400000);
+        timer.schedule(task, 10000, 10000);
     }
 
     private Map<String, GameRoom> AllGame = new HashMap<>();
 
     public String[] CreateNewGameRoom(JSONObject jdata) {
         String[] Key = new String[2];
+        int gameTpye = 0;
         try {
+            gameTpye = jdata.getInt("gameType");
             Key[0] = getKey(jdata.getString("blueTeamName") + jdata.getString("redTeamName")
                     + jdata.getString("gameName") + System.currentTimeMillis());
             Key[1] = getKey(System.currentTimeMillis() + "").substring(5, 12);
@@ -39,7 +43,16 @@ public class GameRoomManager {
         }
         if (!Key[0].equals("")) {
             // 這邊可以換成可擴充結構
-            GameRoom newGameRoom = new LOLM3BanRoom(jdata, Key);
+            GameRoom newGameRoom = null;
+            switch (gameTpye) {
+                case 1:
+                    newGameRoom = new LOLM3BanRoom(jdata, Key);
+                    break;
+                case 2:
+                    newGameRoom = new HPBanRoom(jdata, Key);
+                    break;
+            }
+
             synchronized (AllGame) {
                 AllGame.put(Key[0], newGameRoom);
             }

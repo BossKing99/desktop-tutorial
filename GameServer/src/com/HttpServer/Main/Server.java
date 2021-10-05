@@ -20,6 +20,12 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Server {
 	public static Server mGame = null;
 
@@ -42,10 +48,51 @@ public class Server {
 	}
 
 	public static void main(String[] args) throws Exception {
+		Console.Log("GO");
+		// try {
+		// 	FileWriter fw = new FileWriter("ssh/filename.txt");
+		// 	fw.flush();
+		// 	fw.close();
+		// 	File file2 = new File("./ssh");
+		// 	listDir(file2);
+		// } catch (Exception e) {
+
+		// 	Console.Log("Error r = " + e);
+		// }
+		// test();
+
 		CheckPassword.Check("ss");
 		LOLMData.LoadData();
 		ThreadManager.Init();
 		Server.mGame = new Server();
 		Server.mGame.bind(8083);
+	}
+
+	private static void test() {
+		try {
+			FileReader bmifile = new FileReader("ssh/KEY");
+			Scanner inf = new Scanner(bmifile);
+			System.out.printf(inf.next() + "\n");
+			bmifile.close();
+		} catch (Exception e) {
+
+			Console.Log("Error r = " + e);
+		}
+
+	}
+
+	public static void listDir(File file) {
+		if (file.isDirectory()) { // 是一個目錄
+			// 列出目錄中的全部內容
+			File results[] = file.listFiles();
+			if (results != null) {
+				for (int i = 0; i < results.length; i++) {
+					System.out.println(results[i].getName());
+				}
+			}
+		} else {
+			System.out.println(file.getName());
+		}
+
 	}
 }
