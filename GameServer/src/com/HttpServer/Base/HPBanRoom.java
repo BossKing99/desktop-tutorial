@@ -29,6 +29,8 @@ public class HPBanRoom extends GameRoom {
     // 選角用
     private int nowCtrl = 0;
     private int previewNum = 0;
+    private int[] banProcess;
+    private int banFlage = 0;
 
     public HPBanRoom(JSONObject jdata, String[] key) {
         super(jdata, key);
@@ -95,8 +97,6 @@ public class HPBanRoom extends GameRoom {
                     JSONObject jdata = new JSONObject();
                     if (_status == RoomStatus.BAN)
                         jdata.put("banNum", banFlage);
-                    else if (_status == RoomStatus.PICK)
-                        jdata.put("pickNum", pickFlage);
                     else
                         return;
                     jdata.put("team", nowCtrl);
@@ -107,6 +107,11 @@ public class HPBanRoom extends GameRoom {
         } catch (Exception e) {
             Console.Err("HPBanRoom Choose Error");
         }
+    }
+
+    @Override
+    public  void Compose(Player p,JSONObject jdata){
+        
     }
 
     @Override
@@ -135,12 +140,6 @@ public class HPBanRoom extends GameRoom {
                 RoomJData.put("banFlage", banFlage);
                 nowCtrl = 0;
                 RoomJData.put("nowCtrl", nowCtrl);
-            } catch (Exception e) {
-            }
-            break;
-        case PICK:
-            try {
-                RoomJData.put("pickFlage", pickFlage);
             } catch (Exception e) {
             }
             break;
@@ -181,23 +180,15 @@ public class HPBanRoom extends GameRoom {
                 banData[banFlage] = choose;
                 banFlage++;
                 if (banFlage == banData.length) {
-                    SetStatus(RoomStatus.PICK);
+                    SetStatus(RoomStatus.END);
                     nowCtrl = 0;
                 } else
                     nowCtrl = banProcess[banFlage];
                 RoomJData.put("nowCtrl", nowCtrl);
                 RoomJData.put("BanList", banData);
                 RoomJData.put("banFlage", banFlage);
-            } else if (_status == RoomStatus.PICK) {
-                pickData[pickFlage] = choose;
-                pickFlage++;
-                if (pickFlage == 10)
-                    SetStatus(RoomStatus.END);
-                else
-                    nowCtrl = pickProcess[pickFlage];
-                RoomJData.put("nowCtrl", nowCtrl);
-                RoomJData.put("PickList", pickData);
-                RoomJData.put("pickFlage", pickFlage);
+            } else if (_status == RoomStatus.COMPOSE) {
+
             }
 
             if (_status != RoomStatus.END) {

@@ -123,6 +123,12 @@ public class LOLM3BanRoom extends GameRoom {
     }
 
     @Override
+    public  void Compose(Player p,JSONObject jdata){
+        
+    }
+
+
+    @Override
     protected void SetStatus(RoomStatus s) {
         if (s == _status)
             return;

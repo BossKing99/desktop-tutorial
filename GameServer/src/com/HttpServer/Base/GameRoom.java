@@ -41,4 +41,6 @@ public abstract class GameRoom {
     public abstract void RmPlayer(Player p);
 
     public abstract void Preview(JSONObject jdata, String ctxId);
+
+    public abstract void Compose(Player p,JSONObject jdata);
 }
