@@ -2,7 +2,6 @@ package com.HttpServer.Base;
 
 import com.HttpServer.Base.PlayerBase.Player;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 public abstract class GameRoom {

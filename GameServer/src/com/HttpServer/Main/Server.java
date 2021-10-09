@@ -1,15 +1,10 @@
 package com.HttpServer.Main;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.HttpServer.Manager.ThreadManager;
 import com.HttpServer.Net.Client2GameInitializer;
 import com.HttpServer.publicClass.CheckPassword;
 import com.HttpServer.publicClass.Console;
 import com.HttpServer.publicClass.LOLMData;
-
-import org.json.JSONObject;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -20,11 +15,9 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
+// import java.io.File;
+// import java.io.FileReader;
+// import java.util.Scanner;
 
 public class Server {
 	public static Server mGame = null;
@@ -68,31 +61,31 @@ public class Server {
 		Server.mGame.bind(8083);
 	}
 
-	private static void test() {
-		try {
-			FileReader bmifile = new FileReader("ssh/KEY");
-			Scanner inf = new Scanner(bmifile);
-			System.out.printf(inf.next() + "\n");
-			bmifile.close();
-		} catch (Exception e) {
+	// private static void test() {
+	// 	try {
+	// 		FileReader bmifile = new FileReader("ssh/KEY");
+	// 		Scanner inf = new Scanner(bmifile);
+	// 		System.out.printf(inf.next() + "\n");
+	// 		bmifile.close();
+	// 	} catch (Exception e) {
 
-			Console.Log("Error r = " + e);
-		}
+	// 		Console.Log("Error r = " + e);
+	// 	}
 
-	}
+	// }
 
-	public static void listDir(File file) {
-		if (file.isDirectory()) { // 是一個目錄
-			// 列出目錄中的全部內容
-			File results[] = file.listFiles();
-			if (results != null) {
-				for (int i = 0; i < results.length; i++) {
-					System.out.println(results[i].getName());
-				}
-			}
-		} else {
-			System.out.println(file.getName());
-		}
+	// public static void listDir(File file) {
+	// 	if (file.isDirectory()) { // 是一個目錄
+	// 		// 列出目錄中的全部內容
+	// 		File results[] = file.listFiles();
+	// 		if (results != null) {
+	// 			for (int i = 0; i < results.length; i++) {
+	// 				System.out.println(results[i].getName());
+	// 			}
+	// 		}
+	// 	} else {
+	// 		System.out.println(file.getName());
+	// 	}
 
-	}
+	// }
 }

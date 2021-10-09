@@ -54,12 +54,6 @@ public class HPBanRoom extends GameRoom {
         }
     }
 
-    private void initIntArray(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = -1;
-        }
-    }
-
     @Override
     public void Ready(JSONObject jdata) {
         try {
@@ -164,6 +158,8 @@ public class HPBanRoom extends GameRoom {
             Console.Err("HPBanRoom SetStatus Error");
         }
         switch (_status) {
+            case PICK:
+                break;
             case WAIT:
                 break;
             case BAN:
@@ -178,7 +174,7 @@ public class HPBanRoom extends GameRoom {
                     RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
                     nowCtrl = 0;
                     RoomJData.put("nowCtrl", nowCtrl);
-                    RoomJData.put("hideCompose",GetAllCompose(true));
+                    RoomJData.put("hideCompose", GetAllCompose(true));
                 } catch (Exception e) {
                 }
                 break;

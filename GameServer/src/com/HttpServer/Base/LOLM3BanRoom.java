@@ -150,6 +150,8 @@ public class LOLM3BanRoom extends GameRoom {
             Console.Err("LOLM3BanRoom SetStatus Error");
         }
         switch (_status) {
+            case COMPOSE:
+                break;
             case WAIT:
                 break;
             case BAN:
