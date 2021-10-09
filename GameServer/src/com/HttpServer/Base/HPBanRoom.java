@@ -18,7 +18,7 @@ public class HPBanRoom extends GameRoom {
     // 0是藍隊 1是紅隊
     private Boolean[] isReady = { false, false };
     private int[] banData = { -1, -1 };
-    private int[][][] pickData;
+    private int[][][] composeData;
     private Timer timer = new Timer();
     private TimerTask task;
     private List<LOLMPlayer> allPlayers = new ArrayList<>();
@@ -35,9 +35,9 @@ public class HPBanRoom extends GameRoom {
 
         try {
             composeCount = jdata.getInt("composeCount");
-            pickData = new int[2][composeCount][10];
+            composeData = new int[2][composeCount][10];
             RoomJData.put("Status", _status);
-            RoomJData.put("PickList", pickData);
+            RoomJData.put("PickList", composeData);
             RoomJData.put("Ready", isReady);
             RoomInfo = new JSONObject();
             RoomInfo.put("blue", jdata.get("blueTeamName"));
@@ -100,7 +100,7 @@ public class HPBanRoom extends GameRoom {
                 int no = jdata.optInt("no");
                 int group = jdata.optInt("group");
                 int team = jdata.optInt("group");
-                pickData[team][group][no] = chose;
+                composeData[team][group][no] = chose;
                 broadcast(jdata.toString(), ProtocolName.Compose, team);
             }
         } catch (Exception e) {
@@ -115,7 +115,7 @@ public class HPBanRoom extends GameRoom {
         }
         JSONObject jdata = new JSONObject();
         try {
-            jdata.put("pick", pickData[team]);
+            jdata.put("pick", composeData[team]);
         } catch (Exception e) {
             Console.Log("GetCompose pick data conversion error");
         }
@@ -127,24 +127,24 @@ public class HPBanRoom extends GameRoom {
         JSONObject jdata = new JSONObject();
         try {
             if (isHaid) {
-                JSONArray bulePicks = new JSONArray();
-                JSONArray redPicks = new JSONArray();
+                JSONArray buleComposeList = new JSONArray();
+                JSONArray redComposeList = new JSONArray();
 
                 for (int j = 0; j < composeCount; j++) {
-                    JSONArray bulePick = new JSONArray();
-                    JSONArray redPick = new JSONArray();
+                    JSONArray buleCompose = new JSONArray();
+                    JSONArray redCompose = new JSONArray();
                     for (int i = 0; i < 10; i++) {
-                        bulePick.put(hide[i] ? pickData[0][j][i] : -1);
-                        redPick.put(hide[i] ? pickData[0][j][i] : -1);
+                        buleCompose.put(hide[i] ? composeData[0][j][i] : -1);
+                        redCompose.put(hide[i] ? composeData[0][j][i] : -1);
                     }
-                    bulePicks.put(bulePick);
-                    redPicks.put(redPick);
+                    buleComposeList.put(buleCompose);
+                    redComposeList.put(redCompose);
                 }
-                jdata.put("bulePick", bulePicks);
-                jdata.put("redPick", redPicks);
+                jdata.put("buleCompose", buleComposeList);
+                jdata.put("redCompose", redComposeList);
             } else {
-                jdata.put("bulePick", pickData[0]);
-                jdata.put("redPick", pickData[1]);
+                jdata.put("buleCompose", composeData[0]);
+                jdata.put("redCompose", composeData[1]);
             }
         } catch (Exception e) {
             Console.Log("GetCompose pick data conversion error");
@@ -178,6 +178,7 @@ public class HPBanRoom extends GameRoom {
                     RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
                     nowCtrl = 0;
                     RoomJData.put("nowCtrl", nowCtrl);
+                    RoomJData.put("hideCompose",GetAllCompose(true));
                 } catch (Exception e) {
                 }
                 break;
@@ -231,8 +232,7 @@ public class HPBanRoom extends GameRoom {
                 if (nowCtrl == banData.length) {
                     SetStatus(RoomStatus.END);
                     nowCtrl = 0;
-                    RoomJData.put("bluePick", pickData[0]);
-                    RoomJData.put("redPick", pickData[1]);
+                    RoomJData.put("Compose", GetAllCompose(false));
                 }
                 RoomJData.put("nowCtrl", nowCtrl);
                 RoomJData.put("BanList", banData);
