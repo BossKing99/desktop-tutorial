@@ -8,6 +8,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import com.HttpServer.Base.PlayerBase.Player;
+import com.HttpServer.Manager.GameRoomManager;
 import com.HttpServer.Portocol.NetJson;
 import com.HttpServer.publicClass.Console;
 import com.HttpServer.publicClass.LOLMData;
@@ -33,8 +34,10 @@ public class LOLM3BanRoom extends GameRoom {
     private int pickFlage = 0;
     private int previewNum = 0;
 
-    public LOLM3BanRoom(JSONObject jdata, String[] key) {
+    public LOLM3BanRoom(JSONObject jdata, String key) {
         super(jdata, key);
+        String[] pass = new String[2];
+
         try {
             int banCount = jdata.getInt("banCount");
             banData = new int[2 * banCount];
@@ -54,6 +57,13 @@ public class LOLM3BanRoom extends GameRoom {
             RoomInfo.put("red", jdata.get("redTeamName"));
             RoomInfo.put("game", jdata.get("gameName"));
             RoomInfo.put("banCount", jdata.get("banCount"));
+
+            pass[0] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "asdasfgdfth")
+                    .substring(5, 12);
+            pass[1] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "thrthrthtrth")
+                    .substring(5, 12);
+            RoomInfo.put("pass", pass);
+            SetRoomPass(pass);
         } catch (Exception e) {
             Console.Err("LOLM3BanRoom Create Error");
         }
@@ -68,9 +78,7 @@ public class LOLM3BanRoom extends GameRoom {
     @Override
     public void Ready(JSONObject jdata) {
         try {
-            Console.Log(jdata.optString("pass"));
-            Console.Log(_pass);
-            if (_status == RoomStatus.WAIT && jdata.optString("pass").equals(_pass)) {
+            if (_status == RoomStatus.WAIT) {
                 isReady[jdata.getInt("team")] = true;
                 RoomJData.put("Ready", isReady);
                 if (isReady[0] && isReady[1])
@@ -85,12 +93,12 @@ public class LOLM3BanRoom extends GameRoom {
     @Override
     public void Choose(JSONObject jdata, String ctxId) {
         try {
-            if (jdata.optString("pass").equals(_pass)) {
-                LOLMPlayer player = findPlayer(ctxId);
-                if (player != null && player.team == nowCtrl) {
-                    nextProcess(jdata.optInt("choose"));
-                }
+
+            LOLMPlayer player = findPlayer(ctxId);
+            if (player != null && player.team == nowCtrl) {
+                nextProcess(jdata.optInt("choose"));
             }
+
         } catch (Exception e) {
             Console.Err("LOLM3BanRoom Choose Error");
         }
@@ -101,7 +109,7 @@ public class LOLM3BanRoom extends GameRoom {
     public void Preview(JSONObject data, String ctxId) {
         try {
             int num = data.getInt("num");
-            if ((num == 0 || !chosen.containsKey(num)) && data.optString("pass").equals(_pass)) {
+            if ((num == 0 || !chosen.containsKey(num))) {
                 previewNum = num;
                 LOLMPlayer player = findPlayer(ctxId);
                 if (player != null && player.team == nowCtrl) {
@@ -123,10 +131,13 @@ public class LOLM3BanRoom extends GameRoom {
     }
 
     @Override
-    public  void Compose(Player p,JSONObject jdata){
-        
+    public void Compose(JSONObject jdata) {
     }
 
+    @Override
+    public JSONObject GetCompose(String pass, int team) {
+        return null;
+    }
 
     @Override
     protected void SetStatus(RoomStatus s) {
@@ -139,32 +150,32 @@ public class LOLM3BanRoom extends GameRoom {
             Console.Err("LOLM3BanRoom SetStatus Error");
         }
         switch (_status) {
-        case WAIT:
-            break;
-        case BAN:
-            task = new TimerTask() {
-                public void run() {
-                    nextProcess(previewNum);
+            case WAIT:
+                break;
+            case BAN:
+                task = new TimerTask() {
+                    public void run() {
+                        nextProcess(previewNum);
+                    }
+                };
+                timer = new Timer();
+                timer.schedule(task, chooseTime);
+                try {
+                    RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
+                    RoomJData.put("banFlage", banFlage);
+                    nowCtrl = 0;
+                    RoomJData.put("nowCtrl", nowCtrl);
+                } catch (Exception e) {
                 }
-            };
-            timer = new Timer();
-            timer.schedule(task, chooseTime);
-            try {
-                RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
-                RoomJData.put("banFlage", banFlage);
-                nowCtrl = 0;
-                RoomJData.put("nowCtrl", nowCtrl);
-            } catch (Exception e) {
-            }
-            break;
-        case PICK:
-            try {
-                RoomJData.put("pickFlage", pickFlage);
-            } catch (Exception e) {
-            }
-            break;
-        case END:
-            break;
+                break;
+            case PICK:
+                try {
+                    RoomJData.put("pickFlage", pickFlage);
+                } catch (Exception e) {
+                }
+                break;
+            case END:
+                break;
         }
     }
 

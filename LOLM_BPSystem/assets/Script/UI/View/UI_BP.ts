@@ -70,7 +70,6 @@ export default class UI_BP extends IUIView {
             this.Choosebox[this.SyncData.nowCtrl].position = cc.Vec3.ZERO;
             let data: PreviewData = new PreviewData();
             data.num = num;
-            data.pass = this.pass;
             Manager.Inst.GetNetwork().Send(data);
         }
     }
@@ -204,6 +203,7 @@ export default class UI_BP extends IUIView {
         let linkData: LinkRoomData = new LinkRoomData();
         linkData.key = UI_BP.Inst.key;
         linkData.team = UI_BP.Inst.myTeam;
+        linkData.pass = UI_BP.Inst.pass;
         Manager.Inst.GetNetwork().Send(linkData);
     }
     public OnCheckButton() {
@@ -211,7 +211,6 @@ export default class UI_BP extends IUIView {
             case "WAIT":
                 if (this.myTeam != -1 && !this.SyncData.Ready[this.myTeam]) {
                     let data: ReadyData = new ReadyData();
-                    data.pass = this.pass;
                     data.team = this.myTeam;
                     Manager.Inst.GetNetwork().Send(data);
                 }
@@ -221,7 +220,6 @@ export default class UI_BP extends IUIView {
                 if (this.NowChoose != -1) {
                     let data: ChooseData = new ChooseData();
                     data.choose = this.NowChoose;
-                    data.pass = this.pass;
                     Manager.Inst.GetNetwork().Send(data);
                 }
                 break;
@@ -232,10 +230,10 @@ export class LinkRoomData {
     public pt: number = ProtocolName.LINK_ROOM;
     public key: string = "";
     public team: number = -1;
+    public pass: string = "";
 }
 export class ReadyData {
     public pt: number = ProtocolName.READY;
-    public pass: string;
     public team: number;
 }
 export class GetLOLMData {
@@ -244,7 +242,6 @@ export class GetLOLMData {
 export class ChooseData {
     public pt: number = ProtocolName.CHOOSE;
     public choose: number;
-    public pass: string;
 }
 export class ELinkRoomData {
     public resCode: number = -1;
@@ -253,7 +250,6 @@ export class ELinkRoomData {
 export class PreviewData {
     public pt: number = ProtocolName.PREVIEW;
     public num: number;
-    public pass: string;
 }
 export class EPreviewRoomData {
     public preview: number;

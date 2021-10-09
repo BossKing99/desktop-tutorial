@@ -8,6 +8,7 @@ import io.netty.channel.Channel;
 public class Player implements IPlayer {
     private Channel _ctx = null;
     private GameRoom _room = null;
+    private String _pass = "";
 
     public Player(Channel ctx) {
         _ctx = ctx;

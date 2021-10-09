@@ -18,7 +18,7 @@ export default class UI_RoomLink extends IUIView {
             TeamUrl.searchParams.set("page", "2");
             TeamUrl.searchParams.set("team", i.toString());
             TeamUrl.searchParams.set("key", url.searchParams.get("key"));
-            TeamUrl.searchParams.set("pass", url.searchParams.get("pass"));
+            TeamUrl.searchParams.set("pass", url.searchParams.get("pass" + i));
             this.Urls[i] = TeamUrl.toString();
         }
         let AudienceUrl = new URL(Manager.Inst.GetOriginURL());

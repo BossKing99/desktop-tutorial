@@ -67,22 +67,24 @@ public class PackThread extends Thread {
 
     private PortocolBasc getControl(int pt) {
         switch (pt) {
-        case ProtocolName.LOGIN:
-            return new LoginProtocol();
-        case ProtocolName.CREATE_ROOM:
-            return new CreateRoomProtocol();
-        case ProtocolName.LINK_ROOM:
-            return new LinkRoomProtocol();
-        case ProtocolName.CHOOSE:
-            return new ChooseProtocol();
-        case ProtocolName.PREVIEW:
-            return new PreviewProtocol();
-        case ProtocolName.GET_LOLMDATA:
-            return new GetLOLMDataProtocol();
-        case ProtocolName.READY:
-            return new ReadyProtocol();
-        default:
-            break;
+            case ProtocolName.LOGIN:
+                return new LoginProtocol();
+            case ProtocolName.CREATE_ROOM:
+                return new CreateRoomProtocol();
+            case ProtocolName.LINK_ROOM:
+                return new LinkRoomProtocol();
+            case ProtocolName.CHOOSE:
+                return new ChooseProtocol();
+            case ProtocolName.PREVIEW:
+                return new PreviewProtocol();
+            case ProtocolName.GET_LOLMDATA:
+                return new GetLOLMDataProtocol();
+            case ProtocolName.READY:
+                return new ReadyProtocol();
+            case ProtocolName.GetCompose:
+                return new GetCompose();
+            default:
+                break;
         }
         return null;
     }

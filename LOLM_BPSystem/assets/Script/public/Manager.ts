@@ -8,6 +8,8 @@ const { ccclass, property } = cc._decorator;
 export default class Manager extends cc.Component {
     @property(String)
     private IP: string = "";
+    @property(String)
+    private ws: string = "";
     public static Inst: Manager = null;
     private _network: Network = null;
     private originURL: string = "";
@@ -30,7 +32,7 @@ export default class Manager extends cc.Component {
             window.location.href = newURL.toString();
         }
         else {
-            this._network.creatWebSocket(this.IP);
+            this._network.creatWebSocket(this.ws,this.IP);
             while (true) {
                 if (this.GetNetwork().isConnent()) {
                     Manager.Inst.GetNetwork().Send(new LoginData());

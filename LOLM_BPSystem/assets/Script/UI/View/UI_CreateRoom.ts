@@ -64,8 +64,9 @@ export default class UI_CreateRoom extends IUIView {
         if (jdata.resCode === 0) {
             let url = new URL(Manager.Inst.GetOriginURL());
             url.searchParams.set("page", "1");
-            url.searchParams.set("key", jdata.key[0]);
-            url.searchParams.set("pass", jdata.key[1]);
+            url.searchParams.set("key", jdata.key);
+            url.searchParams.set("pass0", jdata.roomPass[0]);
+            url.searchParams.set("pass1", jdata.roomPass[1]);
             url.searchParams.set("blue", jdata.blueTeam);
             url.searchParams.set("red", jdata.redTeam);
             window.location.href = url.toString();
@@ -81,10 +82,12 @@ export class CreateRoomData {
     public gameName: string = "";
     public banCount: number = 0;
     public pass: string = "";
+    public gameType:number = 1
 }
 export class ECreateRoomData {
     public resCode: number = -1;
-    public key: string[] = [];
+    public key: string;
+    public roomPass:string[] = []
     public blueTeam: string;
     public redTeam: string;
     public gameName: string;

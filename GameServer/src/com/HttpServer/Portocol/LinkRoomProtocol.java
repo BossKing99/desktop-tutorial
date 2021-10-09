@@ -16,17 +16,25 @@ public class LinkRoomProtocol implements PortocolBasc {
         JSONObject jres = new JSONObject();
         try {
             String key = jdata.getString("key");
+            int team = jdata.getInt("team");
+            String pass = "";
+            if (team != -1)
+                pass = jdata.getString("pass");
             GameRoom room = GameRoomManager.Inst.GetRoom(key);
+
             if (room != null) {
-                Player p = PlayerManager.GetPlayer(ctx.id().toString());
-                if (p == null) {
-                    Console.Err("LinkRoomProtocol Player is null ");
-                    return jres;
-                }
-                room.PlayerAdd(p, jdata.getInt("team"));
-                jres.put("resCode", 0);
-                Console.Log(room.GetRoomInfo().toString());
-                jres.put("info", room.GetRoomInfo());
+                if (team == -1 || pass.equals(room.GetRoomPass()[team])) {
+                    Player p = PlayerManager.GetPlayer(ctx.id().toString());
+                    if (p == null) {
+                        Console.Err("LinkRoomProtocol Player is null ");
+                        return jres;
+                    }
+                    room.PlayerAdd(p, team);
+                    jres.put("resCode", 0);
+                    Console.Log(room.GetRoomInfo().toString());
+                    jres.put("info", room.GetRoomInfo());
+                } else
+                    jres.put("resCode", 1);
             } else
                 jres.put("resCode", 1);
         } catch (Exception e) {

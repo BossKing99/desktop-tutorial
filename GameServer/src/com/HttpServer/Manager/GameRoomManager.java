@@ -31,17 +31,16 @@ public class GameRoomManager {
 
     private Map<String, GameRoom> AllGame = new HashMap<>();
 
-    public String[] CreateNewGameRoom(JSONObject jdata) {
-        String[] Key = new String[2];
+    public String CreateNewGameRoom(JSONObject jdata) {
+        String Key = "";
         int gameTpye = 0;
         try {
             gameTpye = jdata.getInt("gameType");
-            Key[0] = getKey(jdata.getString("blueTeamName") + jdata.getString("redTeamName")
+            Key = GetKey(jdata.getString("blueTeamName") + jdata.getString("redTeamName")
                     + jdata.getString("gameName") + System.currentTimeMillis());
-            Key[1] = getKey(System.currentTimeMillis() + "").substring(5, 12);
         } catch (Exception e) {
         }
-        if (!Key[0].equals("")) {
+        if (!Key.equals("")) {
             // 這邊可以換成可擴充結構
             GameRoom newGameRoom = null;
             switch (gameTpye) {
@@ -54,7 +53,7 @@ public class GameRoomManager {
             }
 
             synchronized (AllGame) {
-                AllGame.put(Key[0], newGameRoom);
+                AllGame.put(Key, newGameRoom);
             }
         }
         return Key;
@@ -87,7 +86,7 @@ public class GameRoomManager {
         }
     }
 
-    private String getKey(String str) {
+    public static String GetKey(String str) {
         char[] hexDigits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
         try {
             MessageDigest messageDigest = MessageDigest.getInstance("MD5");

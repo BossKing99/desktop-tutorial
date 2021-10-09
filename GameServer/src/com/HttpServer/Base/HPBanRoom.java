@@ -1,26 +1,24 @@
 package com.HttpServer.Base;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import com.HttpServer.Base.PlayerBase.Player;
+import com.HttpServer.Manager.GameRoomManager;
 import com.HttpServer.Portocol.NetJson;
 import com.HttpServer.publicClass.Console;
-import com.HttpServer.publicClass.LOLMData;
 import com.HttpServer.publicClass.ProtocolName;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class HPBanRoom extends GameRoom {
     // 0是藍隊 1是紅隊
-    private Map<Integer, Integer> chosen = new HashMap<>();
     private Boolean[] isReady = { false, false };
-    private int[] banData = new int[2];
-    private int[][] pickData = new int[3][10];
+    private int[] banData = { -1, -1 };
+    private int[][][] pickData;
     private Timer timer = new Timer();
     private TimerTask task;
     private List<LOLMPlayer> allPlayers = new ArrayList<>();
@@ -28,14 +26,16 @@ public class HPBanRoom extends GameRoom {
     private long composeTime = 300000;
     // 選角用
     private int nowCtrl = 0;
-    private int previewNum = 0;
-    private int[] banProcess;
-    private int banFlage = 0;
+    private boolean[] hide = { true, true, true, true, false, false, false, false, true, true, false, true };
+    private int composeCount;
 
-    public HPBanRoom(JSONObject jdata, String[] key) {
+    public HPBanRoom(JSONObject jdata, String key) {
         super(jdata, key);
+        String[] pass = new String[2];
+
         try {
-            initIntArray(banData);
+            composeCount = jdata.getInt("composeCount");
+            pickData = new int[2][composeCount][10];
             RoomJData.put("Status", _status);
             RoomJData.put("PickList", pickData);
             RoomJData.put("Ready", isReady);
@@ -43,6 +43,12 @@ public class HPBanRoom extends GameRoom {
             RoomInfo.put("blue", jdata.get("blueTeamName"));
             RoomInfo.put("red", jdata.get("redTeamName"));
             RoomInfo.put("game", jdata.get("gameName"));
+
+            pass[0] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "asdasfgdfth");
+            pass[1] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "thrthrthtrth");
+            RoomInfo.put("pass", pass);
+            RoomInfo.put("pickCount", composeCount);
+            SetRoomPass(pass);
         } catch (Exception e) {
             Console.Err("HPBanRoom Create Error");
         }
@@ -57,13 +63,11 @@ public class HPBanRoom extends GameRoom {
     @Override
     public void Ready(JSONObject jdata) {
         try {
-            Console.Log(jdata.optString("pass"));
-            Console.Log(_pass);
-            if (_status == RoomStatus.WAIT && jdata.optString("pass").equals(_pass)) {
+            if (_status == RoomStatus.WAIT) {
                 isReady[jdata.getInt("team")] = true;
                 RoomJData.put("Ready", isReady);
                 if (isReady[0] && isReady[1])
-                    SetStatus(RoomStatus.BAN);
+                    SetStatus(RoomStatus.COMPOSE);
                 broadcast(RoomJData.toString(), ProtocolName.SYNC);
             }
         } catch (Exception e) {
@@ -74,11 +78,9 @@ public class HPBanRoom extends GameRoom {
     @Override
     public void Choose(JSONObject jdata, String ctxId) {
         try {
-            if (jdata.optString("pass").equals(_pass)) {
-                LOLMPlayer player = findPlayer(ctxId);
-                if (player != null && player.team == nowCtrl) {
-                    nextProcess(jdata.optInt("choose"));
-                }
+            LOLMPlayer player = findPlayer(ctxId);
+            if (player != null && player.team == nowCtrl) {
+                nextProcess(jdata.optInt("choose"));
             }
         } catch (Exception e) {
             Console.Err("HPBanRoom Choose Error");
@@ -88,30 +90,67 @@ public class HPBanRoom extends GameRoom {
 
     @Override
     public void Preview(JSONObject data, String ctxId) {
+    }
+
+    @Override
+    public void Compose(JSONObject jdata) {
         try {
-            int num = data.getInt("num");
-            if ((num == 0 || !chosen.containsKey(num)) && data.optString("pass").equals(_pass)) {
-                previewNum = num;
-                LOLMPlayer player = findPlayer(ctxId);
-                if (player != null && player.team == nowCtrl) {
-                    JSONObject jdata = new JSONObject();
-                    if (_status == RoomStatus.BAN)
-                        jdata.put("banNum", banFlage);
-                    else
-                        return;
-                    jdata.put("team", nowCtrl);
-                    jdata.put("preview", previewNum);
-                    broadcast(jdata.toString(), ProtocolName.PREVIEW);
-                }
+            if (_status == RoomStatus.COMPOSE) {
+                int chose = jdata.optInt("chose");
+                int no = jdata.optInt("no");
+                int group = jdata.optInt("group");
+                int team = jdata.optInt("group");
+                pickData[team][group][no] = chose;
+                broadcast(jdata.toString(), ProtocolName.Compose, team);
             }
         } catch (Exception e) {
-            Console.Err("HPBanRoom Choose Error");
+            Console.Err("HPBanRoom Compose Error");
         }
     }
 
     @Override
-    public  void Compose(Player p,JSONObject jdata){
-        
+    public JSONObject GetCompose(String pass, int team) {
+        if (!pass.equals(GetRoomPass()[team])) {
+            return null;
+        }
+        JSONObject jdata = new JSONObject();
+        try {
+            jdata.put("pick", pickData[team]);
+        } catch (Exception e) {
+            Console.Log("GetCompose pick data conversion error");
+        }
+
+        return jdata;
+    }
+
+    public JSONObject GetAllCompose(boolean isHaid) {
+        JSONObject jdata = new JSONObject();
+        try {
+            if (isHaid) {
+                JSONArray bulePicks = new JSONArray();
+                JSONArray redPicks = new JSONArray();
+
+                for (int j = 0; j < composeCount; j++) {
+                    JSONArray bulePick = new JSONArray();
+                    JSONArray redPick = new JSONArray();
+                    for (int i = 0; i < 10; i++) {
+                        bulePick.put(hide[i] ? pickData[0][j][i] : -1);
+                        redPick.put(hide[i] ? pickData[0][j][i] : -1);
+                    }
+                    bulePicks.put(bulePick);
+                    redPicks.put(redPick);
+                }
+                jdata.put("bulePick", bulePicks);
+                jdata.put("redPick", redPicks);
+            } else {
+                jdata.put("bulePick", pickData[0]);
+                jdata.put("redPick", pickData[1]);
+            }
+        } catch (Exception e) {
+            Console.Log("GetCompose pick data conversion error");
+        }
+
+        return jdata;
     }
 
     @Override
@@ -125,26 +164,39 @@ public class HPBanRoom extends GameRoom {
             Console.Err("HPBanRoom SetStatus Error");
         }
         switch (_status) {
-        case WAIT:
-            break;
-        case BAN:
-            task = new TimerTask() {
-                public void run() {
-                    nextProcess(previewNum);
+            case WAIT:
+                break;
+            case BAN:
+                task = new TimerTask() {
+                    public void run() {
+                        nextProcess(0);
+                    }
+                };
+                timer = new Timer();
+                timer.schedule(task, chooseTime);
+                try {
+                    RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
+                    nowCtrl = 0;
+                    RoomJData.put("nowCtrl", nowCtrl);
+                } catch (Exception e) {
                 }
-            };
-            timer = new Timer();
-            timer.schedule(task, chooseTime);
-            try {
-                RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
-                RoomJData.put("banFlage", banFlage);
-                nowCtrl = 0;
-                RoomJData.put("nowCtrl", nowCtrl);
-            } catch (Exception e) {
-            }
-            break;
-        case END:
-            break;
+                break;
+
+            case COMPOSE:
+                task = new TimerTask() {
+                    public void run() {
+                        SetStatus(RoomStatus.BAN);
+                    }
+                };
+                timer = new Timer();
+                timer.schedule(task, composeTime);
+                try {
+                    RoomJData.put("NextTime", System.currentTimeMillis() + composeTime);
+                } catch (Exception e) {
+                }
+                break;
+            case END:
+                break;
         }
     }
 
@@ -169,32 +221,27 @@ public class HPBanRoom extends GameRoom {
     }
 
     private void nextProcess(int choose) {
-        previewNum = 0;
         try {
-            if (!(choose < LOLMData.MaxHeroCount() && (choose == 0 || !chosen.containsKey(choose))))
+            if (!(choose < composeCount && choose >= 0))
                 return;
-            if (choose != 0)
-                chosen.put(choose, 0);
             timer.cancel();
             if (_status == RoomStatus.BAN) {
-                banData[banFlage] = choose;
-                banFlage++;
-                if (banFlage == banData.length) {
+                banData[nowCtrl] = choose;
+                nowCtrl++;
+                if (nowCtrl == banData.length) {
                     SetStatus(RoomStatus.END);
                     nowCtrl = 0;
-                } else
-                    nowCtrl = banProcess[banFlage];
+                    RoomJData.put("bluePick", pickData[0]);
+                    RoomJData.put("redPick", pickData[1]);
+                }
                 RoomJData.put("nowCtrl", nowCtrl);
                 RoomJData.put("BanList", banData);
-                RoomJData.put("banFlage", banFlage);
-            } else if (_status == RoomStatus.COMPOSE) {
-
             }
 
             if (_status != RoomStatus.END) {
                 task = new TimerTask() {
                     public void run() {
-                        nextProcess(previewNum);
+                        nextProcess(0);
                     }
                 };
                 timer = new Timer();
@@ -213,6 +260,19 @@ public class HPBanRoom extends GameRoom {
         for (LOLMPlayer lolmPlayer : allPlayers) {
             try {
                 if (lolmPlayer != null)
+                    lolmPlayer.Write(jdata);
+            } catch (Exception e) {
+                Console.Err("HPBanRoom broadcast Error e = " + e);
+            }
+        }
+    }
+
+    private void broadcast(String data, int pt, int team) {
+        String jdata = NetJson.CreatePack(data, pt);
+        Console.Log(jdata);
+        for (LOLMPlayer lolmPlayer : allPlayers) {
+            try {
+                if (lolmPlayer != null && lolmPlayer.team == team)
                     lolmPlayer.Write(jdata);
             } catch (Exception e) {
                 Console.Err("HPBanRoom broadcast Error e = " + e);
