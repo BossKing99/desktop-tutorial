@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "374f597c-db58-4a26-b485-4f5d97336ad7",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 254,
+  "height": 254,
+  "platformSettings": {},
+  "subMetas": {
+    "RedTeam_AvatarFrame": {
+      "ver": "1.0.4",
+      "uuid": "7e52f56f-5dea-42a1-ab1b-b122b59f2754",
+      "rawTextureUuid": "374f597c-db58-4a26-b485-4f5d97336ad7",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 250,
+      "height": 250,
+      "rawWidth": 254,
+      "rawHeight": 254,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

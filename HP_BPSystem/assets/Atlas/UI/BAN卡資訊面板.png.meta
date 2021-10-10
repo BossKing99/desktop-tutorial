@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "18144b89-4492-4055-bb61-b902c54a5f66",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 646,
+  "height": 1747,
+  "platformSettings": {},
+  "subMetas": {
+    "BAN卡資訊面板": {
+      "ver": "1.0.4",
+      "uuid": "d7285b39-c23a-44d8-b25b-e8938e5eff3f",
+      "rawTextureUuid": "18144b89-4492-4055-bb61-b902c54a5f66",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 646,
+      "height": 1747,
+      "rawWidth": 646,
+      "rawHeight": 1747,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -80,14 +80,15 @@ export class CreateRoomData {
     public blueTeamName: string = "";
     public redTeamName: string = "";
     public gameName: string = "";
-    public banCount: number = 0;
+    public banCount: number = 1;
     public pass: string = "";
-    public gameType:number = 1
+    public gameType: number = 2
+    public composeCount: number = 1;
 }
 export class ECreateRoomData {
     public resCode: number = -1;
     public key: string;
-    public roomPass:string[] = []
+    public roomPass: string[] = []
     public blueTeam: string;
     public redTeam: string;
     public gameName: string;

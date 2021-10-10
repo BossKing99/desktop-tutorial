@@ -37,20 +37,20 @@ public class HPBanRoom extends GameRoom {
             composeCount = jdata.getInt("composeCount");
             composeData = new int[2][composeCount][10];
             RoomJData.put("Status", _status);
-            RoomJData.put("PickList", composeData);
+            RoomJData.put("ComposeCount", composeCount);
             RoomJData.put("Ready", isReady);
             RoomInfo = new JSONObject();
             RoomInfo.put("blue", jdata.get("blueTeamName"));
             RoomInfo.put("red", jdata.get("redTeamName"));
             RoomInfo.put("game", jdata.get("gameName"));
 
-            pass[0] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "asdasfgdfth");
-            pass[1] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "thrthrthtrth");
+            pass[0] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "asdasfgdfth").substring(5, 12);;
+            pass[1] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "thrthrthtrth").substring(5, 12);;
             RoomInfo.put("pass", pass);
-            RoomInfo.put("pickCount", composeCount);
+            RoomInfo.put("composeCount", composeCount);
             SetRoomPass(pass);
         } catch (Exception e) {
-            Console.Err("HPBanRoom Create Error");
+            Console.Err("HPBanRoom Create Error e = " + e);
         }
     }
 
@@ -98,7 +98,7 @@ public class HPBanRoom extends GameRoom {
                 broadcast(jdata.toString(), ProtocolName.Compose, team);
             }
         } catch (Exception e) {
-            Console.Err("HPBanRoom Compose Error");
+            Console.Err("HPBanRoom Compose Error e = " + e);
         }
     }
 
@@ -173,8 +173,8 @@ public class HPBanRoom extends GameRoom {
                 try {
                     RoomJData.put("NextTime", System.currentTimeMillis() + chooseTime);
                     nowCtrl = 0;
-                    RoomJData.put("nowCtrl", nowCtrl);
-                    RoomJData.put("hideCompose", GetAllCompose(true));
+                    RoomJData.put("NowCtrl", nowCtrl);
+                    RoomJData.put("HideCompose", GetAllCompose(true));
                 } catch (Exception e) {
                 }
                 break;
@@ -230,7 +230,7 @@ public class HPBanRoom extends GameRoom {
                     nowCtrl = 0;
                     RoomJData.put("Compose", GetAllCompose(false));
                 }
-                RoomJData.put("nowCtrl", nowCtrl);
+                RoomJData.put("NowCtrl", nowCtrl);
                 RoomJData.put("BanList", banData);
             }
 
