@@ -19,7 +19,7 @@ export default class MagicCardManager extends cc.Component {
             CardButtonS.Init(data[index])
             this.AllIcon.push(CardButtonS);
         }
-        this.HeroButtonPraent.setContentSize(1050, ((this.AllIcon.length / 4) + 1) * 122);
+        this.HeroButtonPraent.setContentSize(1050, ((this.AllIcon.length / 5) + 1) * 226 + 40);
     }
     public isChoose(n) {
         console.log(n);

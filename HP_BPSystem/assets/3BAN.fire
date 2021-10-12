@@ -186,7 +186,7 @@
       "array": [
         0,
         0,
-        398.3716857408418,
+        401.9169772375843,
         0,
         0,
         0,
@@ -8344,11 +8344,11 @@
       "height": 40
     },
     "_N$startAxis": 0,
-    "_N$paddingLeft": 89,
-    "_N$paddingRight": 89,
+    "_N$paddingLeft": 67.75,
+    "_N$paddingRight": 67.75,
     "_N$paddingTop": 10,
     "_N$paddingBottom": 10,
-    "_N$spacingX": 20,
+    "_N$spacingX": 10,
     "_N$spacingY": 20,
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 0,

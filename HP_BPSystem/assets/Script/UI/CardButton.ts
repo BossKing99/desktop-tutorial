@@ -7,6 +7,8 @@ const { ccclass, property } = cc._decorator;
 export default class HeroButton extends cc.Component {
     @property(cc.Sprite)
     private Icon: cc.Sprite;
+    @property(cc.Label)
+    private NameLabel: cc.Label;
     private Id: number;
     private Type: number;
     private isChoose = false;
@@ -21,6 +23,7 @@ export default class HeroButton extends cc.Component {
             }
             // 加載 成功
             this.Icon.spriteFrame = spriteFrame;
+            this.NameLabel.string = data.name;
         })
     }
     public OnClick() {
