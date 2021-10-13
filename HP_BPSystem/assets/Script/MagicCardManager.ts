@@ -9,6 +9,8 @@ export default class MagicCardManager extends cc.Component {
     HeroButton: cc.Prefab = null;
     @property(cc.Node)
     HeroButtonPraent: cc.Node = null;
+    @property(cc.Node)
+    ChooseBox: cc.Node = null;
     private AllIcon: CardButton[];
     public Init(data: MgData[]) {
         this.AllIcon = [];
@@ -20,10 +22,15 @@ export default class MagicCardManager extends cc.Component {
             this.AllIcon.push(CardButtonS);
         }
         this.HeroButtonPraent.setContentSize(1050, ((this.AllIcon.length / 5) + 1) * 226 + 40);
+        this.ChooseBox.active = false
+    }
+    public OpenChessBox() {
+        this.ChooseBox.active = true
     }
     public isChoose(n) {
         console.log(n);
         this.AllIcon[n].Choose();
+        this.ChooseBox.active = false
     }
     public OnClick_filter(event, n) {
         for (let i = 0; i < this.AllIcon.length; i++)

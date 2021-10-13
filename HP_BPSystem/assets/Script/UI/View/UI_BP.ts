@@ -104,8 +104,12 @@ export default class UI_BP extends IUIView {
                 case "WAIT":
                     UI_BP.Inst.RoomInfoLable.string = "準備階段";
                     if (UI_BP.Inst.myTeam != -1) {
-                        UI_BP.Inst.ReadyLabel.string = jdata.Ready[UI_BP.Inst.myTeam] ? "准备完成" : "准备";
+                        UI_BP.Inst.ReadyLabel.string = jdata.Ready[UI_BP.Inst.myTeam] ? "準備完成" : "準備";
                         UI_BP.Inst.ReadyButtonNode.interactable = !jdata.Ready[UI_BP.Inst.myTeam];
+                        UI_BP.Inst.ObBox.active = false;
+                    } else {
+                        UI_BP.Inst.ObBox.active = true;
+                        UI_BP.Inst.OBText.string = "等待選手就位"
                     }
                     for (let i = 0; i < 2; i++)
                         UI_BP.Inst.TeamBox[i].spriteFrame = UI_BP.Inst.TeamBoxSf[i];
@@ -119,10 +123,13 @@ export default class UI_BP extends IUIView {
                     if (UI_BP.Inst.SyncData.banFlage < UI_BP.Inst.AllBanIcon.length)
                         UI_BP.Inst.AllBanIcon[UI_BP.Inst.SyncData.banFlage].SetReady();
                     break;
+                case "COMPOSE":
+                    UI_BP.Inst.OBText.string = "等待選手組牌"
+                    break;
             }
             if (UI_BP.Inst.SyncData.Status == "BAN") {
                 UI_BP.Inst.RoomInfoLable.string = "";
-                UI_BP.Inst.ReadyLabel.string = UI_BP.Inst.SyncData.nowCtrl == UI_BP.Inst.myTeam ? "确认选择" : "等待对手";
+                UI_BP.Inst.ReadyLabel.string = UI_BP.Inst.SyncData.nowCtrl == UI_BP.Inst.myTeam ? "確認選擇" : "等待對手";
                 UI_BP.Inst.ReadyButtonNode.interactable = UI_BP.Inst.SyncData.nowCtrl == UI_BP.Inst.myTeam;
                 for (let i = 0; i < 2; i++) {
                     if (UI_BP.Inst.SyncData.nowCtrl == i) {
