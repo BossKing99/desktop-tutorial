@@ -11,30 +11,39 @@ export default class MagicCardManager extends cc.Component {
     HeroButtonPraent: cc.Node = null;
     @property(cc.Node)
     ChooseBox: cc.Node = null;
+
     private AllIcon: CardButton[];
-    public Init(data: MgData[]) {
+
+
+    public Init(data: MgData[]): MgData[] {
         this.AllIcon = [];
+        let allMgData: MgData[] = [];
         for (let index = 0; index < data.length; index++) {
             let newIcon = cc.instantiate(this.HeroButton)
             newIcon.parent = this.HeroButtonPraent;
             let CardButtonS = newIcon.getComponent(CardButton)
             CardButtonS.Init(data[index])
             this.AllIcon.push(CardButtonS);
+            allMgData[data[index].no] = data[index];
         }
         this.HeroButtonPraent.setContentSize(1050, ((this.AllIcon.length / 5) + 1) * 226 + 40);
         this.ChooseBox.active = false
+
+        return allMgData
     }
-    public OpenChessBox() {
+    public OpenChessBox(cardType: number) {
+        this.OnClick_filter(null, cardType)
         this.ChooseBox.active = true
     }
-    public isChoose(n) {
-        console.log(n);
-        this.AllIcon[n].Choose();
+    public isChoose() {
         this.ChooseBox.active = false
     }
     public OnClick_filter(event, n) {
+        let num = 0;
         for (let i = 0; i < this.AllIcon.length; i++)
-            this.AllIcon[i].Filter(n);
+            num += this.AllIcon[i].Filter(n) ? 1 : 0;
+        this.HeroButtonPraent.setPosition(0, 240)
+        this.HeroButtonPraent.setContentSize(1050, ((num / 5) + 1) * 226 + 40);
     }
 }
 export class HPData {

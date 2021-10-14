@@ -1,8 +1,9 @@
 
-import MagicCardManager, { HPData } from "../../MagicCardManager";
+import MagicCardManager, { HPData, MgData } from "../../MagicCardManager";
 import GetTime from "../../public/GetTime";
 import Manager, { ProtocolName } from "../../public/Manager";
 import BanPickIcon from "../BanPickIcon";
+import CardButton from "../CardButton";
 import IUIView from "./IUIView";
 
 const { ccclass, property } = cc._decorator;
@@ -31,15 +32,20 @@ export default class UI_BP extends IUIView {
     private ObBox: cc.Node;
     @property(cc.Label)
     private OBText: cc.Label;
+    @property(cc.Node)
+    private ChooseBox: cc.Node;
     //------------------------------------------
     public static Inst: UI_BP = null;
-    private NowChoose: number = -1;
     private myTeam: number = -1;
     private key: string
     private pass: string
     private SyncData: ESyncData;
     private AllBanIcon: BanPickIcon[] = [];
     private isInit: boolean = false;
+    private AllChooseCard: CardButton[] = [];
+    private NowChooseCard: number = 0;
+    private AllMgData: MgData[] = []
+
     public Open() {
         super.Open();
         UI_BP.Inst = this;
@@ -47,6 +53,15 @@ export default class UI_BP extends IUIView {
         Manager.Inst.GetNetwork().AddCallBack(ProtocolName.SYNC, this.SyncCallBack); //OK
         Manager.Inst.GetNetwork().AddCallBack(ProtocolName.PREVIEW, this.PreviewCallBack);
         Manager.Inst.GetNetwork().AddCallBack(ProtocolName.GET_DATA, this.GetLOLMDataCallBack); //OK
+        Manager.Inst.GetNetwork().Send(new GetLOLMData());
+
+        console.log(UI_BP.Inst.ChooseBox.childrenCount)
+        let box = UI_BP.Inst.ChooseBox.children[0];
+        for (let j = 0; j < box.childrenCount; j++) {
+            UI_BP.Inst.AllChooseCard[j] = box.children[j].getComponent(CardButton)
+            console.log(UI_BP.Inst.AllChooseCard)
+        }
+
         let url = new URL(window.location.href);
         if (url.searchParams.has("team")) {
             this.myTeam = Number.parseInt(url.searchParams.get("team"));
@@ -54,23 +69,14 @@ export default class UI_BP extends IUIView {
         }
         this.key = url.searchParams.get("key");
         this.ReadyButtonNode.node.active = url.searchParams.has("team");
-        Manager.Inst.GetNetwork().Send(new GetLOLMData());
     }
     public Close() {
         super.Close();
     }
-    public SetChoosebox(node: cc.Node, num: number) {
-        if (this.SyncData.nowCtrl == this.myTeam) {
-            this.NowChoose = num;
-            let data: PreviewData = new PreviewData();
-            data.num = num;
-            Manager.Inst.GetNetwork().Send(data);
-        }
-    }
+
     public CloseChoosebox() {
         if (this.SyncData.nowCtrl != 0 && this.SyncData.nowCtrl != 1)
             return
-        this.NowChoose = -1;
     }
     private GetLinkCallBack(data: string) {
         let jdata: ELinkRoomData = JSON.parse(data);
@@ -103,6 +109,7 @@ export default class UI_BP extends IUIView {
             switch (UI_BP.Inst.SyncData.Status) {
                 case "WAIT":
                     UI_BP.Inst.RoomInfoLable.string = "準備階段";
+                    // UI_BP.Inst.ChooseBox.active = false
                     if (UI_BP.Inst.myTeam != -1) {
                         UI_BP.Inst.ReadyLabel.string = jdata.Ready[UI_BP.Inst.myTeam] ? "準備完成" : "準備";
                         UI_BP.Inst.ReadyButtonNode.interactable = !jdata.Ready[UI_BP.Inst.myTeam];
@@ -124,7 +131,11 @@ export default class UI_BP extends IUIView {
                         UI_BP.Inst.AllBanIcon[UI_BP.Inst.SyncData.banFlage].SetReady();
                     break;
                 case "COMPOSE":
-                    UI_BP.Inst.OBText.string = "等待選手組牌"
+                    if (UI_BP.Inst.myTeam != -1) {
+                        UI_BP.Inst.OBText.string = "等待選手組牌"
+                    } else {
+                        UI_BP.Inst.ChooseBox.active = true
+                    }
                     break;
             }
             if (UI_BP.Inst.SyncData.Status == "BAN") {
@@ -172,16 +183,17 @@ export default class UI_BP extends IUIView {
         }
 
     }
+
     private GetLOLMDataCallBack(data: string) {
         let jdata: HPData = JSON.parse(data);
-        console.log(UI_BP.Inst.CardManager)
-        UI_BP.Inst.CardManager.Init(jdata.ChampoinTable);
+        UI_BP.Inst.AllMgData = UI_BP.Inst.CardManager.Init(jdata.ChampoinTable);
         let linkData: LinkRoomData = new LinkRoomData();
         linkData.key = UI_BP.Inst.key;
         linkData.team = UI_BP.Inst.myTeam;
         linkData.pass = UI_BP.Inst.pass;
         Manager.Inst.GetNetwork().Send(linkData);
     }
+
     public OnCheckButton() {
         switch (UI_BP.Inst.SyncData.Status) {
             case "WAIT":
@@ -192,14 +204,18 @@ export default class UI_BP extends IUIView {
                 }
                 break;
             case "BAN":
-            case "PICK":
-                if (this.NowChoose != -1) {
-                    let data: ChooseData = new ChooseData();
-                    data.choose = this.NowChoose;
-                    Manager.Inst.GetNetwork().Send(data);
-                }
                 break;
         }
+    }
+
+    public ShowChooseBox(cardNum: number, cardType: number) {
+        UI_BP.Inst.NowChooseCard = cardNum
+        UI_BP.Inst.CardManager.OpenChessBox(cardType)
+    }
+
+    public SetChooseCardData(cardNum: number) {
+        UI_BP.Inst.AllChooseCard[UI_BP.Inst.NowChooseCard].Init(UI_BP.Inst.AllMgData[cardNum])
+        UI_BP.Inst.CardManager.isChoose()
     }
 }
 export class LinkRoomData {
