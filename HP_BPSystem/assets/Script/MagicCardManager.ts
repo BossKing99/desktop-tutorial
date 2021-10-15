@@ -31,7 +31,7 @@ export default class MagicCardManager extends cc.Component {
 
         return allMgData
     }
-    public OpenChessBox(cardType: number) {
+    public OpenChoosBox(cardType: number) {
         this.OnClick_filter(null, cardType)
         this.ChooseBox.active = true
     }

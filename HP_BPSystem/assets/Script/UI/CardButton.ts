@@ -15,11 +15,20 @@ export default class CardButton extends cc.Component {
     private CardNumber: number = 0;
     @property(Number)
     private CardType: number = 0;
-    private Id: number;
+    public Id: number;
     private Type: number;
-    private isChoose = false;
+    private defuName:string = ""
     
+    public onLoad(){
+        this.defuName = this.NameLabel.string
+    }
+
     public Init(data: MgData) {
+        if (data == undefined){
+            this.NameLabel.string=this.defuName;
+            this.Icon.spriteFrame= null;
+            return
+        }
         this.Id = data.no;
         this.Type = data.type;
         cc.loader.loadRes("HeroIcon/" + this.Id, cc.SpriteFrame, (e: Error, spriteFrame: cc.SpriteFrame) => {
@@ -41,18 +50,15 @@ export default class CardButton extends cc.Component {
         }
     }
     public Choose() {
-        if (this.isChoose || this.Id == 0)
+        if (this.Id == 0)
             return;
-        this.isChoose = true;
         this.node.active = false;
     }
     public Filter(t): boolean {
-        if (this.isChoose)
-            return false;
         if (t == -1)
             this.node.active = true;
         else {
-            if (this.Type == t) {
+            if (this.Type == t && !UI_BP.Inst.IsChoose(this.Id)) {
                 this.node.active = true;
                 return true;
             }

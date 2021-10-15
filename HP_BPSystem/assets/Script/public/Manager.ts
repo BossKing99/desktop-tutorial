@@ -82,6 +82,6 @@ export class ProtocolName {
     public static PREVIEW: number = 6; // 預選角
     public static GET_DATA: number = 7;
     public static READY: number = 8;
-    public static Compose:number = 9;
-    public static GetCompose:number = 10;
+    public static COMPOSE:number = 9;
+    public static GET_COMPOST:number = 10;
 }

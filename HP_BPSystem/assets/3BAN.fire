@@ -87,16 +87,16 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 420
-      },
-      {
-        "__id__": 421
-      },
-      {
         "__id__": 422
       },
       {
         "__id__": 423
+      },
+      {
+        "__id__": 424
+      },
+      {
+        "__id__": 425
       }
     ],
     "_prefab": null,
@@ -186,7 +186,7 @@
       "array": [
         0,
         0,
-        400.96976195219514,
+        401.21333159700947,
         0,
         0,
         0,
@@ -6402,17 +6402,17 @@
         "__id__": 215
       },
       {
-        "__id__": 405
+        "__id__": 407
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 418
+        "__id__": 420
       }
     ],
     "_prefab": {
-      "__id__": 419
+      "__id__": 421
     },
     "_opacity": 255,
     "_color": {
@@ -6507,7 +6507,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        250,
+        283.833,
         0,
         0,
         0,
@@ -6619,9 +6619,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 0,
+      "g": 0,
+      "b": 0,
       "a": 255
     },
     "_contentSize": {
@@ -6837,9 +6837,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 0,
+      "g": 0,
+      "b": 0,
       "a": 255
     },
     "_contentSize": {
@@ -8135,13 +8135,13 @@
         "__id__": 390
       },
       {
-        "__id__": 397
+        "__id__": 398
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 404
+      "__id__": 406
     },
     "_opacity": 255,
     "_color": {
@@ -8166,14 +8166,14 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        0,
+        -15.036,
         0,
         0,
         0,
         0,
         1,
-        1,
-        1,
+        1.4,
+        1.4,
         1
       ]
     },
@@ -8343,7 +8343,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -226.34807690000002,
+        -181.34807690000002,
         162.5769231,
         0,
         0,
@@ -8867,7 +8867,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -75.44423070000003,
+        -60.444230700000034,
         162.5769231,
         0,
         0,
@@ -9391,7 +9391,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        75.45961549999997,
+        60.45961549999997,
         162.5769231,
         0,
         0,
@@ -9915,7 +9915,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        226.36346169999996,
+        181.36346169999996,
         162.5769231,
         0,
         0,
@@ -10439,8 +10439,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -226.3480769,
-        17.73076930000002,
+        -181.3480769,
+        27.73076930000002,
         0,
         0,
         0,
@@ -10704,7 +10704,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 84.3195267,
-      "height": 25.9615385
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -10754,8 +10754,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "基礎卡",
-    "_N$string": "基礎卡",
+    "_string": "基礎卡\n隱藏",
+    "_N$string": "基礎卡\n隱藏",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -10963,8 +10963,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -75.44423069999998,
-        17.73076930000002,
+        -60.44423069999998,
+        27.73076930000002,
         0,
         0,
         0,
@@ -11228,7 +11228,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 84.3195267,
-      "height": 25.9615385
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -11278,8 +11278,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "基礎卡",
-    "_N$string": "基礎卡",
+    "_string": "基礎卡\n隱藏",
+    "_N$string": "基礎卡\n隱藏",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -11487,8 +11487,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        75.45961550000003,
-        17.73076930000002,
+        60.45961550000003,
+        27.73076930000002,
         0,
         0,
         0,
@@ -11752,7 +11752,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 84.3195267,
-      "height": 25.9615385
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -11802,8 +11802,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "基礎卡",
-    "_N$string": "基礎卡",
+    "_string": "基礎卡\n隱藏",
+    "_N$string": "基礎卡\n隱藏",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -12011,8 +12011,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        226.36346170000002,
-        17.73076930000002,
+        181.36346170000002,
+        27.73076930000002,
         0,
         0,
         0,
@@ -12276,7 +12276,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 84.3195267,
-      "height": 25.9615385
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -12326,8 +12326,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "基礎卡",
-    "_N$string": "基礎卡",
+    "_string": "基礎卡\n隱藏",
+    "_N$string": "基礎卡\n隱藏",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -12535,8 +12535,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -226.3480769,
-        -127.1153845,
+        -181.3480769,
+        -107.1153845,
         0,
         0,
         0,
@@ -13059,8 +13059,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -75.44423069999998,
-        -127.1153845,
+        -60.44423069999998,
+        -107.1153845,
         0,
         0,
         0,
@@ -13583,8 +13583,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        75.45961550000003,
-        -127.1153845,
+        60.45961550000003,
+        -107.1153845,
         0,
         0,
         0,
@@ -13848,7 +13848,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 84.3195267,
-      "height": 25.9615385
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -13898,8 +13898,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "夥伴卡",
-    "_N$string": "夥伴卡",
+    "_string": "夥伴卡\n隱藏",
+    "_N$string": "夥伴卡\n隱藏",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -14107,8 +14107,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        226.36346170000002,
-        -127.1153845,
+        181.36346170000002,
+        -107.1153845,
         0,
         0,
         0,
@@ -14699,12 +14699,12 @@
       "height": 40
     },
     "_N$startAxis": 0,
-    "_N$paddingLeft": 23.2,
+    "_N$paddingLeft": 68.2,
     "_N$paddingRight": 0,
     "_N$paddingTop": 0,
     "_N$paddingBottom": 0,
-    "_N$spacingX": 50,
-    "_N$spacingY": 20,
+    "_N$spacingX": 20,
+    "_N$spacingY": 10,
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 0,
     "_N$affectedByScale": false,
@@ -14740,7 +14740,7 @@
       }
     ],
     "_prefab": {
-      "__id__": 396
+      "__id__": 397
     },
     "_opacity": 255,
     "_color": {
@@ -14764,8 +14764,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -426.4949983,
-        -0.000004499999988638592,
+        -380,
+        0,
         0,
         0,
         0,
@@ -14812,9 +14812,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 230,
+      "g": 230,
+      "b": 230,
       "a": 255
     },
     "_contentSize": {
@@ -14940,11 +14940,15 @@
     "_grayMaterial": null,
     "duration": 0.1,
     "zoomScale": 1.2,
-    "clickEvents": [],
+    "clickEvents": [
+      {
+        "__id__": 396
+      }
+    ],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
-    "_N$transition": 2,
-    "transition": 2,
+    "_N$transition": 1,
+    "transition": 1,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 230,
@@ -15011,6 +15015,16 @@
     "_id": "0feFzX7hNHmr0SFevXuMvu"
   },
   {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 169
+    },
+    "component": "",
+    "_componentId": "b809fXszgBHCLF5tsjMuw5w",
+    "handler": "SwitchGroup",
+    "customEventData": "-1"
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 169
@@ -15030,17 +15044,17 @@
     },
     "_children": [
       {
-        "__id__": 398
+        "__id__": 399
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 402
+        "__id__": 403
       }
     ],
     "_prefab": {
-      "__id__": 403
+      "__id__": 405
     },
     "_opacity": 255,
     "_color": {
@@ -15064,7 +15078,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        402.323,
+        380,
         0,
         0,
         0,
@@ -15094,27 +15108,27 @@
     "_name": "Background",
     "_objFlags": 512,
     "_parent": {
-      "__id__": 397
+      "__id__": 398
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 399
+        "__id__": 400
       },
       {
-        "__id__": 400
+        "__id__": 401
       }
     ],
     "_prefab": {
-      "__id__": 401
+      "__id__": 402
     },
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 230,
+      "g": 230,
+      "b": 230,
       "a": 255
     },
     "_contentSize": {
@@ -15161,7 +15175,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 398
+      "__id__": 399
     },
     "_enabled": true,
     "_materials": [
@@ -15193,7 +15207,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 398
+      "__id__": 399
     },
     "_enabled": true,
     "alignMode": 0,
@@ -15231,7 +15245,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 397
+      "__id__": 398
     },
     "_enabled": true,
     "_normalMaterial": {
@@ -15240,11 +15254,15 @@
     "_grayMaterial": null,
     "duration": 0.1,
     "zoomScale": 1.2,
-    "clickEvents": [],
+    "clickEvents": [
+      {
+        "__id__": 404
+      }
+    ],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
-    "_N$transition": 2,
-    "transition": 2,
+    "_N$transition": 1,
+    "transition": 1,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 230,
@@ -15306,9 +15324,19 @@
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
     },
     "_N$target": {
-      "__id__": 398
+      "__id__": 399
     },
     "_id": "03wPyFY2NLEr8YXTpu0Guc"
+  },
+  {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 169
+    },
+    "component": "",
+    "_componentId": "b809fXszgBHCLF5tsjMuw5w",
+    "handler": "SwitchGroup",
+    "customEventData": "1"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -15341,17 +15369,17 @@
     },
     "_children": [
       {
-        "__id__": 406
+        "__id__": 408
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 416
+        "__id__": 418
       }
     ],
     "_prefab": {
-      "__id__": 417
+      "__id__": 419
     },
     "_opacity": 255,
     "_color": {
@@ -15405,24 +15433,24 @@
     "_name": "ChooseBox",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 405
+      "__id__": 407
     },
     "_children": [
       {
-        "__id__": 407
+        "__id__": 409
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 413
+        "__id__": 415
       },
       {
-        "__id__": 414
+        "__id__": 416
       }
     ],
     "_prefab": {
-      "__id__": 415
+      "__id__": 417
     },
     "_opacity": 255,
     "_color": {
@@ -15476,21 +15504,21 @@
     "_name": "view",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 406
+      "__id__": 408
     },
     "_children": [
       {
-        "__id__": 408
+        "__id__": 410
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 411
+        "__id__": 413
       }
     ],
     "_prefab": {
-      "__id__": 412
+      "__id__": 414
     },
     "_opacity": 255,
     "_color": {
@@ -15544,17 +15572,17 @@
     "_name": "box",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 407
+      "__id__": 409
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 409
+        "__id__": 411
       }
     ],
     "_prefab": {
-      "__id__": 410
+      "__id__": 412
     },
     "_opacity": 255,
     "_color": {
@@ -15608,7 +15636,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 408
+      "__id__": 410
     },
     "_enabled": true,
     "_layoutSize": {
@@ -15651,7 +15679,7 @@
     "_name": "view<Mask>",
     "_objFlags": 0,
     "node": {
-      "__id__": 407
+      "__id__": 409
     },
     "_enabled": true,
     "_materials": [
@@ -15682,7 +15710,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 406
+      "__id__": 408
     },
     "_enabled": true,
     "horizontal": false,
@@ -15694,10 +15722,10 @@
     "scrollEvents": [],
     "cancelInnerEvents": true,
     "_N$content": {
-      "__id__": 408
+      "__id__": 410
     },
     "content": {
-      "__id__": 408
+      "__id__": 410
     },
     "_N$horizontalScrollBar": null,
     "_N$verticalScrollBar": null,
@@ -15708,7 +15736,7 @@
     "_name": "ChooseBox<Sprite>",
     "_objFlags": 0,
     "node": {
-      "__id__": 406
+      "__id__": 408
     },
     "_enabled": true,
     "_materials": [
@@ -15751,17 +15779,17 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 405
+      "__id__": 407
     },
     "_enabled": true,
     "HeroButton": {
       "__uuid__": "380099d2-b7cf-45ea-a128-cf474304dd55"
     },
     "HeroButtonPraent": {
-      "__id__": 408
+      "__id__": 410
     },
     "ChooseBox": {
-      "__id__": 406
+      "__id__": 408
     },
     "_id": "0buUvBUYZC6ZOmKs+Zw4+5"
   },
@@ -15797,7 +15825,7 @@
       "__id__": 204
     },
     "CardManager": {
-      "__id__": 416
+      "__id__": 418
     },
     "TeamBoxSf": [
       {
