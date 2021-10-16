@@ -10,7 +10,7 @@ public class ProtocolName {
     public static final int CHOOSE = 4; // 選角
     public static final int SYNC = 5; // 同步房間資訊
     public static final int PREVIEW = 6; // 預選角
-    public static final int GET_LOLMDATA = 7;
+    public static final int GET_DATA = 7;
     public static final int READY = 8;
     public static final int Compose = 9;
     public static final int GetCompose = 10;

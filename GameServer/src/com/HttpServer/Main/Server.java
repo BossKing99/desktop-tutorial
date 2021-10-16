@@ -5,6 +5,7 @@ import com.HttpServer.Net.Client2GameInitializer;
 import com.HttpServer.publicClass.CheckPassword;
 import com.HttpServer.publicClass.Console;
 import com.HttpServer.publicClass.LOLMData;
+import com.HttpServer.publicClass.HPData;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -56,6 +57,7 @@ public class Server {
 
 		CheckPassword.Check("ss");
 		LOLMData.LoadData();
+		HPData.LoadData();
 		ThreadManager.Init();
 		Server.mGame = new Server();
 		Server.mGame.bind(8083);

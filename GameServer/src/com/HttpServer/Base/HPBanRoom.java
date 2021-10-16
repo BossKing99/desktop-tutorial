@@ -22,8 +22,8 @@ public class HPBanRoom extends GameRoom {
     private Timer timer = new Timer();
     private TimerTask task;
     private List<LOLMPlayer> allPlayers = new ArrayList<>();
-    private long chooseTime = 60000;
-    private long composeTime = 300000;
+    private long chooseTime = 18000;
+    private long composeTime = 20000;
     // 選角用
     private int nowCtrl = 0;
     private boolean[] hide = { true, true, true, true, false, false, false, false, true, true, false, true };
@@ -35,7 +35,7 @@ public class HPBanRoom extends GameRoom {
 
         try {
             composeCount = jdata.getInt("composeCount");
-            composeData = new int[2][composeCount][10];
+            composeData = new int[2][composeCount][12];
             RoomJData.put("Status", _status);
             RoomJData.put("ComposeCount", composeCount);
             RoomJData.put("Ready", isReady);
@@ -44,8 +44,12 @@ public class HPBanRoom extends GameRoom {
             RoomInfo.put("red", jdata.get("redTeamName"));
             RoomInfo.put("game", jdata.get("gameName"));
 
-            pass[0] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "asdasfgdfth").substring(5, 12);;
-            pass[1] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "thrthrthtrth").substring(5, 12);;
+            pass[0] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "asdasfgdfth")
+                    .substring(5, 12);
+            ;
+            pass[1] = GameRoomManager.GetKey(RoomJData.toString() + System.currentTimeMillis() + "thrthrthtrth")
+                    .substring(5, 12);
+            ;
             RoomInfo.put("pass", pass);
             RoomInfo.put("composeCount", composeCount);
             SetRoomPass(pass);
@@ -72,9 +76,13 @@ public class HPBanRoom extends GameRoom {
     @Override
     public void Choose(JSONObject jdata, String ctxId) {
         try {
-            LOLMPlayer player = findPlayer(ctxId);
-            if (player != null && player.team == nowCtrl) {
-                nextProcess(jdata.optInt("choose"));
+            if (_status == RoomStatus.BAN) {
+                LOLMPlayer player = findPlayer(ctxId);
+                if (player != null && player.team == nowCtrl) {
+                    banData[nowCtrl] = jdata.optInt("choose");
+                    RoomJData.put("BanList", banData);
+                    broadcast(RoomJData.toString(), ProtocolName.SYNC);
+                }
             }
         } catch (Exception e) {
             Console.Err("HPBanRoom Choose Error");
@@ -90,11 +98,11 @@ public class HPBanRoom extends GameRoom {
     public void Compose(JSONObject jdata) {
         try {
             if (_status == RoomStatus.COMPOSE) {
-                int chose = jdata.optInt("chose");
+                int choose = jdata.optInt("choose");
                 int no = jdata.optInt("no");
                 int group = jdata.optInt("group");
-                int team = jdata.optInt("group");
-                composeData[team][group][no] = chose;
+                int team = jdata.optInt("team");
+                composeData[team][group][no] = choose;
                 broadcast(jdata.toString(), ProtocolName.Compose, team);
             }
         } catch (Exception e) {
@@ -103,10 +111,7 @@ public class HPBanRoom extends GameRoom {
     }
 
     @Override
-    public JSONObject GetCompose(String pass, int team) {
-        if (!pass.equals(GetRoomPass()[team])) {
-            return null;
-        }
+    public JSONObject GetCompose(int team) {
         JSONObject jdata = new JSONObject();
         try {
             jdata.put("pick", composeData[team]);
@@ -127,15 +132,15 @@ public class HPBanRoom extends GameRoom {
                 for (int j = 0; j < composeCount; j++) {
                     JSONArray buleCompose = new JSONArray();
                     JSONArray redCompose = new JSONArray();
-                    for (int i = 0; i < 10; i++) {
+                    for (int i = 0; i < 12; i++) {
                         buleCompose.put(hide[i] ? composeData[0][j][i] : -1);
-                        redCompose.put(hide[i] ? composeData[0][j][i] : -1);
+                        redCompose.put(hide[i] ? composeData[1][j][i] : -1);
                     }
                     buleComposeList.put(buleCompose);
                     redComposeList.put(redCompose);
                 }
-                jdata.put("buleCompose", buleComposeList);
-                jdata.put("redCompose", redComposeList);
+                jdata.put("buleCompose", redComposeList);
+                jdata.put("redCompose", buleComposeList);
             } else {
                 jdata.put("buleCompose", composeData[0]);
                 jdata.put("redCompose", composeData[1]);
@@ -177,6 +182,7 @@ public class HPBanRoom extends GameRoom {
                     RoomJData.put("HideCompose", GetAllCompose(true));
                 } catch (Exception e) {
                 }
+                broadcast(RoomJData.toString(), ProtocolName.SYNC);
                 break;
 
             case COMPOSE:
@@ -223,15 +229,17 @@ public class HPBanRoom extends GameRoom {
                 return;
             timer.cancel();
             if (_status == RoomStatus.BAN) {
-                banData[nowCtrl] = choose;
+                if (banData[nowCtrl] == -1) {
+                    banData[nowCtrl] = 0;
+                    RoomJData.put("BanList", banData);
+                }
                 nowCtrl++;
+                RoomJData.put("NowCtrl", nowCtrl);
                 if (nowCtrl == banData.length) {
                     SetStatus(RoomStatus.END);
                     nowCtrl = 0;
                     RoomJData.put("Compose", GetAllCompose(false));
                 }
-                RoomJData.put("NowCtrl", nowCtrl);
-                RoomJData.put("BanList", banData);
             }
 
             if (_status != RoomStatus.END) {

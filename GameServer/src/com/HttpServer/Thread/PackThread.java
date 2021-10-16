@@ -77,12 +77,14 @@ public class PackThread extends Thread {
                 return new ChooseProtocol();
             case ProtocolName.PREVIEW:
                 return new PreviewProtocol();
-            case ProtocolName.GET_LOLMDATA:
-                return new GetLOLMDataProtocol();
+            case ProtocolName.GET_DATA:
+                return new GetDataProtocol();
             case ProtocolName.READY:
                 return new ReadyProtocol();
             case ProtocolName.GetCompose:
                 return new GetCompose();
+            case ProtocolName.Compose:
+                return new Compost();
             default:
                 break;
         }

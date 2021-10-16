@@ -135,7 +135,7 @@ public class LOLM3BanRoom extends GameRoom {
     }
 
     @Override
-    public JSONObject GetCompose(String pass, int team) {
+    public JSONObject GetCompose(int team) {
         return null;
     }
 

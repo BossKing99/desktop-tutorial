@@ -51,5 +51,5 @@ public abstract class GameRoom {
 
     public abstract void Compose(JSONObject jdata);
 
-    public abstract JSONObject GetCompose(String pass, int team);
+    public abstract JSONObject GetCompose(int team);
 }

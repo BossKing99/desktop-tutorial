@@ -11,7 +11,7 @@ public class HPData {
 
 	public static void LoadData() {
 		try {
-			FileReader fr = new FileReader("Config/LOLMData.json");
+			FileReader fr = new FileReader("Config/HPData.json");
 			BufferedReader br = new BufferedReader(fr);
 			String Data = "";
 			while (true) {
