@@ -71,15 +71,20 @@ export default class UI_Output extends IUIView {
             let bf = 0;
             let rf = 0;
             for (let index = 0; index < jdata.Compose.buleCompose.length; index++) {
-
-                if (bf != jdata.BanList[1]) {
-                    UI_Output.Inst.AllInfo[bf].SetBuleInfo(jdata.Compose.buleCompose[bf])
+           
+                if (index != jdata.BanList[1]) {
+                    console.log("b = "+index)
+                    UI_Output.Inst.AllInfo[bf].SetBuleInfo(jdata.Compose.buleCompose[index])
                     bf++;
                 }
-                if (rf != jdata.BanList[0]) {
-                    UI_Output.Inst.AllInfo[rf].SetRedInfo(jdata.Compose.redCompose[rf])
+
+                if (index != jdata.BanList[0]) {
+                    console.log("r = "+index)
+                    UI_Output.Inst.AllInfo[rf].SetRedInfo(jdata.Compose.redCompose[index])
                     rf++;
                 }
+          
+               
             }
         }
     }

@@ -1,3 +1,3 @@
-sudo rm -rf /var/www/html/hpbp
-sudo cp -r build /var/www/html/hpbp
-sudo chmod 755 /var/www/html/hpbp -R
+sudo rm -rf /home/d02405014/hpbp
+sudo cp -r build /home/d02405014/hpbp
+sudo chmod 755 /home/d02405014/hpbp -R
