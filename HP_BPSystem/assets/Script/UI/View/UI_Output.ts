@@ -1,36 +1,40 @@
+import { HPData, MgData } from "../../MagicCardManager";
 import Manager, { ProtocolName } from "../../public/Manager";
 import BanPickIcon from "../BanPickIcon";
+import OutputCardInfo from "../OutputCardInfo";
 import IUIView from "./IUIView";
-import { ELinkRoomData, ESyncData, LinkRoomData } from "./UI_BP";
+import { ELinkRoomData, ESyncData, GetLOLMData, LinkRoomData } from "./UI_BP";
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class UI_Output extends IUIView {
+    @property(cc.Label)
+    private blueTeamLabel: cc.Label = null;
+    @property(cc.Label)
+    private redTeamLabel: cc.Label = null;
+    @property(cc.Label)
+    private ReadyLabel: cc.Label = null;
+    @property(cc.Prefab)
+    private infoPrefab: cc.Prefab = null;
+    @property(cc.Node)
+    private InfoPraent: cc.Node = null;
+
     public static Inst: UI_Output = null;
-    @property([cc.Prefab])
-    private BanIcon: cc.Prefab[] = [];
-    @property([cc.Layout])
-    private BanParent: cc.Layout[] = [];
-    @property([cc.Label])
-    private Name: cc.Label[] = [];
-    @property([BanPickIcon])
-    private AllPickIcon: BanPickIcon[] = [];
-    //---------------------------------
-    private AllBanIcon: BanPickIcon[] = [];
     private isInit: boolean = false;
-    private sizeL: number[] = [0, 170, 85, 12, 5, 5];
-    private sizeX: number[] = [0, 0, 100, 80, 35, 10];
+    public AllMgData: MgData[] = []
+    public AllInfo: OutputCardInfo[] = []
+    private key: string
+
     public Open() {
         super.Open();
         UI_Output.Inst = this;
         Manager.Inst.GetNetwork().AddCallBack(ProtocolName.LINK_ROOM, this.GetLinkCallBack);
         Manager.Inst.GetNetwork().AddCallBack(ProtocolName.SYNC, this.SyncCallBack);
+        Manager.Inst.GetNetwork().AddCallBack(ProtocolName.GET_DATA, this.GetLOLMDataCallBack); //OK
+        Manager.Inst.GetNetwork().Send(new GetLOLMData());
         let url = new URL(window.location.href);
-        let linkData: LinkRoomData = new LinkRoomData();
-        linkData.key = url.searchParams.get("key");
-        linkData.team = -1;
-        Manager.Inst.GetNetwork().Send(linkData);
+        UI_Output.Inst.key = url.searchParams.get("key");
     }
     public Close() {
         super.Close();
@@ -38,20 +42,17 @@ export default class UI_Output extends IUIView {
     private GetLinkCallBack(data: string) {
         let jdata: ELinkRoomData = JSON.parse(data);
         if (jdata.resCode === 0) {
-            UI_Output.Inst.Name[0].string = jdata.info.blue;
-            UI_Output.Inst.Name[1].string = jdata.info.red;
-            UI_Output.Inst.Name[2].string = jdata.info.game;
-            UI_Output.Inst.BanParent[0].spacingX = UI_Output.Inst.sizeX[jdata.info.banCount];
-            UI_Output.Inst.BanParent[0].paddingLeft = UI_Output.Inst.sizeL[jdata.info.banCount];
-            UI_Output.Inst.BanParent[1].spacingX = UI_Output.Inst.sizeX[jdata.info.banCount];
-            UI_Output.Inst.BanParent[1].paddingRight = UI_Output.Inst.sizeL[jdata.info.banCount];
-            for (let i = 0; i < jdata.info.banCount; i++) {
-                for (let j = 0; j < 2; j++) {
-                    let newIcon = cc.instantiate(UI_Output.Inst.BanIcon[j]);
-                    newIcon.parent = UI_Output.Inst.BanParent[j].node;
-                    UI_Output.Inst.AllBanIcon.push(newIcon.getComponent(BanPickIcon));
-                }
+            UI_Output.Inst.blueTeamLabel.string = jdata.info.blue;
+            UI_Output.Inst.redTeamLabel.string = jdata.info.red;
+            UI_Output.Inst.ReadyLabel.string = jdata.info.game;
+
+            for (let index = 0; index < jdata.info.composeCount - 1; index++) {
+                let newInfo = cc.instantiate(UI_Output.Inst.infoPrefab)
+                newInfo.parent = UI_Output.Inst.InfoPraent;
+                UI_Output.Inst.AllInfo[index] =  newInfo.getComponent(OutputCardInfo)
+                UI_Output.Inst.AllInfo[index].SetName(index)
             }
+            UI_Output.Inst.InfoPraent.setContentSize(1250, (jdata.info.composeCount - 1) * 300);
             UI_Output.Inst.isInit = true;
         }
         else if (jdata.resCode === 1) {
@@ -67,14 +68,31 @@ export default class UI_Output extends IUIView {
 
         let jdata: ESyncData = JSON.parse(data);
         if (jdata.Status === "END") {
-            for (let i = 0; i < jdata.BanList.length; i++) {
-                UI_Output.Inst.AllBanIcon[i].SetChoose(jdata.BanList[i]);
-            }
-            for (let i = 0; i < jdata.PickList.length; i++) {
-                if (jdata.PickList[i] != -1) {
-                    UI_Output.Inst.AllPickIcon[i].SetChoose(jdata.PickList[i]);
+            let bf = 0;
+            let rf = 0;
+            for (let index = 0; index < jdata.Compose.buleCompose.length; index++) {
+                if (index != jdata.BanList[0]) {
+                    UI_Output.Inst.AllInfo[bf].SetBuleInfo(jdata.Compose.buleCompose[bf])
+                    bf++;
+                }
+                if (index != jdata.BanList[1]) {
+                    UI_Output.Inst.AllInfo[rf].SetRedInfo(jdata.Compose.redCompose[rf])
+                    rf++;
                 }
             }
         }
     }
+    private GetLOLMDataCallBack(data: string) {
+        let jdata: HPData = JSON.parse(data);
+        let allMgData: MgData[] = [];
+        for (let index = 0; index < jdata.ChampoinTable.length; index++) {
+            allMgData[jdata.ChampoinTable[index].no] = jdata.ChampoinTable[index];
+        }
+        UI_Output.Inst.AllMgData = allMgData;
+        let linkData: LinkRoomData = new LinkRoomData();
+        linkData.key = UI_Output.Inst.key;
+        linkData.team = -1;
+        Manager.Inst.GetNetwork().Send(linkData);
+    }
+
 }

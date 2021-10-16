@@ -1,8 +1,10 @@
 
+
 import MagicCardManager, { HPData, MgData } from "../../MagicCardManager";
 import Network from "../../Network";
 import GetTime from "../../public/GetTime";
 import Manager, { ProtocolName } from "../../public/Manager";
+import BanInfo from "../BanInfo";
 import BanPickIcon from "../BanPickIcon";
 import CardButton from "../CardButton";
 import IUIView from "./IUIView";
@@ -35,17 +37,19 @@ export default class UI_BP extends IUIView {
     private OBText: cc.Label;
     @property(cc.Node)
     private ChooseBox: cc.Node;
+    @property([BanInfo])
+    private BanInfos: BanInfo[] = [];
     //------------------------------------------
     public static Inst: UI_BP = null;
     private myTeam: number = -1;
     private key: string
     private pass: string
-    private SyncData: ESyncData;
+    public SyncData: ESyncData;
     private AllBanIcon: BanPickIcon[] = [];
     private isInit: boolean = false;
     private AllChooseCard: CardButton[] = [];
     private NowChooseCard: number = 0;
-    private AllMgData: MgData[] = []
+    public AllMgData: MgData[] = []
     private ComposeGroup: number[][] = [];
     private nowGroup: number = 0
     private rinfo: RoomInfo;
@@ -79,7 +83,7 @@ export default class UI_BP extends IUIView {
     }
 
     public CloseChoosebox() {
-        if (this.SyncData.nowCtrl != 0 && this.SyncData.nowCtrl != 1)
+        if (this.SyncData.NowCtrl != 0 && this.SyncData.NowCtrl != 1)
             return
     }
     private GetLinkCallBack(data: string) {
@@ -88,8 +92,10 @@ export default class UI_BP extends IUIView {
             UI_BP.Inst.Countdown();
             UI_BP.Inst.isInit = true;
             UI_BP.Inst.rinfo = jdata.info;
-            for (let i = 0; i < 2; i++)
+            for (let i = 0; i < 2; i++) {
+                UI_BP.Inst.BanInfos[i].node.active = false
                 UI_BP.Inst.TeamBox[i].spriteFrame = UI_BP.Inst.TeamBoxSf[UI_BP.Inst.myTeam == -1 ? i : 3];
+            }
 
             if (UI_BP.Inst.myTeam == -1) {
                 UI_BP.Inst.blueTeamLabel.string = UI_BP.Inst.rinfo.blue;
@@ -140,45 +146,56 @@ export default class UI_BP extends IUIView {
                     }
 
                     break;
+
                 case "BAN":
-                    for (let i = 0; i < UI_BP.Inst.SyncData.BanList.length; i++) {
-                        if (UI_BP.Inst.SyncData.BanList[i] != -1) {
-                            UI_BP.Inst.AllBanIcon[i].SetChoose(UI_BP.Inst.SyncData.BanList[i]);
+                    for (let i = 0; i < 2; i++) {
+                        UI_BP.Inst.BanInfos[i].node.active = true
+                        UI_BP.Inst.TeamBox[i].spriteFrame = UI_BP.Inst.TeamBoxSf[i];
+                        UI_BP.Inst.ReadyButtonNode.node.active = true;
+                    }
+                    UI_BP.Inst.ObBox.active = false;
+                    UI_BP.Inst.CardManager.isChoose()
+                    UI_BP.Inst.ChooseBox.active = true
+                    UI_BP.Inst.RoomInfoLable.string = "";
+                    UI_BP.Inst.ReadyLabel.string = UI_BP.Inst.SyncData.NowCtrl == UI_BP.Inst.myTeam ? "BAN" : "等待對手";
+                    UI_BP.Inst.ReadyButtonNode.interactable = UI_BP.Inst.SyncData.NowCtrl == UI_BP.Inst.myTeam;
+                    for (let i = 0; i < 2; i++) {
+                        if (UI_BP.Inst.SyncData.NowCtrl == i) {
+                            UI_BP.Inst.TeamBox[i].spriteFrame = UI_BP.Inst.TeamBoxSf[i];
+                            UI_BP.Inst.NextTime[i] = UI_BP.Inst.SyncData.NextTime;
+                        }
+                        else {
+                            UI_BP.Inst.TeamBox[i].spriteFrame = UI_BP.Inst.TeamBoxSf[2];
+                            UI_BP.Inst.NextTime[i] = 0;
                         }
                     }
-                    if (UI_BP.Inst.SyncData.banFlage < UI_BP.Inst.AllBanIcon.length)
-                        UI_BP.Inst.AllBanIcon[UI_BP.Inst.SyncData.banFlage].SetReady();
+
+                    UI_BP.Inst.ComposeGroup = jdata.NowCtrl == 0 ? jdata.HideCompose.buleCompose : jdata.HideCompose.redCompose
+                    UI_BP.Inst.nowGroup = 0;
+                    UI_BP.Inst.SetGroup();
+
+                    if (jdata.BanList) {
+                        for (let i = 0; i < jdata.BanList.length; i++) {
+                            UI_BP.Inst.BanInfos[i].SetInfo(i == 0 ? jdata.HideCompose.buleCompose[jdata.BanList[i]] : jdata.HideCompose.redCompose[jdata.BanList[i]])
+                        }
+                    }
+
                     break;
+
                 case "COMPOSE":
                     UI_BP.Inst.NextTime[0] = UI_BP.Inst.SyncData.NextTime;
+                    UI_BP.Inst.ReadyButtonNode.node.active = false;
                     if (UI_BP.Inst.myTeam == -1) {
                         UI_BP.Inst.OBText.string = "等待選手組牌"
                         UI_BP.Inst.ChooseBox.active = false
                     } else {
                         UI_BP.Inst.ChooseBox.active = true
-                        UI_BP.Inst.ReadyButtonNode.node.active = false;
                         UI_BP.Inst.redTeamLabel.string = "選卡階段";
                         let getCompose = new GetCompose;
                         getCompose.team = UI_BP.Inst.myTeam;
                         Manager.Inst.GetNetwork().Send(getCompose);
                     }
                     break;
-            }
-            if (UI_BP.Inst.SyncData.Status == "BAN") {
-                UI_BP.Inst.RoomInfoLable.string = "";
-                UI_BP.Inst.ReadyLabel.string = UI_BP.Inst.SyncData.nowCtrl == UI_BP.Inst.myTeam ? "確認選擇" : "等待對手";
-                UI_BP.Inst.ReadyButtonNode.interactable = UI_BP.Inst.SyncData.nowCtrl == UI_BP.Inst.myTeam;
-                for (let i = 0; i < 2; i++) {
-                    if (UI_BP.Inst.SyncData.nowCtrl == i) {
-                        this.ReadyButtonNode.node.active = false;
-                        UI_BP.Inst.TeamBox[i].spriteFrame = UI_BP.Inst.TeamBoxSf[i];
-                        UI_BP.Inst.NextTime[i] = UI_BP.Inst.SyncData.NextTime;
-                    }
-                    else {
-                        UI_BP.Inst.TeamBox[i].spriteFrame = UI_BP.Inst.TeamBoxSf[2];
-                        UI_BP.Inst.NextTime[i] = 0;
-                    }
-                }
             }
         }
         UI_BP.Inst.CloseChoosebox();
@@ -236,6 +253,13 @@ export default class UI_BP extends IUIView {
                     Manager.Inst.GetNetwork().Send(data);
                 }
                 break;
+            case "BAN":
+                if (UI_BP.Inst.myTeam == UI_BP.Inst.SyncData.NowCtrl) {
+                    let data: ChooseData = new ChooseData();
+                    data.choose = UI_BP.Inst.nowGroup;
+                    Manager.Inst.GetNetwork().Send(data);
+                }
+                break;
         }
     }
 
@@ -265,11 +289,11 @@ export default class UI_BP extends IUIView {
 
     public IsChoose(num: number): boolean {
 
-        if(num==UI_BP.Inst.AllChooseCard[UI_BP.Inst.NowChooseCard].Id)
+        if (num == UI_BP.Inst.AllChooseCard[UI_BP.Inst.NowChooseCard].Id)
             return false;
-        
+
         for (let i = 0; i < 12; i++) {
-            if (UI_BP.Inst.ComposeGroup[UI_BP.Inst.nowGroup][i] == num){
+            if (UI_BP.Inst.ComposeGroup[UI_BP.Inst.nowGroup][i] == num) {
                 return true;
             }
         }
@@ -330,10 +354,12 @@ export class ESyncData {
     public BanList: number[];
     public PickList: number[];
     public Ready: boolean[];
-    public nowCtrl: number;
+    public NowCtrl: number;
     public NextTime: number;
     public banFlage: number;
     public pickFlage: number;
+    public HideCompose: ComposeData;
+    public Compose: ComposeData;
 }
 
 export class Compose {
@@ -350,4 +376,8 @@ export class GetCompose {
 }
 export class EGetCompose {
     public pick: number[][]
+}
+export class ComposeData {
+    public buleCompose: number[][]
+    public redCompose: number[][]
 }

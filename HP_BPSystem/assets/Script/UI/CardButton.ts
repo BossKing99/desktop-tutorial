@@ -17,16 +17,16 @@ export default class CardButton extends cc.Component {
     private CardType: number = 0;
     public Id: number;
     private Type: number;
-    private defuName:string = ""
-    
-    public onLoad(){
+    private defuName: string = ""
+
+    public onLoad() {
         this.defuName = this.NameLabel.string
     }
 
     public Init(data: MgData) {
-        if (data == undefined){
-            this.NameLabel.string=this.defuName;
-            this.Icon.spriteFrame= null;
+        if (data == undefined) {
+            this.NameLabel.string = this.defuName;
+            this.Icon.spriteFrame = null;
             return
         }
         this.Id = data.no;
@@ -43,10 +43,12 @@ export default class CardButton extends cc.Component {
         })
     }
     public OnClick() {
-        if (this.isView) {
-            UI_BP.Inst.ShowChooseBox(this.CardNumber, this.CardType);
-        } else {
-            UI_BP.Inst.SetChooseCardData(this.Id)
+        if (UI_BP.Inst.SyncData.Status == "COMPOSE") {
+            if (this.isView) {
+                UI_BP.Inst.ShowChooseBox(this.CardNumber, this.CardType);
+            } else {
+                UI_BP.Inst.SetChooseCardData(this.Id)
+            }
         }
     }
     public Choose() {
