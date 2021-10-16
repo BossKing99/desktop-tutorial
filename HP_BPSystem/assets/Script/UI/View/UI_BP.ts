@@ -171,7 +171,7 @@ export default class UI_BP extends IUIView {
                     }
 
                     UI_BP.Inst.ComposeGroup = jdata.NowCtrl == 0 ? jdata.HideCompose.buleCompose : jdata.HideCompose.redCompose
-                    UI_BP.Inst.nowGroup = 0;
+                    // UI_BP.Inst.nowGroup = 0;
                     UI_BP.Inst.SetGroup();
 
                     if (jdata.BanList) {
