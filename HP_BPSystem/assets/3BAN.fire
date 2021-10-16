@@ -189,7 +189,7 @@
       "array": [
         0,
         0,
-        406.1659143749018,
+        406.395952372782,
         0,
         0,
         0,
@@ -6411,7 +6411,7 @@
         "__id__": 420
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 502
@@ -17334,7 +17334,6 @@
         "__id__": 454
       }
     ],
-    "CardInfo": null,
     "_id": "03ywsdIPVCM7gsc9xQ19vZ"
   },
   {
@@ -18805,7 +18804,6 @@
         "__id__": 494
       }
     ],
-    "CardInfo": null,
     "_id": "41bpK0Q29D+outgXwsw54K"
   },
   {
@@ -18931,7 +18929,7 @@
         "__id__": 525
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 534
@@ -20153,7 +20151,7 @@
       "__id__": 2
     },
     "_enabled": true,
-    "IP": "127.0.0.1",
+    "IP": "35.185.133.58",
     "ws": "ws",
     "UIViewNode": [
       {

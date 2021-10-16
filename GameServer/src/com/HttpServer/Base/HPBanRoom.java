@@ -22,8 +22,8 @@ public class HPBanRoom extends GameRoom {
     private Timer timer = new Timer();
     private TimerTask task;
     private List<LOLMPlayer> allPlayers = new ArrayList<>();
-    private long chooseTime = 18000;
-    private long composeTime = 20000;
+    private long chooseTime = 180000;
+    private long composeTime = 300000;
     // 選角用
     private int nowCtrl = 0;
     private boolean[] hide = { true, true, true, true, false, false, false, false, true, true, false, true };

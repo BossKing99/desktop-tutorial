@@ -281,7 +281,7 @@ export default class UI_BP extends IUIView {
     public SwitchGroup(event, next) {
         UI_BP.Inst.nowGroup += +next
         if (UI_BP.Inst.nowGroup < 0)
-            UI_BP.Inst.nowGroup = UI_BP.Inst.rinfo.composeCount
+            UI_BP.Inst.nowGroup = UI_BP.Inst.rinfo.composeCount - 1
         else if (UI_BP.Inst.nowGroup >= UI_BP.Inst.rinfo.composeCount)
             UI_BP.Inst.nowGroup = 0
         UI_BP.Inst.SetGroup()
